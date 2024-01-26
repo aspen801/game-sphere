@@ -1,0 +1,30 @@
+$mainFont500: fixelTextMedium500;
+$mainFont400: fixelTextRegular400;
+$logoFont: galaxy;
+$kharkov: Kharkiv;
+$mainGbColor: #1F2023;
+$secondColor: #2A2A2F;
+$gradient-purple: linear-gradient(63deg, #53389E 16.72%, #7F56D9 83.39%);
+$colorSellFont: #6941C6;
+$colorDiscount: #F79009;
+
+@font-face {
+    font-family: 'fixelTextMedium500';
+    src: url('./fonts/FixelText-Medium.woff2');
+}
+@font-face {
+    font-family: 'fixelTextRegular400';
+    src: url('./fonts/FixelText-Regular.woff2');
+}
+@font-face {
+    font-family: 'galaxy';
+    src: url('./fonts/LogoFont.otf');
+}
+@font-face {
+    font-family: 'Kharkiv';
+    src: url('./fonts/KharkivTone.ttf');
+}
+
+
+
+

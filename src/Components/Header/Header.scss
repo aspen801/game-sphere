@@ -1,0 +1,81 @@
+@import "../../style/variables.scss";
+.header {
+    background: $mainGbColor;
+    min-height: 115px;
+    padding-top: 20px;
+}
+.inputBox {
+    position: relative;
+    width: 100%;
+}
+.Input {
+    background-color: #3E3E45;
+    border: 0px;
+    height: 44px;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 21px;
+    padding: 12px;
+    outline: none;
+    font-family: $mainFont400;
+}
+.inputBox img {
+    position: absolute;
+    top:35px;
+    right: 14px;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+.tel {
+    color: #F2F4F7;
+    font-family: $mainFont500;
+    font-size: 16px;
+    font-style: normal;
+    margin: 0 auto;
+}
+.data {
+    font-family: $mainFont400;
+    font-size: 14px;
+}
+.arrow {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.widgets {
+    display: flex;
+    color: #fff;
+    align-items: end;
+    gap:20px;
+    font-family: $mainFont400;
+    cursor: pointer;
+}
+.like {
+    position: relative;
+}
+.like::before {
+    width: 16px;
+    content: "";
+    height: 16px;
+    background: #6941C6;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    border-radius: 50%;   
+}
+.likeText {
+    position: absolute;
+    top: -4px;
+    right: 1px;
+    font-size: 12px;
+    font-family: $mainFont400;
+    margin-bottom: 0px;
+}
+.align {
+    display: flex;
+    align-items: end;
+}
