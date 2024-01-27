@@ -1,5 +1,5 @@
 import Header from '../Header/Header';
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.scss';
 
 function App() {

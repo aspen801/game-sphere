@@ -5,51 +5,50 @@ import {Container, Row, Col} from 'react-bootstrap'
 import searchInputSvg from "../../resources/svg/Search.svg"
 import arrow from "../../resources/svg/arrow.svg"
 import arrowDropLng from "../../resources/svg/arrow-drop-lng.svg"
+import profile from "../../resources/svg/Profile.svg"
 import heart from "../../resources/svg/heart-line.svg"
 import balance from "../../resources/svg/sharp-balance.svg"
 import shoppingCart from "../../resources/svg/shopping-cart-line.svg"
+import menu from "../../resources/svg/menu.svg"
+import phone from "../../resources/svg/phone.svg"
 
 const Header = () => {
   return (
     <div className='header'>
-        <Container fluid="xl">
-            <Row>
-                <Col sm={2} className='logo'>
-                  <a href='#'>
-                      <img src={logo} alt="logo"/>
-                  </a>
-                </Col>
-                <Col sm={5} className='align'>
-                  <div className='inputBox'>
-                    <input type='text' className='Input' placeholder='Шукати'/>
-                    <img src={searchInputSvg} alt="inputSvg"/>
-                  </div>
-                </Col>
-                <Col sm={3} className='align'>
-                    <div className='tel'>
-                        0 800 25 00 32
-                        <img className='arrow' src={arrow} alt='arrow'/>
-                      <div className='data'>
-                        Пн-Нд: 09:00-21:30
-                      </div>
-                    </div>
-                </Col>
-                <Col sm={2} className='align'>
-                  <div className='widgets'>
-                    <div>
-                      Укр
-                      <img src={arrowDropLng} alt='arrow'/>
-                    </div>
-                    <div className='like'>
-                      <img src={heart} alt="likeImg"/>
-                      <p className='likeText'>7</p>
-                    </div>
-                    <img src={balance} alt="balance"/>
-                    <img src={shoppingCart} alt="shoppingCart"/>
-                  </div>
-                </Col>
-            </Row>
-        </Container>
+        <div className='container'>
+          <div className='nav'>
+            <img src={menu} alt='menu' className='menu'/>
+            <a href='#'><img src={logo} className='logo' alt='logo'/></a>
+          </div>
+          <div className='searchPanel'>
+            <input type='text' placeholder='Шукати' className='input'/>
+            <img src={searchInputSvg} alt='search' className='searchButton'/>
+          </div>
+          <div className='contact'>
+            <div>
+              <div className='numberPanel'>
+                <p className='number'>0 800 25 00 32</p>
+                <img src={arrow} className='arrow' alt='arrow'/>
+              </div>
+              <p>Пн-Нд: 09:00-21:30</p>
+            </div>
+          </div>
+          <div className='catalog'>
+           
+              <div className='language'>
+                <p className='languageText'>Укр</p>
+                <img className='languageArrow' src={arrowDropLng} alt='arrow'/>
+              </div>
+              <img src={profile} className='profile' alt='profile'/>
+              <img src={phone} className='phone' alt='phone'/>
+              <div className='likes'>
+                <img src={heart} alt='heart'/> 
+                <p>11</p> 
+              </div>
+              <img src={balance} className='balance' alt='balance'/>
+              <img src={shoppingCart} alt='shoppingcart'/>
+          </div>
+        </div>
     </div>
   )
 }
