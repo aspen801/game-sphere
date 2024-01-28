@@ -14,7 +14,7 @@ import phone from "../../resources/svg/phone.svg"
 
 const Header = () => {
   return (
-    <div className='header'>
+    <div id='header'>
         <div className='container'>
           <div className='nav'>
             <img src={menu} alt='menu' className='menu'/>
@@ -46,7 +46,7 @@ const Header = () => {
                 <p>11</p> 
               </div>
               <img src={balance} className='balance' alt='balance'/>
-              <img src={shoppingCart} alt='shoppingcart'/>
+              <img src={shoppingCart} alt='shoppingcart' className='shoppingCart'/>
           </div>
         </div>
     </div>

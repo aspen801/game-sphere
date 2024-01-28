@@ -1,4 +1,7 @@
 @import "../../style/variables.scss";
 .App {
   font-family: $mainFont400;
+  box-sizing: border-box;
+  overflow-y:hidden; 
+  overflow-x:hidden;
 }
