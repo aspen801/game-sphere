@@ -1,7 +1,7 @@
-import Catalog from '../Catalog/Catalog';
-import Header from '../Header/Header';
-import Intro from '../Intro/Intro';
-import { SlideTopSell } from '../SlideTopSell/SlideTopSell';
+import Catalog from '../../components/Catalog/Catalog';
+import Header from '../../components/Header/Header';
+import Intro from '../../components/Intro/Intro';
+import { SlideTopSell } from '../../components/SlideTopSell/SlideTopSell';
 // import 'bootstrap/dist/css/bootstrap.min.css'
 import './MainPage.scss';
 

@@ -1,22 +1,22 @@
-@import "../../style/variables.scss";
+@import "../../styles/variables.scss";
 
 #intro {
     position: relative;
     min-height: 600px;
     background-color: $mainGbColor;
 }
-.sotsLeft {
+.SotsLeft {
     position: absolute;
     left: 0px;
     z-index: 1;
 
 }
-.sotsRight {
+.SotsRight {
     position: absolute;
     right: 0px;
     z-index: 3;
 }
-.sotMouse {
+.SotMouse {
     transition: transform 0.5s;
     position: absolute;
     right: 577px;
@@ -64,7 +64,7 @@
     z-index: 4;
     filter: drop-shadow(0rem 0rem 0.75rem #854EFF);
 }
-.sotMouse:hover {
+.SotMouse:hover {
     transition: transform 0.5s;
     transform: scale(1.1);
     z-index: 5;
@@ -110,7 +110,7 @@
     color: #fff;
     padding-top: 180px;
 }
-.sotsPhone {
+.SotsPhone {
     display: none;
 }
 .containerIntro h2 {
@@ -125,7 +125,7 @@
     color: #fff;
     padding-top: 25px;
 }
-.sotsTablet {
+.SotsTablet {
     display: none;
 }
 .containerIntro a {
@@ -165,10 +165,10 @@
 }
 
 @media (max-width: 1400px) {
-    .sotsLeft {
+    .SotsLeft {
         display: none;
     }
-    .sotsRight {
+    .SotsRight {
         position: absolute;
         right: 0px;
         z-index: 3;
@@ -190,20 +190,20 @@
     }
 }
 @media (max-width: 768px) {
-    .sotsRight {
+    .SotsRight {
         display: none;
     }
     #intro {
         position: relative;
         min-height: 883px;
     }
-    .sotsTablet {
+    .SotsTablet {
         display: block;
         position: absolute;
         top: -58px;
         z-index: 1;
     }
-    .sotMouse {
+    .SotMouse {
         display: none;
     }
     .SotHeadphones {
@@ -246,10 +246,10 @@
     .containerIntro {
     padding: 0px 16px;
     }
-    .sotsTablet {
+    .SotsTablet {
         display: none;
     }
-    .sotsPhone {
+    .SotsPhone {
         display: block;
         position: absolute;
     }

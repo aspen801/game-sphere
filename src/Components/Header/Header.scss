@@ -1,4 +1,4 @@
-@import "../../style/variables.scss";
+@import "../../styles/variables.scss";
 .menu {
     display: none;
 }
@@ -48,7 +48,7 @@
     background-color: #3E3E45;
     color: #fff;
 }
-.searchButton {
+.search {
     position: absolute;
     right: 14px;
     bottom: 14px;

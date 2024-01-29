@@ -1,35 +1,27 @@
 import React from 'react'
 import "./Header.scss"
+import giveSvg from '../../layouts/SvgFunction'
 import logo from "../../resources/png/Logo.png"
 import LogoMobile from "../../resources/png/LogoMobile.png"
-import searchInputSvg from "../../resources/svg/Search.svg"
-import arrow from "../../resources/svg/arrow.svg"
-import arrowDropLng from "../../resources/svg/arrow-drop-lng.svg"
-import profile from "../../resources/svg/Profile.svg"
-import heart from "../../resources/svg/heart-line.svg"
-import balance from "../../resources/svg/sharp-balance.svg"
-import shoppingCart from "../../resources/svg/shopping-cart-line.svg"
-import menu from "../../resources/svg/menu.svg"
-import phone from "../../resources/svg/phone.svg"
 
 const Header = () => {
   return (
     <div id='header'>
         <div className='container'>
           <div className='nav'>
-            <img src={menu} alt='menu' className='menu'/>
+          {giveSvg("menu")}
             <a href='#'><img src={logo} className='logo' alt='logo'/></a>
             <a href='#'><img src={LogoMobile} className='logo-mobile' alt='logo'/></a>
           </div>
           <div className='searchPanel'>
             <input type='text' placeholder='Шукати' className='input'/>
-            <img src={searchInputSvg} alt='search' className='searchButton'/>
+            {giveSvg("search")}
           </div>
           <div className='contact'>
             <div>
               <div className='numberPanel'>
                 <p className='number'>0 800 25 00 32</p>
-                <img src={arrow} className='arrow' alt='arrow'/>
+                {giveSvg("arrow")}
               </div>
               <p>Пн-Нд: 09:00-21:30</p>
             </div>
@@ -38,16 +30,16 @@ const Header = () => {
            
               <div className='language'>
                 <p className='languageText'>Укр</p>
-                <img className='languageArrow' src={arrowDropLng} alt='arrow'/>
+                {giveSvg("arrowDropLng")}
               </div>
-              <img src={profile} className='profile' alt='profile'/>
-              <img src={phone} className='phone' alt='phone'/>
+                {giveSvg("profile")}
+                {giveSvg("phone")}
               <div className='likes'>
-                <img src={heart} alt='heart'/> 
+                {giveSvg("heart")}
                 <p>11</p> 
               </div>
-              <img src={balance} className='balance' alt='balance'/>
-              <img src={shoppingCart} alt='shoppingcart' className='shoppingCart'/>
+              {giveSvg("balance")}
+              {giveSvg("shoppingCart")}
           </div>
         </div>
     </div>
