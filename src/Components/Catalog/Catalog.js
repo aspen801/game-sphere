@@ -7,6 +7,9 @@ const Catalog = () => {
     <div id="catalog">
         <div className='containerNav'>
             <ul className='Navigation'>
+            {catalog.map((item,i) => {
+              i === 6 ? <li className='navItem'><a href='#' style={{color: "#6941C6"}}>{item}</a></li> : <li className='navItem'><a href='#'>{item}</a></li>
+            })}
                 <li className='navItem'><a href='#'>ПК та комплектуючі</a></li>
                 <li className='navItem'><a href='#'>Консолі та аксесуари</a></li>
                 <li className='navItem'><a href='#'>Ноутбуки</a></li>

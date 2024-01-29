@@ -3,12 +3,12 @@ import Header from '../Header/Header';
 import Intro from '../Intro/Intro';
 import { SlideTopSell } from '../SlideTopSell/SlideTopSell';
 // import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.scss';
+import './MainPage.scss';
 
-const App = () => {
+const MainPage = () => {
 
   return (
-    <div className='App'>
+    <div className='MainPage'>
       <Header/>
       <Catalog/>
       <Intro/>
@@ -17,4 +17,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default MainPage;
