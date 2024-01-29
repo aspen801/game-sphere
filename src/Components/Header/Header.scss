@@ -6,6 +6,11 @@
     display: none;
     cursor: pointer;
 }
+.logo-mobile {
+    display: none;
+    width: 94px;
+    height: 42px;
+}
 .nav {
     display: flex;
 }
@@ -90,6 +95,9 @@
 .balance {
     cursor: pointer;
     display: block;
+}
+.languageArrow {
+    cursor: pointer;
 }
 .shoppingCart {
     cursor: pointer;
@@ -180,8 +188,15 @@
 }
 @media (max-width: 505px) {
     .logo {
-        margin: 0;
+        display: none;
+    }
+    .logo-mobile {
+        display: block;
         margin-left: 8px;
+    }
+    #header {
+        min-height: 42px;
+        padding-top: 0px; 
     }
     .menu {
         margin: 0;

@@ -19,45 +19,50 @@
 .sotMouse {
     transition: transform 0.5s;
     position: absolute;
-    right: 527px;
-    top: 0px;
+    right: 577px;
+    top: 4px;
     z-index: 4;
- 
+    filter: drop-shadow(0rem 0rem 0.75rem #854EFF);
 }
 .SotHeadphones {
     transition: transform 0.5s;
     position: absolute;
-    right: 269px;
-    top: 0px;
+    right: 319px;
+    top: 4px;
     z-index: 4;
+    filter: drop-shadow(0rem 0rem 0.75rem #854EFF);
 }
 .SotLaptop {
     transition: transform 0.5s;
     position: absolute;
-    right: 398px;
-    top: 176px;
+    right: 450px;
+    top: 229px;
     z-index: 4;
+    filter: drop-shadow(0rem 0rem 0.75rem #854EFF);
 }
 .SotDisplay {
     transition: transform 0.5s;
     position: absolute;
-    right: 10px;
-    top: 0px;
+    right: 63px;
+    top: 4px;
     z-index: 4;
+    filter: drop-shadow(0rem 0rem 0.75rem #854EFF);
 }
 .SotKeyBoard {
     transition: transform 0.5s;
     position: absolute;
     right: 0px;
-    top: 176px;
+    top: 229px;
     z-index: 4;
+    filter: drop-shadow(0rem 0rem 0.75rem #854EFF);
 }
 .SotArmchair {
     transition: transform 0.5s;
     position: absolute;
-    right: 139px;
-    top: 176px;
+    right: 192px;
+    top: 229px;
     z-index: 4;
+    filter: drop-shadow(0rem 0rem 0.75rem #854EFF);
 }
 .sotMouse:hover {
     transition: transform 0.5s;
@@ -98,12 +103,15 @@
     display: block;
     position: relative;
     font-family: $kharkiv;
-    font-size: 72px;
+    font-size: 4.5rem;
     line-height: 80%;
     z-index: 11;
     margin: 0;
     color: #fff;
     padding-top: 180px;
+}
+.sotsPhone {
+    display: none;
 }
 .containerIntro h2 {
     max-width: 660px;
@@ -117,9 +125,15 @@
     color: #fff;
     padding-top: 25px;
 }
+.sotsTablet {
+    display: none;
+}
 .containerIntro a {
+    display: block;
     position: relative;
     margin: 0;
+    max-width: 224px;
+    text-align: center;
     z-index: 11;
     color: #fff;
     border: 1px solid;
@@ -148,4 +162,121 @@
     color: #fff;
     line-height: 140%;
     margin-bottom: 72px;
+}
+
+@media (max-width: 1400px) {
+    .sotsLeft {
+        display: none;
+    }
+    .sotsRight {
+        position: absolute;
+        right: 0px;
+        z-index: 3;
+    }
+    .containerIntro {
+        padding-left: 40px;
+    }
+    .containerIntro h1 {
+        max-width: 360px;
+        font-size: 3rem;
+    }
+    .containerIntro h2 {
+        max-width: 460px;
+        font-size: 3rem;
+    }
+    .containerIntro p {
+        font-size: 1.125rem;
+        line-height: 140%;
+    }
+}
+@media (max-width: 768px) {
+    .sotsRight {
+        display: none;
+    }
+    #intro {
+        position: relative;
+        min-height: 883px;
+    }
+    .sotsTablet {
+        display: block;
+        position: absolute;
+        top: -58px;
+        z-index: 1;
+    }
+    .sotMouse {
+        display: none;
+    }
+    .SotHeadphones {
+        display: none;
+    }
+    .SotLaptop {
+        display: none;
+    }
+    .SotDisplay {
+        display: none;
+    }
+    .SotKeyBoard {
+        display: none;
+    }
+    .SotArmchair {
+        display: none;
+    }
+    .containerIntro h1 {
+        padding-top: 453px;
+        font-size: 3rem;
+        line-height: 100%;
+    }
+    .containerIntro h2 {
+        font-size: 3rem;
+        line-height: 100%;
+    }
+    .containerIntro p {
+        font-size: 1.125rem;
+        line-height: 140%;
+    }
+    .containerIntro a {
+        font-size: 1rem;
+        line-height: 140%;
+    }
+    .containerIntro {
+        padding-left: 40px;
+    }
+}
+@media (max-width: 375px) {
+    .containerIntro {
+    padding: 0px 16px;
+    }
+    .sotsTablet {
+        display: none;
+    }
+    .sotsPhone {
+        display: block;
+        position: absolute;
+    }
+    #intro {
+        position: relative;
+        min-height: 594px;
+    }
+    .containerIntro h1 {
+        padding-top: 304px;
+        font-size: 2.25rem;
+        line-height: 110%;
+    }
+    .containerIntro h2 {
+        font-size: 2.25rem;
+        line-height: 110%;
+    }
+    .containerIntro p {
+        font-size: 1.125rem;
+        line-height: 140%;
+        margin-bottom: 40px;
+    }
+    .containerIntro a {
+        box-sizing: border-box;
+        font-size: 1rem;
+        line-height: 140%;
+        padding: 16px 32px;
+        max-width: 343px;
+        margin: 0 auto;
+    }
 }

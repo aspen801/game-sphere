@@ -1,6 +1,8 @@
 @import "../../style/variables.scss";
 #catalog {
     background-color: #2A2A2F;
+    position: relative;
+    z-index: 50;
 }
 .searchPanelNav {
     display: none;
@@ -63,6 +65,9 @@
 @media (max-width: 505px) {
     .searchPanelNav {
         margin: 0px 16px;
+    }
+    #catalog {
+        background-color: $mainGbColor;
     }
 }
 

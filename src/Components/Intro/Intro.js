@@ -2,7 +2,9 @@ import React from 'react'
 import "./Intro.scss"
 import sotsLeft from "../../resources/png/SotsLeft.png"
 import sotsRight from "../../resources/png/SotsRight.png"
-import sotsMouse from '../../resources/png/SotMouse.png'
+import sotsTablet from "../../resources/png/SotsTablet.png"
+import sotsPhone from "../../resources/png/SotsPhone.png"
+import sotMouse from '../../resources/png/SotMouse.png'
 import SotHeadphones from '../../resources/png/SotHeadphones.png'
 import SotDisplay from '../../resources/png/SotDisplay.png'
 import SotKeyBoard from '../../resources/png/SotKeyBoard.png'
@@ -13,7 +15,9 @@ const Intro = () => {
     <div id='intro'>
         <img src={sotsLeft} className='sotsLeft' alt='sotsLeft'/>
         <img src={sotsRight} className='sotsRight' alt='sotsRight'/>
-        <img src={sotsMouse} className='sotMouse' alt='sotMouse'/>
+        <img src={sotsTablet} className='sotsTablet' alt='sotsTablet'/>
+        <img src={sotsPhone} className='sotsPhone' alt='sotsPhone'/>
+        <img src={sotMouse} className='sotMouse' alt='sotMouse'/>
         <img src={SotHeadphones} className='SotHeadphones' alt='SotHeadphones'/>
         <img src={SotDisplay} className='SotDisplay' alt='SotDisplay'/>
         <img src={SotKeyBoard} className='SotKeyBoard' alt='SotKeyBoard'/>
