@@ -1,7 +1,7 @@
-import Catalog from '../../components/Catalog/Catalog';
-import Header from '../../components/Header/Header';
-import Intro from '../../components/Intro/Intro';
-import { SlideTopSell } from '../../components/SlideTopSell/SlideTopSell';
+import Catalog from '../../Components/Catalog/Catalog.js';
+import Header from '../../Components/Header/Header.js';
+import Intro from '../../Components/Intro/Intro.js';
+import SlideTopSell from '../../Components/SlideTopSell/SlideTopSell.js';
 // import 'bootstrap/dist/css/bootstrap.min.css'
 import './MainPage.scss';
 
