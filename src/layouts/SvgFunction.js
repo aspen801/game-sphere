@@ -7,11 +7,17 @@ import balance from "../resources/svg/balance.svg"
 import shoppingCart from "../resources/svg/shoppingCart.svg"
 import menu from "../resources/svg/menu.svg"
 import phone from "../resources/svg/phone.svg"
+import logoSvg from "../resources/svg/Logo.svg"
+import LogoMobileSvg from "../resources/svg/LogoMobile.svg"
 
 const giveSvg = (name) => {
     switch(name){
         case "arrow":
             return <img src={arrow} alt={name} className={name} />
+        case "logoSvg":
+            return <img src={logoSvg} alt={name} className="logo" />
+        case "LogoMobileSvg":
+            return <img src={LogoMobileSvg} alt={name} className="logo-mobile" />
         case "search":
             return <img src={search} alt={name} className={name} />
         case "arrowDropLng":

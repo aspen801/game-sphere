@@ -1,8 +1,6 @@
 import React from 'react'
 import "./Header.scss"
 import giveSvg from '../../layouts/SvgFunction'
-import logo from "../../resources/png/Logo.png"
-import LogoMobile from "../../resources/png/LogoMobile.png"
 
 const Header = () => {
   return (
@@ -10,8 +8,8 @@ const Header = () => {
         <div className='container'>
           <div className='nav'>
           {giveSvg("menu")}
-            <a href='#'><img src={logo} className='logo' alt='logo'/></a>
-            <a href='#'><img src={LogoMobile} className='logo-mobile' alt='logo'/></a>
+            <a href='#'>{giveSvg("logoSvg")}</a>
+            <a href='#'>{giveSvg("LogoMobileSvg")}</a>
           </div>
           <div className='searchPanel'>
             <input type='text' placeholder='Шукати' className='input'/>

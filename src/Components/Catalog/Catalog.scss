@@ -49,6 +49,17 @@
 .navItem a:hover {
     color: #6941C6;
 }
+
+.menuPc.active {
+    display: block;
+}
+.menuPc {
+    display: none;
+}
+
+.dropDownMenu0.active0 {
+    display: block;
+}
 @media (max-width: 820px) {
     
     .Navigation {
