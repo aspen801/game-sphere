@@ -8,7 +8,7 @@ const Catalog = () => {
         <div className='containerNav'>
             <ul className='Navigation'>
             {catalog.map((item,i) => {
-              return i === 6 ? <li className='navItem'><a href='#' style={{color: "#6941C6"}}>{item}</a></li> : <li className='navItem'><a href='#'>{item}</a></li>
+              return i === 5 ? <li className='navItem'><a href='#' style={{color: "#6941C6"}}>{item}</a></li> : <li className='navItem'><a href='#'>{item}</a></li>
             })}
             </ul>
             <div className='searchPanelNav'>
