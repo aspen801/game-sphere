@@ -11,10 +11,12 @@ $colorDiscount: #F79009;
 @font-face {
     font-family: 'fixelTextMedium500';
     src: url('./fonts/FixelText-Medium.woff2');
+    font-weight: Medium;
 }
 @font-face {
     font-family: 'fixelTextRegular400';
     src: url('./fonts/FixelText-Regular.woff2');
+    font-weight: Normal;
 }
 @font-face {
     font-family: 'galaxy';

@@ -1,15 +1,14 @@
 import React from 'react'
 import "./Card.scss"
-import { Rating } from "@material-tailwind/react";
 import laptop from "../../resources/png/laptop.png"
 import shoppingCart from "../../resources/svg/shoppingCart.svg"
 import { CustomRatingIcon } from '../RatedFunction';
 const Card = () => {
   return (
     <div className='сard'>    
-        <img src={laptop} className='mainImg'/>
+        <img src={laptop} alt='laptop' className='mainImg'/>
         <p className='codeText'>Код: 1447</p>
-        <p className='mainText'>Ноутбук ASUS 16" ROG STRIX G16 G614JV-AS73/Intel I7-13650HX/16Gb/512SSD/GF 4060-8/W11H/Grey (G614JV-AS73)</p>
+        <p className='mainText'>Ноутбук ASUS 16" ROG STRIX G16 G614JV-AS73/Intel I7-13650HX/16Gb/512SSD/GF 406</p>
         <div className='rating'>
             {CustomRatingIcon()}
             <p>5 відгуків</p>

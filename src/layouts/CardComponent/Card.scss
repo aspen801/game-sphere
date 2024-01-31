@@ -2,8 +2,8 @@
 
 .сard {
     box-sizing: border-box;
-    max-height: 677px;
-    max-width: 396px;
+    max-height: 636px;
+    max-width: 292px;
     background: $secondColor;
     border-radius: 4px;
     padding: 0 10px;
@@ -13,7 +13,7 @@
 .rating {
     display: flex;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 20px;
 
 }
 .rating p {
@@ -42,12 +42,14 @@
     margin-top: 4px;
 }
 .mainImg {
-    display: block;
     width: 100%;
-    margin-top: 30px;
+    max-width: 260px;
+    max-height: 187px;
+    display: block;
+    margin-top: 40px;
 }
 .description {
-    margin-top: 22px;
+    margin-top: 16px;
 }
 .description p {
     margin: 0;
@@ -75,7 +77,7 @@
 .price {
     margin: 0;
     margin-top: 4px;
-    font-size: 36px;
+    font-size: 32px;
     font-family: $mainFont500;
     color: $colorSellFont;
 }

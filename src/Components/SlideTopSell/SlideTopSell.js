@@ -6,8 +6,9 @@ import arrowright from "../../resources/svg/ArrowRight.svg"
 import Card from '../../layouts/CardComponent/Card';
 const SlideTopSell = () => {
   const breakPoints = [
-    {width: 820, itemsToShow: 2, pagination: true, itemPadding: [0, 10]},
-    {width: 1220, itemsToShow: 3},
+    {width: 510, itemsToShow: 2, pagination: true},
+    {width: 820, itemsToShow: 3, pagination: true, itemPadding: [0, 10]},
+    {width: 1220, itemsToShow: 4},
   ]
   const myArrow = ({ type, onClick, isEdge }) => {
     const pointer = type === consts.PREV ? <img src={arrowleft} alt='arrowLeft'/> : <img src={arrowright} alt='arrowRight' />
@@ -22,7 +23,7 @@ const SlideTopSell = () => {
     <div id='slideTopSell'>
       <div className='containerSlide'>
         <p className='sellText'>Топ продажів</p>
-        <Carousel itemsToShow={3} breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
+        <Carousel itemsToShow={4} breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
           <Card/>
           <Card/>
           <Card/>

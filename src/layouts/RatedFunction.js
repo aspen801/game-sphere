@@ -35,6 +35,7 @@ function UnratedIcon() {
 export function CustomRatingIcon() {
     return (
       <Rating
+        value={4}
         ratedColor="red"
         ratedIcon={<RatedIcon />}
         unratedIcon={<UnratedIcon />}

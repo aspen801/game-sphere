@@ -3,7 +3,7 @@ import "./Catalog.scss"
 import searchInputSvg from "../../resources/svg/Search.svg"
 import { useDispatch, useSelector } from 'react-redux'
 import { actions } from './index.slice'
-import { DropDownComponent } from './DropDownComponent'
+import { DropDownComponent } from '../DropDownMenu/DropDownComponent'
 const Catalog = () => {
   const dispatch = useDispatch()
   const catalog = ["ПК та комплектуючі","Консолі та аксесуари","Ноутбуки","Переферія","Аксесуари","Акції","Покупцеві"]
