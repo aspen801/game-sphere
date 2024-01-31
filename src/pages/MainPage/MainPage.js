@@ -1,3 +1,4 @@
+import { Advantages } from '../../Components/Advantages/Advantages.js';
 import Catalog from '../../Components/Catalog/Catalog.js';
 import Header from '../../Components/Header/Header.js';
 import Intro from '../../Components/Intro/Intro.js';
@@ -13,6 +14,7 @@ const MainPage = () => {
       <Catalog/>
       <Intro/>
       <SlideTopSell/>
+      <Advantages/>
     </div>
   );
 }

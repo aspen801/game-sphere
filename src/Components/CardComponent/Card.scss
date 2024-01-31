@@ -6,8 +6,9 @@
     max-width: 292px;
     background: $secondColor;
     border-radius: 4px;
-    padding: 0 10px;
-    padding-bottom: 10px;
+    padding: 0 16px;
+    padding-bottom: 16px;
+    position: relative;
 }
 
 .rating {
@@ -47,6 +48,11 @@
     max-height: 187px;
     display: block;
     margin-top: 40px;
+    transition: all 1s;
+}
+.mainImg:hover {
+    transform: scale(1.1);
+    transition: all 1s;
 }
 .description {
     margin-top: 16px;
@@ -57,6 +63,10 @@
     font-family: $mainFont400;
     color: #F2F4F7;
     line-height: 140%;
+    white-space: nowrap;
+}
+.description d {
+    color: #98A2B3;
 }
 .discount {
     display: flex;
@@ -72,7 +82,7 @@
 }
 .discount strike {
     color: #C8CDD6;
-    margin-right: 8px;
+    margin-right: 2px;
 }
 .price {
     margin: 0;
@@ -100,10 +110,39 @@
 .buy {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
+}
+.cardLikes {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    z-index: 50;
+}
+.cardBalance {
+    display: block;
+    position: absolute;
+    top: 56px;
+    right: 16px;
+    cursor: pointer;
+    z-index: 50;
 }
 
 @media (max-width:375px) {
+    .сard {
+        padding: 0 10px;
+        padding-bottom: 10px;
+    }
+    .cardLikes {
+        top: 10px;
+        right: 10px;
+    }
+    .cardBalance {
+        top: 42px;
+        right: 10px;
+    }
+    
     .mainImg {
         display: block;
         width: 100%;
@@ -115,10 +154,12 @@
         max-width: 60px;
     }
     .mainText {
+        display: inline-block;
         font-size: 12px;
         margin-top: 0px;
         overflow: auto;
         max-width: 144px;
+        overflow: hidden;
     }
     .description p {
         max-width: 150px;
@@ -140,13 +181,17 @@
     }
     .discount p {
         font-size: 10px;
-        line-height: 140%;  
+        line-height: 140%; 
     }
     .price {
         font-size: 18px;
+        margin-top: 0px;
     }
     .sellBtn {
         padding: 8px 16px;
+    }
+    .buy {
+        align-items: end;
     }
     .card {
         padding: 0 10px;

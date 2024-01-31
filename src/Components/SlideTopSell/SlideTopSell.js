@@ -3,11 +3,11 @@ import "./SlideTopSell.scss"
 import Carousel, {consts} from "@itseasy21/react-elastic-carousel";
 import arrowleft from "../../resources/svg/ArrowLeft.svg"
 import arrowright from "../../resources/svg/ArrowRight.svg"
-import Card from '../../layouts/CardComponent/Card';
+import Card from '../CardComponent/Card';
 const SlideTopSell = () => {
   const breakPoints = [
     {width: 510, itemsToShow: 2, pagination: true},
-    {width: 820, itemsToShow: 3, pagination: true, itemPadding: [0, 10]},
+    {width: 820, itemsToShow: 3, pagination: true},
     {width: 1220, itemsToShow: 4},
   ]
   const myArrow = ({ type, onClick, isEdge }) => {

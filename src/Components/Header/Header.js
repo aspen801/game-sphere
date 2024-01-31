@@ -1,15 +1,24 @@
 import React from 'react'
 import "./Header.scss"
 import giveSvg from '../../layouts/SvgFunction'
+import { useDispatch } from 'react-redux'
+import { actions } from '../Catalog/index.slice'
 
 const Header = () => {
+  const dispatch = useDispatch()
   return (
     <div id='header'>
         <div className='container'>
           <div className='nav'>
           {giveSvg("menu")}
-            <a href='#'>{giveSvg("logoSvg")}</a>
-            <a href='#'>{giveSvg("LogoMobileSvg")}</a>
+            <a href='#' onClick={() => {
+                dispatch(actions.closeMenu(7))
+                document.body.classList.remove('active');
+            }}>{giveSvg("logoSvg")}</a>
+            <a href='#' onClick={() => {
+                dispatch(actions.closeMenu(7))
+                document.body.classList.remove('active');
+            }}>{giveSvg("LogoMobileSvg")}</a>
           </div>
           <div className='searchPanel'>
             <input type='text' placeholder='Шукати' className='input'/>

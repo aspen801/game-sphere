@@ -13,13 +13,19 @@ const Catalog = () => {
             <ul className='Navigation'>
             {catalog.map((item,i) => {
               return i === 5 ? <li 
-                onClick={() => dispatch(actions.setIndex(i))} 
+                onClick={() => {
+                  dispatch(actions.setIndex(i))
+                  document.body.classList.add('active');  
+                }} 
                 className="navItem"><a 
                 href='#' 
                 style={{color: "#F79009"}}
               >{item}</a>
               </li> : <li 
-                onClick={() => dispatch(actions.setIndex(i))} 
+                onClick={() => {
+                  dispatch(actions.setIndex(i))
+                  document.body.classList.add('active');
+                }} 
                 className="navItem">
                 <a href='#'>{item}</a>
               </li>

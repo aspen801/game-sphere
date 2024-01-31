@@ -5,7 +5,7 @@
 
 #slideTopSell {
     background: $mainGbColor;
-    min-height: 1115px;
+    min-height: 1057px;
 }
 .containerSlide {
     max-width: 1408px;
@@ -33,6 +33,11 @@
 .flex {
     display: flex;
 }
+button.rec-dot_active:hover, button.rec-dot:active, button.rec-dot:focus {
+    transition: none;
+    background-color: none;
+    box-shadow: none;
+}
 .rec-pagination {
     width: 90%;
     display: flex;
@@ -54,13 +59,9 @@ button.rec-dot_active  {
     transition: all 1s ease-in-out;
     background-color: #835AE0;
 }
-button.rec-dot_active:hover, button.rec-dot:active, button.rec-dot:focus {
-    transition: none;
-    background-color: none;
-    box-shadow: none;
-}
+
 .rec-swipable {
-    gap: 16px
+    gap: 8px
 }
 @media (max-width: 1360px) {
     .slideButtons {
@@ -84,5 +85,9 @@ button.rec-dot_active:hover, button.rec-dot:active, button.rec-dot:focus {
         box-shadow: none;
         transition: all 1s ease-in-out;
         height: 4px;
+    }
+    button.rec-dot_active  {
+        transition: all 1s ease-in-out;
+        background-color: #835AE0;
     }
 }
