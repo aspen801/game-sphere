@@ -5,7 +5,6 @@ import Intro from '../../Components/Intro/Intro.js';
 import SlideTopSell from '../../Components/SlideTopSell/SlideTopSell.js';
 // import 'bootstrap/dist/css/bootstrap.min.css'
 import './MainPage.scss';
-
 const MainPage = () => {
 
   return (

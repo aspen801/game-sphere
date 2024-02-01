@@ -34,7 +34,6 @@ const Header = () => {
             </div>
           </div>
           <div className='catalog'>
-           
               <div className='language'>
                 <p className='languageText'>Укр</p>
                 {giveSvg("arrowDropLng")}

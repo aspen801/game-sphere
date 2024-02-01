@@ -1,7 +1,7 @@
 @import "../../styles/variables.scss";
 
 
-.backgroundClick {
+.backgroundClick.active {
     position: absolute;
     z-index: 1;
     top: 50px;
@@ -10,6 +10,34 @@
     height: 4500px;
     background: black;
     opacity: 50%;
+}
+.backgroundClick {
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    right: 0px;
+    width: 0%;
+    height: 0px;
+    background: black;
+    opacity: 100%;
+}
+.catalogPc.active {
+    color: #F9FAFB;
+    background: #2A2A2F;
+    width: 100%;
+    height: 430px;
+    max-width: 1920px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    transition: all 0.7s;
+    transform: translateY(20px);
+    visibility: visible;
+    opacity: 100%;
+    
 }
 .catalogPc {
     color: #F9FAFB;
@@ -22,7 +50,12 @@
     margin: 0 auto;
     position: absolute;
     width: 100%;
-    z-index: 55;
+    z-index: 51;
+    transform: translateY(0px);
+    visibility: hidden;
+    opacity: 0%;
+    transition: all 0.2s;
+    z-index: 20;
     
 }
 .containerModal {
