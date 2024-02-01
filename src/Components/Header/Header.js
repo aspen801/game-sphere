@@ -1,24 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Header.scss"
 import giveSvg from '../../layouts/SvgFunction'
-import { useDispatch } from 'react-redux'
-import { actions } from '../Catalog/index.slice'
+
 
 const Header = () => {
-  const dispatch = useDispatch()
+  const [openLng, setOpenLng] = useState(false)
+  const [activeLng,setActiveLng] = useState("Укр")
+  const [passiveLng,setPassiveLng] = useState("Eng")
   return (
     <div id='header'>
         <div className='container'>
           <div className='nav'>
           {giveSvg("menu")}
-            <a href='#' onClick={() => {
-                dispatch(actions.closeMenu(7))
-                document.body.classList.remove('active');
-            }}>{giveSvg("logoSvg")}</a>
-            <a href='#' onClick={() => {
-                dispatch(actions.closeMenu(7))
-                document.body.classList.remove('active');
-            }}>{giveSvg("LogoMobileSvg")}</a>
+            <a href='#'>{giveSvg("logoSvg")}</a>
+            <a href='#'>{giveSvg("LogoMobileSvg")}</a>
           </div>
           <div className='searchPanel'>
             <input type='text' placeholder='Шукати' className='input'/>
@@ -34,9 +29,13 @@ const Header = () => {
             </div>
           </div>
           <div className='catalog'>
-              <div className='language'>
-                <p className='languageText'>Укр</p>
-                {giveSvg("arrowDropLng")}
+              <div className='language' onClick={() => setOpenLng(!openLng)}>
+                <p className='languageText' >{activeLng}</p>
+                <p onClick={() =>{
+                  setPassiveLng(activeLng)
+                  setActiveLng(passiveLng)
+                }} className={openLng ? "languageSwitch active" : "languageSwitch"}>{passiveLng}</p>
+                {openLng ? giveSvg("arrowUpLng") : giveSvg("arrowDropLng")}
               </div>
                 {giveSvg("profile")}
                 {giveSvg("phone")}

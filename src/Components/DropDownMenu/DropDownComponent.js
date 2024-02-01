@@ -4,7 +4,7 @@ import { useClickOutside } from '../../hooks/useClickOutSide'
 
 
 
-export const DropDown = ({info}) => {
+export const DropDown = ({info, index}) => {
     const [open, setOpen] = useState(false)
     const {firstList, secondList, catalog,img, arrowCatalog} = info
     const menuRef = useRef()
@@ -15,12 +15,14 @@ export const DropDown = ({info}) => {
  
     return(
         <>
-        <div ref={menuRef}>
-            <li className="navItem" onClick={() => setOpen(!open)}><a href='#'>{catalog}</a></li>
-            </div>
+        <div>
+            <li className="navItem" onClick={() => setOpen(!open)}>
+                <a href='#' style={index === 5 ? {color: "#F79009"} : null}>{catalog}</a>
+            </li>
+        </div>
             <div>
                 <div className={open ? "catalogPc active": "catalogPc"}>
-                    <div className='containerModal'>
+                    <div className='containerModal' ref={menuRef}>
                         <div className="modalList">
                             <ul style={(firstList.length) ? {display: "block"} : {display: "none"}}>
                                 {

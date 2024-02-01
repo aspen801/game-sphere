@@ -74,8 +74,14 @@ button.rec-dot_active  {
         font-size: 24px;
         line-height: 110%;
     }
+    #slideTopSell {
+        min-height: 716px;
+    }
 }
 @media (max-width: 839px) {
+    #slideTopSell {
+        min-height: 800px;
+    }
     button.rec-dot{
         margin: 0;
         background-color: #F2F4F7;

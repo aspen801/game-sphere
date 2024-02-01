@@ -67,12 +67,11 @@ const modalInfo = [
   },
 ]
 const Catalog = () => {
-  const [indexMenu,setIndexMenu] = useState(1)
   return (
     <nav id="catalog">
         <div className='containerNav'>
             <ul className='Navigation'>
-            {modalInfo.map((item, i) => <DropDown setIndexMenu={setIndexMenu} indexMenu={indexMenu} key={i} info={item} index={i}/>)}
+            {modalInfo.map((item, i) => <DropDown key={i} info={item} index={i}/>)}
             </ul>
             <div className='searchPanelNav'>
                 <input type='text' placeholder='Шукати' className='inputNav'/>

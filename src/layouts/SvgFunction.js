@@ -9,6 +9,7 @@ import menu from "../resources/svg/menu.svg"
 import phone from "../resources/svg/phone.svg"
 import logoSvg from "../resources/svg/Logo.svg"
 import LogoMobileSvg from "../resources/svg/LogoMobile.svg"
+import arrowUpLng from "../resources/svg/arrowUpLng.svg"
 
 const giveSvg = (name) => {
     switch(name){
@@ -22,6 +23,8 @@ const giveSvg = (name) => {
             return <img src={search} alt={name} className={name} />
         case "arrowDropLng":
             return <img src={arrowDropLng} alt={name} className={name} />
+        case "arrowUpLng":
+            return <img src={arrowUpLng} alt={name} className={name} />
         case "profile":
             return <img src={profile} alt={name} className={name} />
         case "heart":
