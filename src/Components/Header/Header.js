@@ -1,17 +1,25 @@
-import React, { useState } from 'react'
-import "./Header.scss"
+import React, { useState, useRef } from 'react'
+import  "./Header.scss"
 import giveSvg from '../../layouts/SvgFunction'
+import { useClickOutside } from '../../hooks/useClickOutSide'
+import { BurgerMenu } from '../BurgerMenu/BurgerMenu'
 
 
-const Header = () => {
+const Header = ({modalInfo}) => {
   const [openLng, setOpenLng] = useState(false)
   const [activeLng,setActiveLng] = useState("Укр")
   const [passiveLng,setPassiveLng] = useState("Eng")
+  const [openBurger, setOpenBurger] = useState(false)
+  const burgerRef = useRef()
+    useClickOutside(burgerRef, () => {
+      setOpenBurger(false);
+    })
+    openBurger ? document.body.classList.add("active") : document.body.classList.remove("active")
   return (
     <div id='header'>
         <div className='container'>
           <div className='nav'>
-          {giveSvg("menu")}
+            <a href='#' onClick={() => setOpenBurger(!openBurger)}>{giveSvg("menu")}</a>
             <a href='#'>{giveSvg("logoSvg")}</a>
             <a href='#'>{giveSvg("LogoMobileSvg")}</a>
           </div>
@@ -46,6 +54,11 @@ const Header = () => {
               {giveSvg("balance")}
               {giveSvg("shoppingCart")}
           </div>
+        </div>
+        <div ref={burgerRef} className={openBurger ? "burgerMenu active" : "burgerMenu"}>
+           <BurgerMenu modalInfo={modalInfo} openBurger={openBurger} setOpenBurger={setOpenBurger}/>
+        </div>
+        <div className={openBurger ? "backGround active": "backGround"}>
         </div>
     </div>
   )
