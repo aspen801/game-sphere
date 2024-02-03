@@ -3,7 +3,7 @@
 .advantages {
     background: $mainGbColor;
 }
-.advantagesContainer {
+.advantages_container {
     width: 100%;
     max-width: 1228px;
     display: grid;
@@ -11,19 +11,19 @@
     margin: 0 auto;
     align-items: center;
 }
-.advantagesContainer p {
+.advantages_container p {
     color: #F2F4F7;
     font-size: 24px;
     line-height: 110%;
     text-align: center;
     font-family: $kharkiv;
 }
-.advantagesContainer img {
+.advantages_container img {
     display: block;
     margin: 0 auto;
 }
 @media (max-width: 768px) {
-    .advantagesContainer {
+    .advantages_container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin: 0 auto;
@@ -31,7 +31,7 @@
     }
 }
 @media (max-width: 400px) {
-    .advantagesContainer p {
+    .advantages_container p {
         font-size: 16px;
         line-height: 110%;
     }

@@ -18,7 +18,7 @@ const giveSvg = (name) => {
         case "logoSvg":
             return <img src={logoSvg} alt={name} className="logo" />
         case "LogoMobileSvg":
-            return <img src={LogoMobileSvg} alt={name} className="logo-mobile" />
+            return <img src={LogoMobileSvg} alt={name} className="logo_mobile" />
         case "search":
             return <img src={search} alt={name} className={name} />
         case "arrowDropLng":

@@ -3,15 +3,15 @@
 
 
 
-#slideTopSell {
+#slide_topSell {
     background: $mainGbColor;
     min-height: 1057px;
 }
-.containerSlide {
+.container_slide {
     max-width: 1408px;
     margin: 0 auto;
 }
-.sellText {
+.sell_text {
     margin: 0px;
     padding: 0px;
     padding-top: 160px;
@@ -25,7 +25,7 @@
 .rec-arrow {
     display: none;
 }
-.slideButtons {
+.slide_buttons {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -64,7 +64,7 @@ button.rec-dot_active  {
     gap: 8px
 }
 @media (max-width: 839px) {
-    #slideTopSell {
+    #slide_topSell {
         min-height: 1000px;
     }
     button.rec-dot{
@@ -84,17 +84,17 @@ button.rec-dot_active  {
 }
 
 @media (max-width: 1360px) {
-    .slideButtons {
+    .slide_buttons {
         display: none;
     }
 }
 @media (max-width: 375px) {
-    .sellText {
+    .sell_text {
         margin-left: 16px;
         font-size: 24px;
         line-height: 110%;
     }
-    #slideTopSell {
+    #slide_topSell {
         min-height: 816px;
     }
 }

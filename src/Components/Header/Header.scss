@@ -6,7 +6,7 @@
     display: none;
     cursor: pointer;
 }
-.logo-mobile {
+.logo_mobile {
     display: none;
     width: 94px;
     height: 42px;
@@ -31,7 +31,7 @@
     max-width: 141px;
     
 }
-.searchPanel {
+.search_panel {
     width: 500px;
     position: relative;
     display: flex;
@@ -60,15 +60,15 @@
     align-items: end;
     margin-left: min(100px,10%);
 }
-.numberPanel {
+.number_panel {
     display: flex;
 }
-.numberPanel .arrow {
+.number_panel .arrow {
     margin-left: 5px;
     cursor: pointer;
     padding-bottom: 3px;
 }
-.numberPanel .number {
+.number_panel .number {
     font-family: $mainFont500;
     font-size: 16px;
     color: #fff;
@@ -97,10 +97,10 @@
     cursor: pointer;
     display: block;
 }
-.languageArrow {
+.language_arrow {
     cursor: pointer;
 }
-.shoppingCart {
+.shopping_cart {
     cursor: pointer;
     display: block;
 }
@@ -110,20 +110,20 @@
     cursor: pointer;
     position: relative;
 }
-.languageSwitch {
+.language_switch {
     position: absolute;
     top: 25px;
     transform: translateY(-5px);
     visibility: hidden;
     opacity: 0%;
 }
-.languageSwitch.active {
+.language_switch.active {
     transform:translateY(0px);
     transition: all 0.5s;
     visibility: visible;
     opacity: 100%;
 }
-.languageSwitch.active:hover {
+.language_switch.active:hover {
     transition: none;
     color: $colorSellFont;
 }
@@ -157,7 +157,7 @@
     right: -2px;
     top: -5px;
 }
-.backGround {
+.background {
     transition: all 0.5s;
     position: absolute;
     top: 0px;
@@ -169,19 +169,19 @@
     opacity: 0%;
     background:$mainGbColor;
 }
-.backGround.active {
+.background.active {
     transition: all 0.5s;
     z-index: 56;
     visibility: visible;
     opacity: 0.7;
 }
-.burgerMenu {
+.burger_menu {
     transition: all 0.5s;
     transform: translateX(-20px);
     visibility: hidden;
     opacity: 0%;
 }
-.burgerMenu.active {
+.burger_menu.active {
     transition: all 0.5s;
     position: absolute;
     top: 0px;
@@ -203,7 +203,7 @@
     .catalog {
         margin-left: 20px;
     }
-    .searchPanel {
+    .search_panel {
        width: 300px;
        margin-left: 20px;
     }
@@ -226,7 +226,7 @@
     .catalog {
         margin-left: 20px;
     }
-    .searchPanel {
+    .search_panel {
        display: none;
     }
     .container {
@@ -249,7 +249,7 @@
     .logo {
         display: none;
     }
-    .logo-mobile {
+    .logo_mobile {
         display: block;
         margin-left: 8px;
     }
@@ -282,7 +282,7 @@
     } 
 }
 @media (max-width: 465px) {
-    .burgerMenu.active {
+    .burger_m   enu.active {
         max-width: 325px;
     }
 }

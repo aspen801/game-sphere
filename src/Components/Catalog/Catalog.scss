@@ -4,12 +4,12 @@
     position: relative;
     z-index: 55;
 }
-.searchPanelNav {
+.search_panel_nav {
     display: none;
     max-width: 700px;
     position: relative;
 }
-.inputNav {
+.input_nav {
     box-sizing: border-box;
     width: 100%;
     border-radius: 4px;
@@ -21,25 +21,25 @@
     background-color: #3E3E45;
     color: #fff;
 }
-.searchButtonNav {
+.search_button_nav {
     position: absolute;
     right: 14px;
     bottom: 14px;
     cursor: pointer;
 }
-.containerNav {
+.container_nav {
     max-width: 1228px;
     margin: 0 auto;
     padding: 20px 0px 20px 0px;
 }
-.Navigation {
+.navigation {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-.navItem a {
+.nav_item a {
     color: #fff;
     position: relative;
     text-decoration: none;
@@ -48,26 +48,23 @@
     font-size: 18px;
     z-index: 55;
 }
-.navItem a:hover {
+.nav_item a:hover {
     color: #6941C6;
 }
 
-.menuPc.active {
+.menu_pc.active {
     display: block;
 }
-.menuPc {
+.menu_pc {
     display: none;
 }
 
-.dropDownMenu0.active0 {
-    display: block;
-}
 @media (max-width: 820px) {
     
-    .Navigation {
+    .navigation {
        display: none;
     }
-    .searchPanelNav {
+    .search_panel_nav {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -76,7 +73,7 @@
 
 }
 @media (max-width: 505px) {
-    .searchPanelNav {
+    .search_panel_nav {
         margin: 0px 16px;
     }
     #catalog {

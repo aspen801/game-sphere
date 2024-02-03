@@ -1,5 +1,5 @@
 @import "../../styles/variables.scss";
-.burgerHead {
+.burger_head {
     width: 100%;
     max-width: 490px;
     margin: 0 auto;
@@ -18,16 +18,16 @@
     height: 1px;
     margin-top: 20px;
 }
-.burgerContainer {
+.burger_container {
     max-width: 490px;
     margin: 0 auto;
 }
-.burgerContainer ul {
+.burger_container ul {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
 }
-.burgerContainer li {
+.burger_container li {
     color: #F2F4F7;
     font-size: 18px;
     margin-top: 30px;
@@ -37,27 +37,30 @@
     justify-content: space-between;
     cursor: pointer;
 }
-.burgerContainer li:last-child {
+.burger_container li:last-child {
     margin-bottom: 100px;
 }
-.burgerLanguage {
+.burger_language {
     margin-top: 40px;
     align-items: end;
     position: relative;
 }
-.burgerLanguage p:last-child {
+.burger_language p:last-child {
     margin-top: 7px;
 }
-.burgerLanguage p {
+.burger_language p {
     margin: 0px;
     padding: 0px;
     color: #F2F4F7;
     font-family: $mainFont400;
     font-size: 16px;
 }
+.burger_icon {
+    margin-right: 16px;
+}
 
 @media (max-width: 465px) {
-    .burgerHead {
+    .burger_head {
         max-width: 264px;
         margin: 0px;
         margin-left: 16px;
@@ -67,15 +70,15 @@
     .line {
         margin-top: 16px;
     }
-    .burgerItem img:first-child {
+    .burger_item img:first-child {
         height: 20px;
         width: 20px;
     }
-    .burgerContainer {
+    .burger_container {
         max-width: 288px;
         margin: 0 auto;
     }
-    .burgerContainer li {
+    .burger_container li {
         font-size: 16px;
     }
 }

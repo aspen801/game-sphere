@@ -26,7 +26,7 @@
     color: #C8CDD6;
    
 }
-.codeText {
+.code_text {
     margin: 0;
     font-size: 14px;
     font-family: $mainFont400;
@@ -34,7 +34,7 @@
     color: #98A2B3;
     margin-top: 20px;
 }
-.mainText {
+.main_text {
     font-size: 16px;
     line-height: 140%;
     color: #F2F4F7;
@@ -42,7 +42,7 @@
     margin: 0;
     margin-top: 4px;
 }
-.mainImg {
+.main_img {
     width: 100%;
     max-width: 260px;
     max-height: 187px;
@@ -50,7 +50,7 @@
     margin-top: 40px;
     transition: all 1s;
 }
-.mainImg:hover {
+.main_img:hover {
     transform: scale(1.1);
     transition: all 1s;
 }
@@ -92,7 +92,7 @@
     color: $colorSellFont;
 }
 
-.sellBtn {
+.sell_btn {
     display: flex;
     max-width: 24px;
     align-items: center;
@@ -104,7 +104,7 @@
     box-shadow: 0 0 40px 40px $colorSellFont inset, 0 0 0 0 $colorSellFont;
     transition: all 150ms ease-in-out;
 }
-.sellBtn:hover {
+.sell_btn:hover {
     box-shadow: 0 0 10px 0 $colorSellFont inset, 0 0 10px 4px $colorSellFont;
 }
 .buy {
@@ -112,7 +112,7 @@
     justify-content: space-between;
     align-items: end;
 }
-.cardLikes {
+.card_likes {
     display: block;
     position: absolute;
     top: 16px;
@@ -120,7 +120,7 @@
     cursor: pointer;
     z-index: 50;
 }
-.cardBalance {
+.card_balance {
     display: block;
     position: absolute;
     top: 56px;
@@ -134,26 +134,26 @@
         padding: 0 10px;
         padding-bottom: 10px;
     }
-    .cardLikes {
+    .card_likes {
         top: 10px;
         right: 10px;
     }
-    .cardBalance {
+    .card_balance {
         top: 42px;
         right: 10px;
     }
     
-    .mainImg {
+    .main_img {
         display: block;
         width: 100%;
         margin-top: 32px;
         max-width: 144px;
         max-height: 101px;
     }
-    .codeText {
+    .code_text {
         max-width: 60px;
     }
-    .mainText {
+    .main_text {
         display: inline-block;
         font-size: 12px;
         margin-top: 0px;
@@ -187,7 +187,7 @@
         font-size: 18px;
         margin-top: 0px;
     }
-    .sellBtn {
+    .sell_btn {
         padding: 8px 16px;
     }
     .buy {

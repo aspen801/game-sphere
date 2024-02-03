@@ -11,7 +11,7 @@ import supportMobile from "../../resources/svg/supportMobile.svg"
 export const Advantages = () => {
   return (
     <div className='advantages'>
-        <div className='advantagesContainer'>
+        <div className='advantages_container'>
             <div className='guarantee'>
                 <img src={window.innerWidth <= 400 ? guaranteeMobile : guarantee } alt='guarantee'/>
                 <p>Гарантія 3 <br/> роки</p>
@@ -20,7 +20,7 @@ export const Advantages = () => {
                 <img src={window.innerWidth <= 400 ? deliveryMobile : delivery } alt='delivery'/>
                 <p>Безкоштовна <br/> доставка</p>
             </div>
-            <div className='discountAdv'>
+            <div className='discount_adv'>
                 <img src={window.innerWidth <= 400 ? discountAdvMobile : discountAdv } alt='discountAdv'/>
                 <p>Знижки та<br/>переваги</p>
             </div>

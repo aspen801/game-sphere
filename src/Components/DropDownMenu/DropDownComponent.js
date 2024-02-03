@@ -12,24 +12,24 @@ export const DropDown = ({info, index}) => {
         setOpen(false);
     })
     open ?  document.body.classList.add("active") : document.body.classList.remove("active")
- 
+
     return(
         <>
         <div>
-            <li className="navItem" onClick={() => setOpen(!open)}>
+            <li className="nav_item" onClick={() => setOpen(!open)}>
                 <a href='#' style={index === 5 ? {color: "#F79009"} : null}>{catalog}</a>
             </li>
         </div>
             <div>
-                <div className={open ? "catalogPc active": "catalogPc"}>
-                    <div className='containerModal' ref={menuRef}>
-                        <div className="modalList">
+                <div className={open ? "catalog_pc active": "catalog_pc"}>
+                    <div className='container_modal' ref={menuRef}>
+                        <div className="modal_list">
                             <ul style={(firstList.length) ? {display: "block"} : {display: "none"}}>
                                 {
                                     firstList.map(item => <li>{item}</li> )
                                 }
                             </ul>
-                            <ul className='secondList'>
+                            <ul className='second_list'>
                                 {    
                                     info.secondList.map((item,index) => {
                                     if (secondList.length - 1 === index)  return <li>{item}<img src={arrowCatalog} alt='arrowCatalog' /></li>
@@ -40,7 +40,7 @@ export const DropDown = ({info, index}) => {
                         <img src={img} alt=''/>
                     </div>
                 </div>
-                <div className={open ? "backgroundClick active" : "backgroundClick"} onClick={() => {setOpen(false)}}>
+                <div className={open ? "background_click active" : "background_click"} onClick={() => {setOpen(false)}}>
                 </div>
             </div>
         </>

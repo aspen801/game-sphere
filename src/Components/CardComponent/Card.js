@@ -12,11 +12,11 @@ import balanceMobile from "../../resources/svg/balanceCardMobile.svg"
 const Card = () => {
   return (
     <div className='сard'>
-        <img src={window.innerWidth <= 400 ? heartMobile : heart } alt='heart' className='cardLikes'/>  
-        <img src={window.innerWidth <= 400 ? balanceMobile : balance } alt='balance' className='cardBalance'/>  
-        <img src={laptop} alt='laptop' className='mainImg'/>
-        <p className='codeText'>Код: 1447</p>
-        <p className='mainText'>Ноутбук ASUS 16" ROG STRIX G16 G614JV-AS73</p>
+        <img src={window.innerWidth <= 400 ? heartMobile : heart } alt='heart' className='card_likes'/>  
+        <img src={window.innerWidth <= 400 ? balanceMobile : balance } alt='balance' className='card_balance'/>  
+        <img src={laptop} alt='laptop' className='main_img'/>
+        <p className='code_text'>Код: 1447</p>
+        <p className='main_text'>Ноутбук ASUS 16" ROG STRIX G16 G614JV-AS73</p>
         <div className='rating'>
             {CustomRatingIcon()}
             <p>5 відгуків</p>
@@ -35,7 +35,7 @@ const Card = () => {
                 </div>
                 <p className='price'>61 999 ₴</p>
             </div>
-            <a href='#' className='sellBtn'><img src={window.innerWidth <= 400 ? shoppingCartMobile : shoppingCartDesktop } alt='shoppingCart'/></a>
+            <a href='#' className='sell_btn'><img src={window.innerWidth <= 400 ? shoppingCartMobile : shoppingCartDesktop } alt='shoppingCart'/></a>
         </div>
     </div>
   )

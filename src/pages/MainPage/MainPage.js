@@ -17,6 +17,7 @@ import disk from "../../resources/svg/diskBurger.svg"
 import promotion from "../../resources/svg/promotionBurger.svg"
 import sellers from "../../resources/svg/sellersBurger.svg"
 import './MainPage.scss';
+import { PopUp } from '../../Components/popUp/popUp.js';
 const modalInfo = [
   {
       firstList: ["Готові рішення","Процесори","Монітори","Кулери","Материнські плати","Відеокарти","Оперативна пам’ять"],
@@ -82,6 +83,7 @@ const MainPage = () => {
       <Intro/>
       <SlideTopSell/>
       <Advantages/>
+      <PopUp/>
     </div>
   );
 }

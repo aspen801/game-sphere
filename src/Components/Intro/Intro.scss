@@ -94,11 +94,11 @@
     transform: scale(1.1);
     z-index: 5;
 }
-.containerIntro {
+.container_intro {
     max-width: 1228px;
     margin: 0 auto;
 }
-.containerIntro h1 {
+.container_intro h1 {
     max-width: 660px;
     display: block;
     position: relative;
@@ -114,7 +114,7 @@
 .SotsPhone {
     display: none;
 }
-.containerIntro h2 {
+.container_intro h2 {
     max-width: 660px;
     display: block;
     position: relative;
@@ -130,7 +130,7 @@
 .SotsTablet {
     display: none;
 }
-.containerIntro a {
+.container_intro a {
     display: block;
     position: relative;
     margin: 0;
@@ -149,10 +149,10 @@
     box-shadow: 0 0 40px 40px $colorSellFont inset, 0 0 0 0 $colorSellFont;
     transition: all 150ms ease-in-out;
 }
-.containerIntro a:hover {
+.container_intro a:hover {
     box-shadow: 0 0 10px 0 $colorSellFont inset, 0 0 10px 4px $colorSellFont;
 }
-.containerIntro p {
+.container_intro p {
     padding-top: 30px;
     font-family: $mainFont400;
     margin-top: 30px;
@@ -175,18 +175,18 @@
         right: 0px;
         z-index: 3;
     }
-    .containerIntro {
+    .container_intro {
         padding-left: 40px;
     }
-    .containerIntro h1 {
+    .container_intro h1 {
         max-width: 360px;
         font-size: 3rem;
     }
-    .containerIntro h2 {
+    .container_intro h2 {
         max-width: 460px;
         font-size: 3rem;
     }
-    .containerIntro p {
+    .container_intro p {
         font-size: 1.125rem;
         line-height: 140%;
     }
@@ -223,29 +223,29 @@
     .SotArmchair {
         display: none;
     }
-    .containerIntro h1 {
+    .container_intro h1 {
         padding-top: 453px;
         font-size: 3rem;
         line-height: 100%;
     }
-    .containerIntro h2 {
+    .container_intro h2 {
         font-size: 3rem;
         line-height: 100%;
     }
-    .containerIntro p {
+    .container_intro p {
         font-size: 1.125rem;
         line-height: 140%;
     }
-    .containerIntro a {
+    .container_intro a {
         font-size: 1rem;
         line-height: 140%;
     }
-    .containerIntro {
+    .container_intro {
         padding-left: 40px;
     }
 }
 @media (max-width: 375px) {
-    .containerIntro {
+    .container_intro {
     padding: 0px 16px;
     }
     .SotsTablet {
@@ -259,21 +259,21 @@
         position: relative;
         min-height: 594px;
     }
-    .containerIntro h1 {
+    .container_intro h1 {
         padding-top: 304px;
         font-size: 2.25rem;
         line-height: 110%;
     }
-    .containerIntro h2 {
+    .container_intro h2 {
         font-size: 2.25rem;
         line-height: 110%;
     }
-    .containerIntro p {
+    .container_intro p {
         font-size: 1.125rem;
         line-height: 140%;
         margin-bottom: 40px;
     }
-    .containerIntro a {
+    .container_intro a {
         box-sizing: border-box;
         font-size: 1rem;
         line-height: 140%;

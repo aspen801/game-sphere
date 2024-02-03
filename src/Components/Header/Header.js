@@ -23,13 +23,13 @@ const Header = ({modalInfo}) => {
             <a href='#'>{giveSvg("logoSvg")}</a>
             <a href='#'>{giveSvg("LogoMobileSvg")}</a>
           </div>
-          <div className='searchPanel'>
+          <div className='search_panel'>
             <input type='text' placeholder='Шукати' className='input'/>
             {giveSvg("search")}
           </div>
           <div className='contact'>
             <div>
-              <div className='numberPanel'>
+              <div className='number_panel'>
                 <p className='number'>0 800 25 00 32</p>
                 {giveSvg("arrow")}
               </div>
@@ -38,11 +38,11 @@ const Header = ({modalInfo}) => {
           </div>
           <div className='catalog'>
               <div className='language' onClick={() => setOpenLng(!openLng)}>
-                <p className='languageText' >{activeLng}</p>
+                <p className='language_text' >{activeLng}</p>
                 <p onClick={() =>{
                   setPassiveLng(activeLng)
                   setActiveLng(passiveLng)
-                }} className={openLng ? "languageSwitch active" : "languageSwitch"}>{passiveLng}</p>
+                }} className={openLng ? "language_switch active" : "language_switch"}>{passiveLng}</p>
                 {openLng ? giveSvg("arrowUpLng") : giveSvg("arrowDropLng")}
               </div>
                 {giveSvg("profile")}
@@ -55,10 +55,10 @@ const Header = ({modalInfo}) => {
               {giveSvg("shoppingCart")}
           </div>
         </div>
-        <div ref={burgerRef} className={openBurger ? "burgerMenu active" : "burgerMenu"}>
+        <div ref={burgerRef} className={openBurger ? "burger_menu active" : "burger_menu"}>
            <BurgerMenu modalInfo={modalInfo} openBurger={openBurger} setOpenBurger={setOpenBurger}/>
         </div>
-        <div className={openBurger ? "backGround active": "backGround"}>
+        <div className={openBurger ? "background active": "background"}>
         </div>
     </div>
   )

@@ -1,7 +1,7 @@
 @import "../../styles/variables.scss";
 
 
-.backgroundClick.active {
+.background_click.active {
     position: absolute;
     z-index: 1;
     top: 50px;
@@ -11,7 +11,7 @@
     background: $mainGbColor;
     opacity: 0.7;
 }
-.backgroundClick {
+.background_click {
     position: absolute;
     z-index: 1;
     top: 50px;
@@ -21,7 +21,7 @@
     background: $mainGbColor;
     opacity: 100%;
 }
-.catalogPc.active {
+.catalog_pc.active {
     color: #F9FAFB;
     background: #2A2A2F;
     width: 100%;
@@ -36,7 +36,7 @@
     opacity: 100%;
     
 }
-.catalogPc {
+.catalog_pc {
     color: #F9FAFB;
     background: #2A2A2F;
     width: 100%;
@@ -55,7 +55,7 @@
     z-index: 20;
     
 }
-.containerModal {
+.container_modal {
     max-width: 1228px;
     display: flex;
     justify-content: space-between;
@@ -63,24 +63,24 @@
     padding-top: 30px;
 }
 
-.modalList {
+.modal_list {
     display: flex;
     gap: 60px;
 }
-.modalList ul {
+.modal_list ul {
     list-style-type: none;
     font-size: 18px;
     font-family: $mainFont400;
     padding: 0px;
 }
-.modalList li {
+.modal_list li {
     margin-bottom: 11px;
     cursor: pointer;
 }
-.secondList li:last-child {
+.second_list li:last-child {
     display: flex;
     color: #835AE0;
 }
-.secondList img {
+.second_list img {
     align-items: center;
 }
