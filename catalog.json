@@ -1,0 +1,169 @@
+[
+    {
+        "id": "U0898696",
+        "title": "ASUS ROG Strix G16 G614JZR-N4094W",
+        "navigation": {
+            "category": "laptop",
+            "subcategory": "laptop"
+        },
+        "images": {
+            "image_cover": "https://flick.zone/wp-content/uploads/2024/02/u0898696-asus-rog-strix-g16-g614jzr-n4094w-90nr0ic3-m00440-flick.zone-395319_nobg.png",
+            "images_set": [
+                "https://flick.zone/wp-content/uploads/2024/02/u0898696-asus-rog-strix-g16-g614jzr-n4094w-90nr0ic3-m00440-flick.zone-271844_nobg.png",
+                "https://flick.zone/wp-content/uploads/2024/02/u0898696-asus-rog-strix-g16-g614jzr-n4094w-90nr0ic3-m00440-flick.zone-395319_nobg.png",
+                "https://flick.zone/wp-content/uploads/2024/02/u0898696-asus-rog-strix-g16-g614jzr-n4094w-90nr0ic3-m00440-flick.zone-481744_nobg.png"
+            ]
+        },
+        "cost": {
+            "sale": true,
+            "price": 127999,
+            "currency": "UAH",
+            "discount_percentage": 2
+        },
+        "tags": [],
+        "new": false,
+        "top_sales": true,
+        "summary": "16″, 2560×1600 (WQXGA), IPS, Intel Core i9-14900HX (2.2 – 5.8 ГГц), 16 ГБ, SSD – 1 ТБ, Windows 11 Home, 2.5 кг",
+        "color": "чорний",
+        "product_code": "U0898696",
+        "additinal_code": "168492",
+        "article": "90NR0IC3-M00440",
+        "description": "Грайте з упевненістю на потужному ноутбуку Strix G16 2024-го модельного року. Беріть гору над супротивниками в найсучасніших змагальних іграх – у цьому допоможуть процесор Intel Core i9 14900HX і відеокарта Nvidia GF RTX 4080 для ноутбуків, загальна графічна потужність якої при використанні функції Dynamic Boost сягає 175 Вт. Твердотільний накопичувач 1 ТБ SSD з інтерфейсом PCIe Gen4 x4 та оперативна пам’ять DDR5 5600 МГц обсягом 32 ГБ легко вмістять велику бібліотеку ігор та впораються з багатьма активними програмами одночасно.",
+        "producer": "ASUS",
+        "model": "ROG Strix G16 G614JZR-N4094W",
+        "guarantee": 24,
+        "characteristics": {
+            "producer": "ASUS",
+            "display_size": "16″",
+            "resolving_power": "2560×1600 (WQXGA)",
+            "screen": "антиблікове покриття",
+            "matrix-type": "IPS",
+            "screen_refresh_rate": "240Hz",
+            "processor": "Intel Core i9-14900HX (2.2 – 5.8 ГГц)",
+            "number_of_processor_cores": 24,
+            "RAM_type": "DDR5",
+            "RAM_capacity": "16 ГБ",
+            "types_of_hard_drives": "SSD",
+            "SSD_size": "1 ТБ",
+            "video_card_type": "дискретна",
+            "video_card": null,
+            "amount_of_VRAM": null,
+            "OS": "Windows 11 Home",
+            "battery_capacity": "4 cell",
+            "weight": "2.5 кг",
+            "country_of_production": "Китай"
+        }
+    },
+    {
+        "id": "U0805559",
+        "title": "MSI Raider",
+        "navigation": {
+            "category": "laptop",
+            "subcategory": "laptop"
+        },
+        "images": {
+            "image_cover": "https://flick.zone/wp-content/uploads/2023/05/u0805559-msi-raider-raider_ge78hx_13vh-211ua-flick.zone_21532_nobg.png",
+            "images_set": [
+                "https://flick.zone/wp-content/uploads/2023/05/u0805559-msi-raider-raider_ge78hx_13vh-211ua-flick.zone-114694_nobg.png",
+                "https://flick.zone/wp-content/uploads/2023/05/u0805559-msi-raider-raider_ge78hx_13vh-211ua-flick.zone-358546_nobg.png",
+                "https://flick.zone/wp-content/uploads/2023/05/u0805559-msi-raider-raider_ge78hx_13vh-211ua-flick.zone-499756_nobg.png"
+            ]
+        },
+        "cost": {
+            "sale": true,
+            "price": 149999,
+            "currency": "UAH",
+            "discount_percentage": 6
+        },
+        "tags": [],
+        "new": false,
+        "top_sales": true,        
+        "summary": "17″, 2560×1600 (WQXGA), IPS, Intel Core i9-13950HX (4.0-5.5 ГГц), 64 ГБ, SSD – 1 ТБ, NVIDIA GeForce RTX 4080, GPU – 12 ГБ, Windows 11, підсвічування клавіатури, 3.1 кг, чорний",
+        "color": "чорний",
+        "product_code": "U0805559",
+        "additinal_code": "89855",
+        "article": "RAIDER_GE78HX_13VH-211UA",
+        "description": null,
+        "producer": "MSI",
+        "model": "MSI GE Raider",
+        "guarantee": 12,
+        "characteristics": {
+            "producer": "MSI",
+            "display_size": "17″",
+            "resolving_power": "2560×1600 (WQXGA)",
+            "screen": "матова",
+            "matrix-type": "IPS",
+            "screen_refresh_rate": "240Hz",
+            "processor": "Intel Core i9-13950HX (4.0-5.5 ГГц)",
+            "number_of_processor_cores": 24,
+            "RAM_type": "DDR5",
+            "RAM_capacity": "64 ГБ",
+            "types_of_hard_drives": "SSD",
+            "SSD_size": "1 ТБ",
+            "video_card_type": "дискретна",
+            "video_card": "NVIDIA GeForce RTX 4080",
+            "amount_of_VRAM": "12 ГБ",
+            "OS": "Windows 11",
+            "battery_capacity": "4 cell",
+            "weight": "3.1 кг",
+            "country_of_production": "Китай",
+            "features": ["підсвітка клавіатури"]
+        }
+    },
+    {
+        "id": "U0895909",
+        "title": "ASUS ROG Strix SCAR 18 G834JYR-R6059X",
+        "navigation": {
+            "category": "laptop",
+            "subcategory": "laptop"
+        },
+        "images": {
+            "image_cover": "https://flick.zone/wp-content/uploads/2024/02/u0895909-asus-rog-strix-scar-18-g834jyr-r6059x-90nr0ip2-m002z0-flick.zone_38050_nobg.png",
+            "images_set": [
+                "https://flick.zone/wp-content/uploads/2024/02/u0895909-asus-rog-strix-scar-18-g834jyr-r6059x-90nr0ip2-m002z0-flick.zone-131701_nobg.png",
+                "https://flick.zone/wp-content/uploads/2024/02/u0895909-asus-rog-strix-scar-18-g834jyr-r6059x-90nr0ip2-m002z0-flick.zone-367340_nobg.png",
+                "https://flick.zone/wp-content/uploads/2024/02/u0895909-asus-rog-strix-scar-18-g834jyr-r6059x-90nr0ip2-m002z0-flick.zone-447444_nobg.png"
+            ]
+        },
+        "cost": {
+            "sale": true,
+            "price": 179999,
+            "currency": "UAH",
+            "discount_percentage": 2
+        },
+        "tags": [],
+        "new": false,
+        "top_sales": true,        
+        "summary": "18″, 2560×1600 (WQXGA), Mini LED, 1100nits, Intel Core i9-14900HX (2.2 – 5.8 ГГц), 32 ГБ, SSD – 2 ТБ SSD (2 x 1 ТБ), NVIDIA GeForce RTX 4090, GPU – 16 ГБ, Windows 11 Pro, підсвічування клавіатури, TPM модуль, 3.1 кг, чорний",
+        "color": "чорний",
+        "product_code": "U0895909",
+        "additinal_code": "169003",
+        "article": "90NR0IP2-M002Z0",
+        "description": "Грайте. Транслюйте. Творіть. Ноутбуки серії SCAR створені з прицілом на геймерів і, звісно, розробників ігор. На Strix SCAR 18 працюють усі сучасні ігрові рушії, тож за цим ноутбуком ви зможете розкрити свій творчий потенціал та створити нову культову гру. Займаєтеся комп’ютерною графікою, редагуванням відео, транслюванням гри чи пробуєте сили в анімації або розробці ігор – Strix SCAR 18 забезпечить всією обчислювальною потужністю, потрібною, щоб вивести ваші твори на новий рівень. У максимальній конфігурації ноутбук має процесор Intel Core i9 та відеокарту серії NVIDIA GeForce RTX 40 для ноутбуків, які легко впораються зі складними проєктами на популярних платформах розробки Unity та Autodesk. Ви здатні бути кращим у грі – та чи готові створити нову?",
+        "producer": "ASUS",
+        "model": "ROG Strix SCAR 18 G834JYR-R6059X",
+        "guarantee": 24,
+        "characteristics": {
+            "producer": "ASUS",
+            "display_size": "18″",
+            "resolving_power": "2560×1600 (WQXGA)",
+            "screen": "матова",
+            "matrix-type": "Mini LED",
+            "screen_refresh_rate": "240Hz",
+            "processor": "Intel Core i9-14900HX (2.2 – 5.8 ГГц)",
+            "number_of_processor_cores": 24,
+            "RAM_type": "DDR5",
+            "RAM_capacity": "32 ГБ",
+            "types_of_hard_drives": "SSD",
+            "SSD_size": "2 ТБ SSD (2 x 1 ТБ)",
+            "video_card_type": "дискретна",
+            "video_card": "NVIDIA GeForce RTX 4090",
+            "amount_of_VRAM": "16 ГБ",
+            "OS": "Windows 11 Pro",
+            "battery_capacity": "90 Втг",
+            "weight": "3.1 кг",
+            "country_of_production": "Китай",
+            "features": ["вбудований мікрофон", "стереодинаміки", "мишка в комплекті", "рюкзак в комплекті"]
+        }
+    }    
+]
