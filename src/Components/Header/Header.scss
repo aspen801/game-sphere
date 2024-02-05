@@ -184,6 +184,7 @@
 .burger_menu.active {
     transition: all 0.5s;
     position: absolute;
+    overflow: auto;
     top: 0px;
     left: 0px;
     height: 100%;
@@ -282,7 +283,7 @@
     } 
 }
 @media (max-width: 465px) {
-    .burger_m   enu.active {
+    .burger_menu.active {
         max-width: 325px;
     }
 }

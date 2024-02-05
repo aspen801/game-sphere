@@ -106,6 +106,7 @@ input[type="checkbox"]:checked::before {
     transform: scale(1);
 }
 .popUp_input {
+    display: flex;
     margin-top: 40px;
 }
 .popUp_input input {
@@ -156,4 +157,23 @@ input[type="checkbox"]:checked::before {
     z-index: 19;
     top: 0px;
     right: 0px;
+}
+
+@media (max-width: 542px) {
+    .popUp_container p {
+        font-size: 12px;
+    }
+    .popUp_container p:first-child {
+        font-size: 24px;
+    }
+    .popUp_checkbox {
+        margin-top: 24px;
+    }
+    .popUp.active {
+        top: 300px;
+    
+    }
+    .popUp_container {
+        margin-left: 20px;
+    }
 }

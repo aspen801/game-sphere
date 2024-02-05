@@ -9,6 +9,8 @@
     margin-top: 20px;
 }
 .burger {
+    position: relative;
+    z-index: 150;
     height: 100%;
     overflow: auto;
 }
