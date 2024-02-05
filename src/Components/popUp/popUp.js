@@ -7,7 +7,7 @@ import { useClickOutside } from '../../hooks/useClickOutSide'
 export const PopUp = () => {
 
     useEffect(() => {
-        setTimeout(() => setOpen(true),30000)
+        setTimeout(() => setOpen(true),15000)
     },[])
     const [open,setOpen] = useState(false)
     const popUpRef = useRef()

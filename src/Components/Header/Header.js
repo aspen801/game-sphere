@@ -3,6 +3,7 @@ import  "./Header.scss"
 import giveSvg from '../../layouts/SvgFunction'
 import { useClickOutside } from '../../hooks/useClickOutSide'
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu'
+import { BurgerLink } from '../BurgerLink/BurgerLink'
 
 
 const Header = ({modalInfo}) => {
@@ -10,6 +11,8 @@ const Header = ({modalInfo}) => {
   const [activeLng,setActiveLng] = useState("Укр")
   const [passiveLng,setPassiveLng] = useState("Eng")
   const [openBurger, setOpenBurger] = useState(false)
+  const [openBurgerLink, setOpenBurgerLink] = useState(false)
+  const [informationBurgerLink, setInformationBurgerLink] = useState(modalInfo[0])
   const burgerRef = useRef()
     useClickOutside(burgerRef, () => {
       setOpenBurger(false);
@@ -55,10 +58,11 @@ const Header = ({modalInfo}) => {
               {giveSvg("shoppingCart")}
           </div>
         </div>
-        <div ref={burgerRef} className={openBurger ? "burger_menu active" : "burger_menu"}>
-           <BurgerMenu modalInfo={modalInfo} openBurger={openBurger} setOpenBurger={setOpenBurger}/>
+        <div ref={burgerRef} className={openBurger ? "burger_menu active" : "burger_menu"} style={openBurger ? {display: "block"} : {display: "none"}}>
+           <BurgerMenu openBurgerLink={openBurgerLink} setInformationBurgerLink={setInformationBurgerLink} setOpenBurgerLink={setOpenBurgerLink} modalInfo={modalInfo} openBurger={openBurger} setOpenBurger={setOpenBurger}/>
+           <BurgerLink setOpenBurgerLink={setOpenBurgerLink} openBurgerLink={openBurgerLink} informationBurgerLink={informationBurgerLink} />
         </div>
-        <div className={openBurger ? "background active": "background"}>
+        <div className={openBurger ? "background active": "background"} onClick={() => setOpenBurgerLink(false)}>
         </div>
     </div>
   )
