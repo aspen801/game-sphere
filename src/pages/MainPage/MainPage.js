@@ -18,6 +18,8 @@ import promotion from "../../resources/svg/promotionBurger.svg"
 import sellers from "../../resources/svg/sellersBurger.svg"
 import './MainPage.scss';
 import { PopUp } from '../../Components/popUp/popUp.js';
+import { Actions } from '../../Components/Actions/Actions.js';
+import { Brands } from '../../Components/Brands/Brands.js';
 const modalInfo = [
   {
       firstList: ["Готові рішення","Процесори","Монітори","Кулери","Материнські плати","Відеокарти","Оперативна пам’ять"],
@@ -81,11 +83,15 @@ const MainPage = () => {
       <Header modalInfo={modalInfo}/>
       <Catalog modalInfo={modalInfo}/>
       <Intro/>
-      <SlideTopSell/>
+      <SlideTopSell title={"Топ продажів"}/>
       <Advantages/>
+      <Actions/>
       <PopUp/>
+      <SlideTopSell title={"Новинки"}/>
+      <Brands/>
     </div>
   );
 }
 
 export default MainPage;
+
