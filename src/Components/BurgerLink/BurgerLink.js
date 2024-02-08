@@ -2,7 +2,7 @@ import React from 'react'
 import "./BurgerLink.scss"
 export const BurgerLink = ({setOpenBurgerLink,openBurgerLink,informationBurgerLink}) => {
   return (
-    <div className='burgerlink'>
+    <div className='burgerlink act' style={openBurgerLink ? {display: "block"} : {display: "none"}}>
         <div className='burger_link_head'>
             <img src={informationBurgerLink.ArrowRight} alt='arrow' onClick={() => setOpenBurgerLink(false)} />
             <p>{informationBurgerLink.catalog}</p>

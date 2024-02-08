@@ -12,6 +12,7 @@ const Header = ({modalInfo}) => {
   const [passiveLng,setPassiveLng] = useState("Eng")
   const [openBurger, setOpenBurger] = useState(false)
   const [openBurgerLink, setOpenBurgerLink] = useState(false)
+  const [likes, setLikes] = useState(5) // переробити на Redux
   const [informationBurgerLink, setInformationBurgerLink] = useState(modalInfo[0])
   const burgerRef = useRef()
     useClickOutside(burgerRef, () => {
@@ -52,7 +53,7 @@ const Header = ({modalInfo}) => {
                 {giveSvg("phone")}
               <div className='likes'>
                 {giveSvg("heart")}
-                <p>11</p> 
+                <p className="likes_count" style={likes >= 1 ? {display: "block"} : {display: "none"}}>{likes}</p> 
               </div>
               {giveSvg("balance")}
               {giveSvg("shoppingCart")}

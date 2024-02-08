@@ -138,25 +138,30 @@
     position: relative;
     cursor: pointer;
 }
-
-.likes p {
+.likes_count  {
     color: #fff;
     position: absolute;
     bottom: -4px;
-    right: 2px;
+    box-sizing: border-box;
+    right: 0px;
+    z-index: 22;
     font-family: $mainFont400;
     font-size: 14px;
+    width: 13px;
+    text-align: center;
 }
-.likes::before {
+.likes_count::before  {
     content: "";
-    position: absolute;
-    height: 16px;
+    box-sizing: border-box;
     width: 16px;
+    height: 16px;
+    position: absolute;
+    z-index: -1;
+    left: -1px;
     border-radius: 50%;
-    background: $colorSellFont;
-    right: -2px;
-    top: -5px;
+    background: #835AE0;
 }
+
 .background {
     transition: all 0.5s;
     position: absolute;
@@ -195,6 +200,11 @@
     transform: translateX(0px);
     visibility: visible;
     opacity: 100%;
+}
+.catalog svg:hover {
+    transition: all 0.2s;
+    cursor: pointer;
+    fill: #835AE0;
 }
 
 @media (max-width: 1180px) {
