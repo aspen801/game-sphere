@@ -30,7 +30,6 @@
     position: absolute;
     width: 100%;
     z-index: 3;
-    transition: all 0.7s;
     transform: translateY(10px);
     visibility: visible;
     opacity: 100%;
@@ -52,9 +51,10 @@
     transform: translateY(0px);
     visibility: hidden;
     opacity: 0%;
-    transition: all 0.2s;
     z-index: 20;
-    
+}
+.modal_list li:hover {
+    color: $colorSellFont;
 }
 .container_modal {
     max-width: 1228px;
