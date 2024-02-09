@@ -20,6 +20,7 @@ import './MainPage.scss';
 import { PopUp } from '../../Components/popUp/popUp.js';
 import { Actions } from '../../Components/Actions/Actions.js';
 import { Brands } from '../../Components/Brands/Brands.js';
+import { Footer } from '../../Components/Footer/Footer.js';
 const modalInfo = [
   {
       firstList: ["Готові рішення","Процесори","Монітори","Кулери","Материнські плати","Відеокарти","Оперативна пам’ять"],
@@ -89,6 +90,7 @@ const MainPage = () => {
       <PopUp/>
       <SlideTopSell title={"Новинки"}/>
       <Brands/>
+      <Footer/>
     </div>
   );
 }

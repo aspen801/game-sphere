@@ -7,7 +7,7 @@
     max-height: 414px;
     position: fixed;
     z-index: 101;
-    top: 426px;
+    top: 326px;
     left: 50%;
     transform: translate(-50%, -50%);
     background: $secondColor;
@@ -123,9 +123,7 @@ input[type="checkbox"]:checked::before {
     font-family: $mainFont400;
     outline: none
 }
-.popUp_input button {
 
-}
 .popUp_input button {
     background: none;
     margin: 0;

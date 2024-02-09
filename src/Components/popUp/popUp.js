@@ -6,9 +6,10 @@ import sotsLeft from "../../resources/png/sotsPopUpLeft.png"
 import { useClickOutside } from '../../hooks/useClickOutSide'
 export const PopUp = () => {
 
-    useEffect(() => {
-        setTimeout(() => setOpen(true),15000)
-    },[])
+    // useEffect(() => {
+    //     const popUpTimer = setTimeout(() => setOpen(true),15000)
+    //     return () => clearTimeout(popUpTimer)
+    // },[])
     const [open,setOpen] = useState(false)
     const popUpRef = useRef()
     useClickOutside(popUpRef, () => {
