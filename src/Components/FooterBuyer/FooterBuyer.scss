@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+
+.footer_buyer_text p {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-family: $mainFont500;
+    color: #F9FAFB;
+}
+.footer_buyer_text img {
+    display: none;
+}
+.footer_line {
+    display: none;
+}
+@media (max-width: 768px) {
+    .footer_buyer_text img {
+        display: block;
+    }
+    .footer_line {
+        display: block;
+        height: 1px;
+        width: 100%;
+        background: #fff;
+        margin-top: 8px;
+    }
+    .footer_buyer_text p {
+        font-size: 20px;
+        margin: 0px;
+    }
+    .footer_buyer_text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    .footer_buyer_list.active {
+        display: block;
+    }
+    .footer_buyer_list {
+        display: none;
+    }
+    .footer_buyer_list li:first-child {
+        margin-top: 10px;
+    }
+}
