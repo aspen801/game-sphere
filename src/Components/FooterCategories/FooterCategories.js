@@ -4,7 +4,7 @@ import dropArrowFooter from "../../resources/svg/dropArrowFooter.svg"
 export const FooterCategories = () => {
     const [openCategories, setCategories] = useState(false)
   return (
-    <>
+    <div>
         <div className='footer_categories_text' onClick={() => setCategories(!openCategories)}>
             <p>Категорії</p>
             <img src={dropArrowFooter} alt='dropArrowFooter'/>
@@ -19,6 +19,6 @@ export const FooterCategories = () => {
         </ul>
         <div className='footer_line'>
         </div>
-    </>
+    </div>
   )
 }

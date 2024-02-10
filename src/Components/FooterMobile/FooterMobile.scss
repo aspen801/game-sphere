@@ -53,4 +53,16 @@
     width: 100%;
     max-width: 336px;
 }
+@media (max-width: 500px) {
+    .footer_info {
+        display: block;
+    }
+    .footer_submit {
+        display: block;
+    }
+    .footer_container_mobile {
+        margin: 0px;
+        padding: 24px 16px 16px 16px;
+    }
 
+}

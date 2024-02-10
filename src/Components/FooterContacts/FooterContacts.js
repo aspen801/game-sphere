@@ -3,7 +3,7 @@ import "./FooterContacts.scss"
 import giveSvg from '../../layouts/SvgFunction'
 export const FooterContacts = () => {
   return (
-    <div>
+    <div className='footer_contacts'>
         <p className='footer_contacts_text'>Контакти</p>
         <ul className='footer_contacts_list'>
             <li>0 800 25 00 32</li>
