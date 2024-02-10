@@ -4,7 +4,7 @@ import giveSvg from '../../layouts/SvgFunction'
 import { useClickOutside } from '../../hooks/useClickOutSide'
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu'
 import { BurgerLink } from '../BurgerLink/BurgerLink'
-
+import arrow from "../../resources/svg/arrow.svg"
 
 const Header = ({modalInfo}) => {
   const [openLng, setOpenLng] = useState(false)
@@ -12,12 +12,17 @@ const Header = ({modalInfo}) => {
   const [passiveLng,setPassiveLng] = useState("Eng")
   const [openBurger, setOpenBurger] = useState(false)
   const [openBurgerLink, setOpenBurgerLink] = useState(false)
-  const [likes, setLikes] = useState(5) // переробити на Redux
+  const [openContactPanel, setOpenContactPanel] = useState(false)
+  const [likes, setLikes] = useState(0) // переробити на Redux
   const [informationBurgerLink, setInformationBurgerLink] = useState(modalInfo[0])
   const burgerRef = useRef()
+  const contactRef = useRef()
     useClickOutside(burgerRef, () => {
       setOpenBurger(false);
     })
+    useClickOutside(contactRef, () => {
+      setOpenContactPanel(false);
+  })
     openBurger ? document.body.classList.add("active") : document.body.classList.remove("active")
   return (
     <div id='header'>
@@ -31,14 +36,21 @@ const Header = ({modalInfo}) => {
             <input type='text' placeholder='Шукати' className='input'/>
             {giveSvg("search")}
           </div>
-          <div className='contact'>
-            <div>
+          <div className='contact' ref={contactRef}>
+            <div className='contact_information'>
               <div className='number_panel'>
                 <p className='number'>0 800 25 00 32</p>
-                {giveSvg("arrow")}
+                <img src={arrow} className='arrow' alt='arrow' onClick={() => setOpenContactPanel(!openContactPanel)}/>
               </div>
               <p>Пн-Нд: 09:00-21:30</p>
             </div>
+            <div className={openContactPanel ? "contact_panel active" : 'contact_panel'}>
+              <div className='network_icon'>
+                {giveSvg("viber")}
+                {giveSvg("telegram")}
+              </div>
+              <a href='#' className='btn_call'>Подзвоніть мені</a>
+            </div>  
           </div>
           <div className='catalog'>
               <div className='language' onClick={() => setOpenLng(!openLng)}>

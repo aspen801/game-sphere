@@ -56,6 +56,7 @@
     cursor: pointer;
 }
 .contact {
+    position: relative;
     display: flex;
     align-items: end;
     margin-left: min(100px,10%);
@@ -207,6 +208,62 @@
     fill: #835AE0;
 }
 
+.btn_call {
+    display: block;
+    margin: 0;
+    width: 100%;
+    max-width: 140px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid;
+    padding: 11px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 140%;
+    text-decoration: none;
+    font-family: $mainFont500;
+    border-color: $colorSellFont;
+    box-shadow: 0 0 40px 40px $colorSellFont inset, 0 0 0 0 $colorSellFont;
+    transition: all 150ms ease-in-out;
+}
+.btn_call:hover {
+    box-shadow: 0 0 10px 0 $colorSellFont inset, 0 0 10px 4px $colorSellFont;
+}
+.contact_panel {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0%;
+}
+.contact_panel.active {
+    position: absolute;
+    top: 80px;
+    opacity: 100%;
+    visibility: visible;
+    z-index: 555;
+    width: 180px;
+    background: $mainGbColor;
+    height: 95px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.network_icon {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 14px;
+}
+.network_icon svg {
+    cursor: pointer;
+}
+.network_icon svg:hover {
+    stroke: #835AE0;
+}
+.network_icon svg:hover:first-child {
+    fill: #835AE0;
+    stroke: none;
+}
+.contact_information {
+    padding-left: 10px;
+}
 @media (max-width: 1180px) {
     .contact {
         margin-left: 23px;

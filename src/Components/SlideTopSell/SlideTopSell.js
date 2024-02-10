@@ -3,7 +3,7 @@ import "./SlideTopSell.scss"
 import Carousel, {consts} from "@itseasy21/react-elastic-carousel";
 import arrowleft from "../../resources/svg/ArrowLeft.svg"
 import arrowright from "../../resources/svg/ArrowRight.svg"
-import Card from '../CardComponent/Card';
+import Card from '../Card/Card';
 const SlideTopSell = ({title}) => {
   console.log(title)
   const breakPoints = [
