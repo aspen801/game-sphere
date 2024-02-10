@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./FooterBuyer.scss"
-import dropArrowFooter from "../../resources/svg/dropArrowFooter.svg"
+import dropArrowFooter from "../../../resources/svg/dropArrowFooter.svg"
 export const FooterBuyer = () => {
     const [openBuyer, setOpenBuyer] = useState(false)
   return (

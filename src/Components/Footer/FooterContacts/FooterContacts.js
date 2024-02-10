@@ -1,6 +1,6 @@
 import React from 'react'
 import "./FooterContacts.scss"
-import giveSvg from '../../layouts/SvgFunction'
+import giveSvg from '../../../layouts/SvgFunction'
 export const FooterContacts = () => {
   return (
     <div className='footer_contacts'>

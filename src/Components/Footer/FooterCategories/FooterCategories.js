@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./FooterCategories.scss"
-import dropArrowFooter from "../../resources/svg/dropArrowFooter.svg"
+import dropArrowFooter from "../../../resources/svg/dropArrowFooter.svg"
 export const FooterCategories = () => {
     const [openCategories, setCategories] = useState(false)
   return (
