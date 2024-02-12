@@ -4,7 +4,7 @@ import dropArrowFooter from "../../../resources/svg/dropArrowFooter.svg"
 export const FooterBuyer = () => {
     const [openBuyer, setOpenBuyer] = useState(false)
   return (
-    <div>
+    <div className='footer_buyer'>
         <div className='footer_buyer_text' onClick={() => setOpenBuyer(!openBuyer)}>
             <p>Покупцеві</p>
             <img src={dropArrowFooter} alt='dropArrowFooter'/>
