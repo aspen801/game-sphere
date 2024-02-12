@@ -8,6 +8,9 @@
 .footer_desktop {
     display: block;
 }
+.footer_tabs {
+    display: none;
+}
 .footer_mobile {
     display: none;
 }
@@ -16,10 +19,24 @@
     .footer_desktop {
         display: none;
     }
-    .footer_mobile {
+    .footer_tabs {
         display: block;
     }
     .footer {
         min-height: 438px;
+    }
+}
+@media (max-width: 500px) {
+    .footer_desktop {
+        display: none;
+    }
+    .footer_tabs {
+        display: none;
+    }
+    .footer_mobile {
+        display: block;
+    }
+    .footer {
+        min-height: 375px;
     }
 }
