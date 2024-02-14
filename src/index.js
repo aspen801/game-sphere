@@ -1,14 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.scss';
-import MainPage from './pages/MainPage/MainPage';
-import {Provider} from "react-redux"
-import { store } from './Features/store';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.scss";
+import App from "./App.js";
+import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
+import { store } from "./Features/store";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <MainPage />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>
 );
-

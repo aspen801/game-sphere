@@ -17,10 +17,10 @@ const Card = () => {
         <img src={laptop} alt='laptop' className='main_img'/>
         <p className='code_text'>Код: 1447</p>
         <p className='main_text'>Ноутбук ASUS 16" ROG STRIX G16 G614JV-AS73</p>
-        <div className='rating'>
+        {/* <div className='rating'>
             {CustomRatingIcon()}
             <p>5 відгуків</p>
-        </div>
+        </div> */}
         <div className='description'>
             <p><d>Об’єм ОЗП:</d> 16 Гб</p>
             <p><d>Тип накопикувача:</d> SSD</p>
