@@ -129,6 +129,10 @@ const modalInfo = [
     tabsImg: promotion,
     arrowCatalog,
     catalog: "Акції",
+      firstList: [],
+      secondList: [],
+      tabsImg: promotion,
+      catalog: "Акції",
   },
   {
     firstList: [

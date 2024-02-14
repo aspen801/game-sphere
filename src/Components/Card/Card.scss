@@ -63,10 +63,10 @@
     font-family: $mainFont400;
     color: #F2F4F7;
     line-height: 140%;
-    white-space: nowrap;
 }
 .description d {
     color: #98A2B3;
+    
 }
 .discount {
     display: flex;
@@ -128,8 +128,78 @@
     cursor: pointer;
     z-index: 50;
 }
-
-@media (max-width:375px) {
+@media (max-width:768px) {
+    .сard {
+        padding: 0 16px;
+        padding-bottom: 16px;
+    }
+    .card_likes {
+        top: 16px;
+        right: 16px;
+    }
+    .card_balance {
+        top: 48px;
+        right: 16px;
+    }
+    
+    .main_img {
+        display: block;
+        width: 100%;
+        margin-top: 32px;
+        max-width: 187px;
+        max-height: 133px;
+    }
+    .code_text {
+        max-width: 53px;
+        margin-top: 24px;
+        font-size: 12px;
+    }
+    .main_text {
+        display: inline-block;
+        font-size: 12px;
+        margin-top: 0px;
+        max-width: 144px;
+        overflow: hidden;
+    }
+    .description p {
+        max-width: 144px;
+        overflow: hidden;
+    }
+    .rating {
+        align-items: center;
+        margin-top: 12px;
+    }
+    .rating p {
+        font-size: 12px;
+    }
+    .description p {
+        font-size: 12px;
+    }
+    .discount {
+        max-width: 83px;
+        margin-top: 24px;
+    }
+    .discount p {
+        font-size: 10px;
+        line-height: 140%; 
+    }
+    .price {
+        font-size: 18px;
+        margin-top: 0px;
+    }
+    .sell_btn {
+        padding: 8px 16px;
+    }
+    .buy {
+        align-items: end;
+    }
+    .card {
+        padding: 0 16px;
+        padding-bottom: 16px;
+        max-width: 164px;
+    }
+}
+@media (max-width:365px) {
     .сard {
         padding: 0 10px;
         padding-bottom: 10px;
