@@ -40,7 +40,7 @@ const modalInfo = [
   },
   {
       firstList: [],
-      secondList: ["Ноутбуки","Аксесуари для ноутбука","Комплектуючи","USB-хаби та картріди","Зовнішні SSD","Всі ноутбуки та комплектуючі"],
+      secondList: ["Ноутбуки","Аксесуари для ноутбука","Комплектуючі","USB-хаби та картріди","Зовнішні SSD","Всі ноутбуки та комплектуючі"],
       img: navigationLaptop,
       tabsImg: laptop,
       arrowCatalog,
@@ -64,10 +64,8 @@ const modalInfo = [
   },
   {
       firstList: [],
-      secondList: ["Ноутбуки","Аксесуари для ноутбука","Комплектуючи","USB-хаби та картріди","Зовнішні SSD","Всі ноутбуки та комплектуючі"],
-      img: navigationLaptop,
+      secondList: [],
       tabsImg: promotion,
-      arrowCatalog,
       catalog: "Акції",
   },
   {
