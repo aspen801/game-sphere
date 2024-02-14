@@ -29,9 +29,9 @@ const Card = () => {
         </div>
         <div className='buy'>
             <div>
-            <div className='discount'>
+                <div className='discount'>
                     <p><strike>69 999 ₴</strike></p>
-                    <p >-8000 ₴</p>
+                    <p>-8000 ₴</p>
                 </div>
                 <p className='price'>61 999 ₴</p>
             </div>

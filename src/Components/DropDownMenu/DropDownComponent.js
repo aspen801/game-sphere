@@ -12,15 +12,26 @@ export const DropDown = ({info, index}) => {
         setOpen(false);
     })
     open ?  document.body.classList.add("active") : document.body.classList.remove("active")
-
+    if (index === 5) {
+        return (
+            <>
+                <div>
+                    <li className="nav_item">
+                        <a href='#' style={{color: "#F79009"}}>{catalog}</a>
+                    </li>
+                </div>
+                <div></div>
+            </>
+        )
+    }
     return(
         <>
-        <div>
-            <li className="nav_item" onClick={() => setOpen(!open)}>
-                <a href='#' style={index === 5 ? {color: "#F79009"} : null}>{catalog}</a>
-            </li>
-        </div>
             <div>
+                <li className="nav_item" onClick={() => setOpen(!open)}>
+                    <a href='#' style={index === 5 ? {color: "#F79009"} : null}>{catalog}</a>
+                </li>
+            </div>
+            <div className={open ? 'modal active' : "modal"}>
                 <div className={open ? "catalog_pc active": "catalog_pc"}>
                     <div className='container_modal' ref={menuRef}>
                         <div className="modal_list">
