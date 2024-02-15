@@ -5,10 +5,10 @@ import arrowleft from "../../resources/svg/ArrowLeft.svg"
 import arrowright from "../../resources/svg/ArrowRight.svg"
 import Card from '../Card/Card';
 const SlideTopSell = ({title}) => {
-  console.log(title)
   const breakPoints = [
-    {width: 510, itemsToShow: 2, pagination: true},
-    {width: 820, itemsToShow: 3, pagination: true},
+    {width: 200, itemsToShow: 1, pagination: true},
+    {width: 210, itemsToShow: 2, pagination: true},
+    {width: 510, itemsToShow: 3, pagination: true},
     {width: 1220, itemsToShow: 4},
   ]
   const myArrow = ({ type, onClick, isEdge }) => {
@@ -24,7 +24,8 @@ const SlideTopSell = ({title}) => {
     <div id='slide_topSell'>
       <div className='container_slide'>
         <p className='sell_text'>{title}</p>
-        <Carousel itemsToShow={4} breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
+        <Carousel itemPadding={[0,8]} itemsToShow={4} breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
+          <Card/>
           <Card/>
           <Card/>
           <Card/>

@@ -54,15 +54,13 @@ button.rec-dot{
     transition: all 1s ease-in-out;
     height: 4px;
 }
-  
+
 button.rec-dot_active  {
     transition: all 1s ease-in-out;
     background-color: #835AE0;
 }
 
-.rec-swipable {
-    gap: 8px
-}
+
 @media (max-width: 839px) {
     #slide_topSell {
         min-height: 1000px;

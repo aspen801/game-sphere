@@ -42,7 +42,7 @@ export const BurgerMenu = ({setInformationBurgerLink, setOpenBurger,openBurger,m
                 <img src={Balance} style={{marginRight: "16px"}} alt='Balance'/>Порівняння
               </div>
             </li>
-            {modalInfo.map((item, i) => <BurgerCatalog setInformationBurgerLink={setInformationBurgerLink} setOpenBurgerLink={setOpenBurgerLink} item={item} index={i} ArrowRight={ArrowRight}/>)}
+            {modalInfo.map((item, i) => <BurgerCatalog setOpenBurger={setOpenBurger} setInformationBurgerLink={setInformationBurgerLink} setOpenBurgerLink={setOpenBurgerLink} item={item} index={i} ArrowRight={ArrowRight}/>)}
           </ul>
         </div>
     </div>
