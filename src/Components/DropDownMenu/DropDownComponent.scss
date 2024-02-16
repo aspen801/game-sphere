@@ -1,13 +1,15 @@
 @import "../../styles/variables.scss";
 
-
+.catalog_pc.active {
+    overflow: scroll;
+}
 .background_click.active {
     position: absolute;
     z-index: 1;
     top: 70px;
     right: 0px;
     width: 100%;
-    height: 4500px;
+    height: 4700px;
     background: $mainGbColor;
     opacity: 0.7;
 }
@@ -36,6 +38,7 @@
     top: 50px;
     border-top: 1px #fff solid;
 }
+
 .catalog_pc {
     color: #F9FAFB;
     background: #2A2A2F;
@@ -61,12 +64,13 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding-top: 30px;
+    padding: 30px 16px 0 16px;
 }
 
 .modal_list {
     display: flex;
     gap: 60px;
+
 }
 .modal_list ul {
     list-style-type: none;
