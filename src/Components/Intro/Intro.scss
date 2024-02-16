@@ -99,6 +99,7 @@
     margin: 0 auto;
 }
 .container_intro h1 {
+    padding-top: 180px;
     max-width: 660px;
     display: block;
     position: relative;
@@ -108,8 +109,7 @@
     z-index: 11;
     margin: 0;
     color: #fff;
-    padding-top: 180px;
-
+    // white-space: nowrap;
 }
 .SotsPhone {
     display: none;
@@ -125,7 +125,7 @@
     margin: 0;
     color: #fff;
     padding-top: 25px;
-
+    // white-space: nowrap;
 }
 .SotsTablet {
     display: none;
@@ -166,15 +166,7 @@
     margin-bottom: 72px;
 }
 
-@media (max-width: 1400px) {
-    .SotsLeft {
-        display: none;
-    }
-    .SotsRight {
-        position: absolute;
-        right: 0px;
-        z-index: 3;
-    }
+@media (max-width: 1570px) {
     .container_intro {
         padding-left: 40px;
     }
@@ -191,7 +183,33 @@
         line-height: 140%;
     }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 1400px) {
+    .SotsLeft {
+        display: none;
+    }
+    .SotsRight {
+        position: absolute;
+        right: 0px;
+        z-index: 3;
+    }
+}
+
+@media (max-width: 1300px) {
+    #intro {
+        position: relative;
+        min-height: 883px;
+    }
+    .container_intro  {
+        padding-top: 526px;
+    }
+    .container_intro h1{
+            padding-top: 0;
+    }
+}
+
+//Tablet
+@media (max-width: 768px) { 
     .SotsRight {
         display: none;
     }
@@ -226,8 +244,7 @@
     .SotArmchair {
         display: none;
     }
-    .container_intro h1 {
-        padding-top: 453px;
+    .container_intro h1{
         font-size: 3rem;
         line-height: 100%;
     }
@@ -247,9 +264,17 @@
         padding-left: 40px;
     }
 }
-@media (max-width: 375px) {
+
+@media (max-width: 480px) { 
+    .container_intro {  
+        padding-left: 16px;
+    }
+}
+
+//Mobile
+@media (max-width: 400px) {
     .container_intro {
-    padding: 0px 16px;
+    padding: 0px 16px; 
     }
     .SotsTablet {
         display: none;
@@ -266,7 +291,7 @@
         min-height: 594px;
     }
     .container_intro h1 {
-        padding-top: 304px;
+        padding-top: 296px;
         font-size: 2.25rem;
         line-height: 110%;
     }
