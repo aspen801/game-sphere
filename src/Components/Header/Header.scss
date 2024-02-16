@@ -280,7 +280,10 @@
        margin-left: 20px;
     }
     .container {
-       justify-content: center;
+       justify-content: space-between;
+    }
+    #header {
+        padding: 20px 16px 0px 16px;
     }
 }
 @media (max-width: 900px) { //820
@@ -288,6 +291,9 @@
         display: block;
         // margin-left: 40px;
         cursor: pointer;
+    }
+    #header {
+        padding: 20px 40px 0px 40px;
     }
     .logo {
         margin-left: 40px;
@@ -348,6 +354,9 @@
         margin-left: 20px;
         align-items: center;
     }
+    #header {
+        padding: 20px 0px 0px 0px;
+    }
     .container {
         padding: 0px 16px 0px 16px;
         justify-content: space-between;
@@ -358,5 +367,8 @@
         max-width: 325px;
     }
 }
-
-
+@media (max-width: 325px) {
+    .catalog {
+        margin: 0px;
+    }
+}
