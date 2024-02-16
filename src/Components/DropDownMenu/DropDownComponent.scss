@@ -1,13 +1,15 @@
 @import "../../styles/variables.scss";
 
-
+.catalog_pc.active {
+    overflow: scroll;
+}
 .background_click.active {
     position: absolute;
     z-index: 1;
     top: 70px;
     right: 0px;
     width: 100%;
-    height: 4500px;
+    height: 4700px;
     background: $mainGbColor;
     opacity: 0.7;
 }
@@ -68,6 +70,7 @@
 .modal_list {
     display: flex;
     gap: 60px;
+
 }
 .modal_list ul {
     list-style-type: none;

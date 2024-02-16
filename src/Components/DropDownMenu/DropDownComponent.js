@@ -11,7 +11,7 @@ export const DropDown = ({info, index}) => {
     useClickOutside(menuRef, () => {
         setOpen(false);
     })
-    open ?  document.body.classList.add("active") : document.body.classList.remove("active")
+    // open ?  document.body.classList.add("active") : document.body.classList.remove("active")
     if (index === 5) {
         return (
             <>
