@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+.nav_catalog {
+    background: $mainGbColor;
+}
+.nav_catalog_container {
+    width: 100%;
+    max-width: 1228px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4px;
+    padding: 20px 16px 0px 16px;
+
+}
+.nav_catalog_container p {
+    margin: 0;
+    font-size: 14px;
+    font-family: $mainFont400;
+    color: #98A2B3;
+    line-height: 140%
+}
+.nav_catalog_container p:first-child {
+    margin: 0;
+    font-size: 14px;
+    font-family: $mainFont500;
+    color: #F2F4F7;
+    line-height: 140%
+}
+.nav_catalog_container img {
+    transform: rotateZ(-90deg);
+}
+.links {
+    text-decoration: none;
+}
+.links:active {
+    color: #F2F4F7;
+}
+.nav_catalog_container a {
+    color: #F2F4F7;
+}
