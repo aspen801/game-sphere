@@ -1,8 +1,10 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit"
-import { reducer } from "../Components/Catalog/index.slice"
+import { reducer as Navigation } from "./slices/NavigationId.slice.js"
+import { reducer as SecondNavigation } from "./slices/SecondNavigationId.slice.js"
 
 const reducers = combineReducers({
-    index: reducer
+    NavigationIdSlice: Navigation,
+    SecondNavigation: SecondNavigation,
 })
 
 export const store = configureStore({
