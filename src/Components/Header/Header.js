@@ -73,7 +73,7 @@ const Header = ({modalInfo}) => {
         </div>
         <div ref={burgerRef} className={openBurger ? "burger_menu active" : "burger_menu"} style={openBurger ? {display: "block"} : {display: "none"}}>
            <BurgerMenu openBurgerLink={openBurgerLink} setInformationBurgerLink={setInformationBurgerLink} setOpenBurgerLink={setOpenBurgerLink} modalInfo={modalInfo} openBurger={openBurger} setOpenBurger={setOpenBurger}/>
-           <BurgerLink setOpenBurgerLink={setOpenBurgerLink} openBurgerLink={openBurgerLink} informationBurgerLink={informationBurgerLink} />
+           <BurgerLink setOpenBurger={setOpenBurger} setOpenBurgerLink={setOpenBurgerLink} openBurgerLink={openBurgerLink} informationBurgerLink={informationBurgerLink} />
         </div>
         <div className={openBurger ? "background active": "background"} onClick={() => setOpenBurgerLink(false)}>
         </div>

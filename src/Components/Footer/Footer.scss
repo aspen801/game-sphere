@@ -39,9 +39,10 @@
     }
     .footer_tabs {
         display: block;
+        padding: 40px;
     }
     .footer {
-        min-height: 438px;
+        min-height: 281px;
     }
 }
 @media (max-width: 500px) {
@@ -50,9 +51,11 @@
     }
     .footer_tabs {
         display: none;
+        
     }
     .footer_mobile {
         display: block;
+        padding: 24px 16px;
     }
     .footer {
         min-height: 375px;

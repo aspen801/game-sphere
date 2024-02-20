@@ -1,7 +1,5 @@
 @import "../../../styles/variables.scss";
 
-
-
 .footer_container_mobile {
     width: 100%;
     max-width: 684px;
@@ -22,12 +20,16 @@
 .footer_contacts_mobile {
     margin-top: 32px;
 }
-.footer_logo_mobile {
-    margin-bottom: 32px;
-}
+
 .footer_container_mobile li {
     cursor: pointer;
     margin-bottom: 10px;
+    font-size: 16px;
+    font-family: $mainFont400;
+}
+.footer_container_mobile li:last-child {
+    cursor: pointer;
+    padding-bottom: 10px;
     font-size: 16px;
     font-family: $mainFont400;
 }
@@ -68,7 +70,7 @@
     }
     .footer_container_mobile {
         margin: 0px;
-        padding: 24px 16px 16px 16px;
+        // padding: 24px 16px 16px 16px;
     }
-
+    
 }

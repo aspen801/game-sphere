@@ -12,6 +12,14 @@
     color: #F2F4F7;
     margin-left: 16px;
 }
+.burger_link {
+    text-decoration: none;
+    color: #F2F4F7;
+}
+.burger_link:active {
+    text-decoration: none;
+    color: #F2F4F7;
+}
 .burger_link_head img {
     transform: rotate(180deg);
 }
