@@ -46,8 +46,11 @@ export const DropDown = ({info, index}) => {
                             <ul className='second_list'>
                                 {    
                                     info.secondList.map((item,index) => {
-                                    if (secondList.length - 1 === index)  return <li key={id}><NavLink className="links_drop_menu_last" onClick={() => setOpen(false)} to={`/catalog/${id}`}>{item}</NavLink><img src={arrowCatalog} alt='arrowCatalog' /></li>
-                                    return <li onClick={() => setOpen(false)}><NavLink className="links_drop_menu" onClick={(e) => {dispatch(secondAction.setSecondNavItem(e.target.innerText))}} to={`/catalog/${id}/${item}`}>{item}</NavLink></li> 
+                                    if (secondList.length - 1 === index)  return <li key={id}><NavLink className="links_drop_menu_last" onClick={() => {
+                                        setOpen(false)
+                                        dispatch(secondAction.setSecondNavItem(""))}
+                                        } to={`/catalog/${id}`}>{item}</NavLink><img src={arrowCatalog} alt='arrowCatalog' /></li>
+                                    return <li onClick={() => setOpen(false)}><NavLink className="links_drop_menu" onClick={(e) => dispatch(secondAction.setSecondNavItem(e.target.innerText))} to={`/catalog/${id}/${item}`}>{item}</NavLink></li> 
                                 })}
                             </ul>
                         </div>

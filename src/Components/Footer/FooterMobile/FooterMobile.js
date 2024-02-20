@@ -11,7 +11,7 @@ export const FooterMobile = () => {
         <div className='footer_container_mobile'>
             <div className='footer_submit'>
                 <img src={Logo} alt='logo' className='footer_logo_mobile'/>
-                <FooterSubmit/>
+                {/* <FooterSubmit/> */}
             </div>
             <div className='footer_menu_mobile'>
                 <FooterCategories/>

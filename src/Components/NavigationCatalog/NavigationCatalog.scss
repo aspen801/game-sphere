@@ -3,10 +3,10 @@
     background: $mainGbColor;
 }
 .nav_catalog_container {
-    width: 100%;
     max-width: 1228px;
     margin: 0 auto;
     display: flex;
+    align-items: center;
     gap: 4px;
     padding: 20px 16px 0px 16px;
 
