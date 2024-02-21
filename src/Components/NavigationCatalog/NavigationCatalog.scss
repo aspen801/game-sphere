@@ -1,39 +1,37 @@
 @import "../../styles/variables.scss";
 .nav_catalog {
-    background: $mainGbColor;
+  background: $mainGbColor;
 }
 .nav_catalog_container {
-    max-width: 1228px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 20px 16px 0px 16px;
-
+  max-width: 1228px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .nav_catalog_container p {
-    margin: 0;
-    font-size: 14px;
-    font-family: $mainFont400;
-    color: #98A2B3;
-    line-height: 140%
+  margin: 0;
+  font-size: 14px;
+  font-family: $mainFont400;
+  color: #98a2b3;
+  line-height: 140%;
 }
 .nav_catalog_container p:first-child {
-    margin: 0;
-    font-size: 14px;
-    font-family: $mainFont500;
-    color: #F2F4F7;
-    line-height: 140%
+  margin: 0;
+  font-size: 14px;
+  font-family: $mainFont500;
+  color: #f2f4f7;
+  line-height: 140%;
 }
 .nav_catalog_container img {
-    transform: rotateZ(-90deg);
+  transform: rotateZ(-90deg);
 }
 .links {
-    text-decoration: none;
+  text-decoration: none;
 }
 .links:active {
-    color: #F2F4F7;
+  color: #f2f4f7;
 }
 .nav_catalog_container a {
-    color: #F2F4F7;
+  color: #f2f4f7;
 }
