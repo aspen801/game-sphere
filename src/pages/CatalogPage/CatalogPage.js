@@ -5,9 +5,10 @@ import CatalogGrid from "../../Components/CatalogGrid/CatalogGrid";
 const CatalogPage = () => {
   return (
     <div className="catalog-page">
-      <div className="catalog-content">
+      <div className="catalog-page__content">
         <NavigationCatalog />
-        <div className="catalog-grid-section">
+        <div className="catalog-page__grid-section">
+          <div className="catalog-page__filters"></div>
           <CatalogGrid />
         </div>
       </div>
