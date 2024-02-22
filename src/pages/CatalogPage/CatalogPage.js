@@ -5,7 +5,9 @@ import CatalogGrid from "../../Components/CatalogGrid/CatalogGrid";
 import { useSelector } from "react-redux";
 import { FilterSubCategory } from "../../Components/FilterSubCategory/FilterSubCategory";
 import { Sorts } from "../../Components/Sorts/Sorts";
-const CatalogPage = ({modalInfo}) => {
+import CatalogPagination from "../../Components/CatalogPagination/CatalogPagination";
+
+const CatalogPage = ({ modalInfo }) => {
   const navCatalog = useSelector((state) => state.NavigationIdSlice);
   return (
     <div className="catalog-page">
@@ -13,10 +15,11 @@ const CatalogPage = ({modalInfo}) => {
         <NavigationCatalog />
         <p className="catalog-page__title-text">{navCatalog}</p>
         <div className="catalog-page__grid-section">
-          <FilterSubCategory modalInfo={modalInfo}/>
-          <div>
-            <Sorts/>
+          <FilterSubCategory modalInfo={modalInfo} />
+          <div className="catalog-page__catalog-column">
+            <Sorts />
             <CatalogGrid />
+            <CatalogPagination />
           </div>
         </div>
       </div>
