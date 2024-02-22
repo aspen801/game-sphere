@@ -8,7 +8,25 @@
   padding: 20px 16px 0px 16px;
 }
 
-.catalog-content {
+.catalog-page__content {
   width: 100%;
   max-width: 1228px;
+}
+
+.catalog-page__grid-section {
+  display: flex;
+}
+
+.catalog-page__filters {
+  min-width: 292px;
+  margin-right: 20px;
+}
+
+@media (max-width: 880px) {
+  .catalog-page__filters {
+    display: none;
+  }
+  // .catalog-page__grid-section {
+  //   justify-content: center;
+  // }
 }
