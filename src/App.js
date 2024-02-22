@@ -41,7 +41,7 @@ const modalInfo = [
     tabsImg: desktop,
     arrowCatalog,
     catalog: "ПК та комплектуючі",
-    id: "Computers"
+    id: "computers"
   },
   {
     firstList: [],
@@ -58,7 +58,7 @@ const modalInfo = [
     tabsImg: gamepad,
     arrowCatalog,
     catalog: "Консолі та аксесуари",
-    id: "Consoles"
+    id: "consoles"
   },
   {
     firstList: [],
@@ -74,7 +74,7 @@ const modalInfo = [
     tabsImg: laptop,
     arrowCatalog,
     catalog: "Ноутбуки",
-    id: "Laptop"
+    id: "laptop"
   },
   {
     firstList: [
@@ -97,7 +97,7 @@ const modalInfo = [
     tabsImg: mouse,
     arrowCatalog,
     catalog: "Переферія",
-    id: "Periphery"
+    id: "periphery"
   },
   {
     firstList: [],
@@ -115,7 +115,7 @@ const modalInfo = [
     tabsImg: disk,
     arrowCatalog,
     catalog: "Аксесуари",
-    id: 'Accessories'
+    id: 'accessories'
   },
   {
     firstList: [],
@@ -160,8 +160,8 @@ const App = () => {
         <Route path="/" element={<MainPage/>} />
         <Route path="/product/:id" />
         <Route path="/catalog" element={<MainPage/>} />
-        <Route path="/catalog/:category" element={<CatalogPage/>} />
-        <Route path="/catalog/:category/:subcategory" element={<CatalogPage/>}/>
+        <Route path="/catalog/:category" element={<CatalogPage modalInfo={modalInfo}/>} />
+        <Route path="/catalog/:category/:subcategory"/>
         <Route path="/shop" />
         <Route path="/user-agreement" />
         <Route path="/cart" />
