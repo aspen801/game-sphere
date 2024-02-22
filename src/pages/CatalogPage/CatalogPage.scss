@@ -15,8 +15,16 @@
 
 .catalog-page__grid-section {
   display: flex;
+  margin-top: 70px;
 }
-
+.catalog-page__title-text {
+  margin: 0px;
+  margin-top: 30px;
+  color: #F2F4F7;
+  font-size: 24px;
+  font-family: $kharkiv;
+  line-height: 110%;
+}
 .catalog-page__filters {
   min-width: 292px;
   margin-right: 20px;

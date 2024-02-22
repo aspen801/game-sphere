@@ -4,6 +4,7 @@ import { useClickOutside } from '../../hooks/useClickOutSide'
 import { NavLink } from "react-router-dom";
 import { actions } from '../../Features/slices/NavigationId.slice'
 import { actions as secondAction } from '../../Features/slices/SecondNavigationId.slice'
+import { actions as SetIndexAction } from '../../Features/slices/SetIndexNavItem.slice'
 import { useDispatch } from 'react-redux'
 
 
@@ -31,7 +32,10 @@ export const DropDown = ({info, index}) => {
         <>
             <div>
                 <li className="nav_item" onClick={() => setOpen(!open)}>
-                    <a href='#' style={index === 5 ? {color: "#F79009"} : null} onClick={(e) => dispatch(actions.setNavItem(e.target.innerText))}>{catalog}</a>
+                    <a href='#' style={index === 5 ? {color: "#F79009"} : null} onClick={(e) => {
+                        dispatch(actions.setNavItem(e.target.innerText))
+                        dispatch(SetIndexAction.SetIndexNavItem(index))
+                        }}>{catalog}</a>
                 </li>
             </div>
             <div className={open ? 'modal active' : "modal"}>
