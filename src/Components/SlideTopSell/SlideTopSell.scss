@@ -86,6 +86,11 @@ button.rec-dot_active  {
         display: none;
     }
 }
+@media (max-width: 530px) {
+    button.rec-dot {
+        width: 25%;
+    }
+}
 @media (max-width: 375px) {
     .sell_text {
         margin-left: 16px;

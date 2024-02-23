@@ -1,12 +1,17 @@
 import React, { useState, useRef } from 'react'
 import "./DropDownComponent.scss"
 import { useClickOutside } from '../../hooks/useClickOutSide'
-
+import { NavLink } from "react-router-dom";
+import { actions } from '../../Features/slices/NavigationId.slice'
+import { actions as secondAction } from '../../Features/slices/SecondNavigationId.slice'
+import { actions as SetIndexAction } from '../../Features/slices/SetIndexNavItem.slice'
+import { useDispatch } from 'react-redux'
 
 
 export const DropDown = ({info, index}) => {
+    const dispatch = useDispatch()
     const [open, setOpen] = useState(false)
-    const {firstList, secondList, catalog,img, arrowCatalog} = info
+    const {firstList, secondList, catalog,img, arrowCatalog,id} = info
     const menuRef = useRef()
     useClickOutside(menuRef, () => {
         setOpen(false);
@@ -27,7 +32,10 @@ export const DropDown = ({info, index}) => {
         <>
             <div>
                 <li className="nav_item" onClick={() => setOpen(!open)}>
-                    <a href='#' style={index === 5 ? {color: "#F79009"} : null}>{catalog}</a>
+                    <a href='#' style={index === 5 ? {color: "#F79009"} : null} onClick={(e) => {
+                        dispatch(actions.setNavItem(e.target.innerText))
+                        dispatch(SetIndexAction.SetIndexNavItem(index))
+                        }}>{catalog}</a>
                 </li>
             </div>
             <div className={open ? 'modal active' : "modal"}>
@@ -36,14 +44,17 @@ export const DropDown = ({info, index}) => {
                         <div className="modal_list">
                             <ul style={(firstList.length) ? {display: "block"} : {display: "none"}}>
                                 {
-                                    firstList.map(item => <li>{item}</li> )
+                                    firstList.map(item => <li onClick={() => setOpen(false)}><NavLink className="links_drop_menu" onClick={(e) => {dispatch(secondAction.setSecondNavItem(e.target.innerText))}} to={`/catalog/${id}/${item}`}>{item}</NavLink></li> )
                                 }
                             </ul>
                             <ul className='second_list'>
                                 {    
                                     info.secondList.map((item,index) => {
-                                    if (secondList.length - 1 === index)  return <li>{item}<img src={arrowCatalog} alt='arrowCatalog' /></li>
-                                    return <li>{item}</li> 
+                                    if (secondList.length - 1 === index)  return <li key={id}><NavLink className="links_drop_menu_last" onClick={() => {
+                                        setOpen(false)
+                                        dispatch(secondAction.setSecondNavItem(""))}
+                                        } to={`/catalog/${id}`}>{item}</NavLink><img src={arrowCatalog} alt='arrowCatalog' /></li>
+                                    return <li onClick={() => setOpen(false)}><NavLink className="links_drop_menu" onClick={(e) => dispatch(secondAction.setSecondNavItem(e.target.innerText))} to={`/catalog/${id}/${item}`}>{item}</NavLink></li> 
                                 })}
                             </ul>
                         </div>

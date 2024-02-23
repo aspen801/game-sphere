@@ -12,7 +12,7 @@ export const FooterTabs = () => {
         <div className='footer_container_tabs'>
             <div className='footer_submit'>
                 <img src={Logo} alt='logo' className='footer_logo'/>
-                <FooterSubmit/>
+                {/* <FooterSubmit/> */}
             </div>
             <div className='footer_info'>
                 <FooterContacts/>

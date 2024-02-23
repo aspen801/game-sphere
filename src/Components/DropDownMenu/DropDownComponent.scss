@@ -11,6 +11,17 @@
     background: $mainGbColor;
     opacity: 0.7;
 }
+.links_drop_menu {
+    text-decoration: none;
+    color: #F9FAFB;
+}
+.links_drop_menu:hover {
+    color: #835AE0;
+}
+.links_drop_menu_last {
+    color: #835AE0;
+    text-decoration: none;
+}
 .background_click {
     position: absolute;
     z-index: 1;
