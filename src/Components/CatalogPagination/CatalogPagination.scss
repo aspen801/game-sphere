@@ -2,8 +2,73 @@
 
 .catalog-pagination {
   display: flex;
+  flex-direction: column;
   align-self: center;
   padding-bottom: 26px;
+}
+
+.catalog-pagination__show-more {
+  padding: 0;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 30px;
+  align-self: center;
+  p {
+    font-family: $mainFont400;
+    font-size: 14px;
+    margin: 0;
+    color: #f9fafb;
+    margin-right: 8px;
+    transition: color 0.3s ease;
+  }
+}
+
+.catalog-pagination__arrows-container {
+  position: relative;
+  display: flex;
+  padding-bottom: 2px;
+}
+
+.catalog-pagination__show-more-arrow {
+  height: 100%;
+  width: 14px;
+  height: 14px;
+  align-self: center;
+  transform: rotate(180deg);
+  &.additional-arrow {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+    left: 7px;
+    &:last-child {
+      left: 14px;
+    }
+  }
+}
+
+.catalog-pagination__show-more:hover {
+  p {
+    color: $mainPurple;
+  }
+  .catalog-pagination__show-more-arrow {
+    path {
+      fill: $mainPurple;
+      transition: fill 0.3s ease;
+    }
+    &.additional-arrow {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0s;
+    }
+  }
+}
+
+.catalog-pagination__buttons {
+  display: flex;
   gap: 5px;
 }
 
