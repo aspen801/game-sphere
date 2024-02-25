@@ -22,7 +22,6 @@ export const BurgerLink = ({setOpenBurger, setOpenBurgerLink,openBurgerLink,info
         <div className='line_link line'></div>
         <ul className='burger_link_list'>
             {informationBurgerLink.firstList.map(item => <li><NavLink className="burger_link" onClick={(e) => setTargetUrl(e)} to={`/catalog/${informationBurgerLink.id}/${item}`}>{item}</NavLink></li>)}
-            {informationBurgerLink.secondList.map(item => <li><NavLink className="burger_link" onClick={(e) => setTargetUrl(e)} to={`/catalog/${informationBurgerLink.id}/${item}`}>{item}</NavLink></li>)}
         </ul>
     </div>
   )
