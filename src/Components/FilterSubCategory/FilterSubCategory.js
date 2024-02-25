@@ -9,26 +9,25 @@ import { actions as secondAction } from '../../Features/slices/SecondNavigationI
 export const FilterSubCategory = ({modalInfo}) => {
     const index = useSelector((state) => state.SetIndexNavItem);
     const dispatch = useDispatch()
-    const {firstList,secondList, id} = modalInfo[index]
+    const {firstList, id} = modalInfo[index]
+
   return (
     <div className='catalog-page__filters'>
         <ul className='catalog-page__filters__list'>
-            {firstList.map(item => <li className='catalog-page__filters__list__item'>
+            {firstList.map((item,index) => {
+                if(firstList.length - 1 === index) {
+                    return null
+                }
+                
+                
+                return(<li className='catalog-page__filters__list__item'>
                 <NavLink 
                 className='catalog-page__filters__list__item__link' 
                 onClick={(e) => dispatch(secondAction.setSecondNavItem(e.target.innerText))}
                 to={`/catalog/${id}/${item}`}>
                     {item}
                 </NavLink>
-            </li>)}
-            {secondList.map(item => <li className='catalog-page__filters__list__item'>
-                <NavLink 
-                className='catalog-page__filters__list__item__link' 
-                onClick={(e) => dispatch(secondAction.setSecondNavItem(e.target.innerText))}
-                to={`/catalog/${id}/${item}`}>
-                    {item}
-                </NavLink>
-            </li>)}
+            </li>)})}
         </ul>
     </div>
   )

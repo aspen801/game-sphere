@@ -42,20 +42,16 @@ export const DropDown = ({info, index}) => {
                 <div className={open ? "catalog_pc active": "catalog_pc"}>
                     <div className='container_modal' ref={menuRef}>
                         <div className="modal_list">
-                            <ul style={(firstList.length) ? {display: "block"} : {display: "none"}}>
+                            <ul className='item_list'>
                                 {
-                                    firstList.map(item => <li onClick={() => setOpen(false)}><NavLink className="links_drop_menu" onClick={(e) => {dispatch(secondAction.setSecondNavItem(e.target.innerText))}} to={`/catalog/${id}/${item}`}>{item}</NavLink></li> )
-                                }
-                            </ul>
-                            <ul className='second_list'>
-                                {    
-                                    info.secondList.map((item,index) => {
-                                    if (secondList.length - 1 === index)  return <li key={id}><NavLink className="links_drop_menu_last" onClick={() => {
+                                    firstList.map((item,index) => {
+                                        if (firstList.length - 1 === index)  return <li key={id}><NavLink className="links_drop_menu_last" onClick={() => {
                                         setOpen(false)
                                         dispatch(secondAction.setSecondNavItem(""))}
                                         } to={`/catalog/${id}`}>{item}</NavLink><img src={arrowCatalog} alt='arrowCatalog' /></li>
                                     return <li onClick={() => setOpen(false)}><NavLink className="links_drop_menu" onClick={(e) => dispatch(secondAction.setSecondNavItem(e.target.innerText))} to={`/catalog/${id}/${item}`}>{item}</NavLink></li> 
-                                })}
+                                    })
+                                }
                             </ul>
                         </div>
                         <img src={img} alt=''/>
