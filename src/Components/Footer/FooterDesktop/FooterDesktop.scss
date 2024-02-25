@@ -2,12 +2,12 @@
 
 
 .footer_container {
-    width: 100%;
     max-width: 1227px;
     margin: 0 auto;
-    padding-top: 60px;
+    padding: 60px 40px 0px 40px;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 .footer_container ul {
     list-style-type: none;

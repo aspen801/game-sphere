@@ -28,8 +28,6 @@ const modalInfo = [
       "Материнські плати",
       "Відеокарти",
       "Оперативна пам’ять",
-    ],
-    secondList: [
       "SSD накопичувачі",
       "Жорсткі диски",
       "Блоки живлення",
@@ -37,6 +35,7 @@ const modalInfo = [
       "Корпуси плати",
       "Всі ПК та комплектуючі",
     ],
+
     img: navigationPc,
     tabsImg: desktop,
     arrowCatalog,
@@ -44,8 +43,7 @@ const modalInfo = [
     id: "computers"
   },
   {
-    firstList: [],
-    secondList: [
+    firstList: [
       "Ігрові консолі",
       "Аксесуари для консолей",
       "Ігрові маніпулятори",
@@ -61,8 +59,7 @@ const modalInfo = [
     id: "consoles"
   },
   {
-    firstList: [],
-    secondList: [
+    firstList: [
       "Ноутбуки",
       "Аксесуари для ноутбука",
       "Комплектуючи",
@@ -84,8 +81,6 @@ const modalInfo = [
       "Гарнітури та аудіо",
       "Комплекти",
       "Геймпади, джойстики та керма",
-    ],
-    secondList: [
       "Килимки для мишок",
       "Аксесуари для клавіатури",
       "Окуляри та шоломи VR",
@@ -100,8 +95,7 @@ const modalInfo = [
     id: "periphery"
   },
   {
-    firstList: [],
-    secondList: [
+    firstList: [
       "Аксесуари для робочого місця",
       "Накопичувачі пам’яті",
       "Кабелі та переходники",
@@ -118,8 +112,7 @@ const modalInfo = [
     id: 'accessories'
   },
   {
-    firstList: [],
-    secondList: [
+    firstList: [
       "Ноутбуки",
       "Аксесуари для ноутбука",
       "Комплектуючи",
@@ -145,7 +138,6 @@ const modalInfo = [
       "Обмін та повернення",
       "Політика конфіденційності",
     ],
-    secondList: [],
     tabsImg: sellers,
     arrowCatalog,
     catalog: "Покупцеві",
@@ -161,7 +153,7 @@ const App = () => {
         <Route path="/product/:id" />
         <Route path="/catalog" element={<MainPage/>} />
         <Route path="/catalog/:category" element={<CatalogPage modalInfo={modalInfo}/>} />
-        <Route path="/catalog/:category/:subcategory"/>
+        <Route path="/catalog/:category/:subcategory" element={<CatalogPage modalInfo={modalInfo}/>}/>
         <Route path="/shop" />
         <Route path="/user-agreement" />
         <Route path="/cart" />
