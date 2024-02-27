@@ -2,6 +2,7 @@
 .nav_catalog {
   background: $mainGbColor;
 }
+
 .nav_catalog_container {
   max-width: 1228px;
   margin: 0 auto;
@@ -10,28 +11,29 @@
   gap: 4px;
 }
 .nav_catalog_container p {
+  margin: 0px;
+}
+
+.nav_catalog_container img {
+  transform: rotateZ(-90deg);
+}
+.links {
   margin: 0;
   font-size: 14px;
   font-family: $mainFont400;
   color: #98a2b3;
   line-height: 140%;
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
 }
-.nav_catalog_container p:first-child {
+.links_active {
   margin: 0;
   font-size: 14px;
   font-family: $mainFont500;
   color: #f2f4f7;
   line-height: 140%;
-}
-.nav_catalog_container img {
-  transform: rotateZ(-90deg);
-}
-.links {
   text-decoration: none;
-}
-.links:active {
-  color: #f2f4f7;
-}
-.nav_catalog_container a {
-  color: #f2f4f7;
+  margin: 0px;
+  padding: 0px;
 }
