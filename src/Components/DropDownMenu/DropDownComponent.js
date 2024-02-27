@@ -6,12 +6,12 @@ import { actions } from '../../Features/slices/NavigationId.slice'
 import { actions as secondAction } from '../../Features/slices/SecondNavigationId.slice'
 import { actions as SetIndexAction } from '../../Features/slices/SetIndexNavItem.slice'
 import { useDispatch } from 'react-redux'
-
+import transliterateToURL from '../../layouts/TransliteToUrl';
 
 export const DropDown = ({info, index}) => {
     const dispatch = useDispatch()
     const [open, setOpen] = useState(false)
-    const {firstList, secondList, catalog,img, arrowCatalog,id} = info
+    const {firstList, catalog,img, arrowCatalog,id} = info
     const menuRef = useRef()
     useClickOutside(menuRef, () => {
         setOpen(false);
@@ -49,7 +49,7 @@ export const DropDown = ({info, index}) => {
                                         setOpen(false)
                                         dispatch(secondAction.setSecondNavItem(""))}
                                         } to={`/catalog/${id}`}>{item}</NavLink><img src={arrowCatalog} alt='arrowCatalog' /></li>
-                                    return <li onClick={() => setOpen(false)}><NavLink className="links_drop_menu" onClick={(e) => dispatch(secondAction.setSecondNavItem(e.target.innerText))} to={`/catalog/${id}/${item}`}>{item}</NavLink></li> 
+                                    return <li onClick={() => setOpen(false)}><NavLink className="links_drop_menu" onClick={(e) => dispatch(secondAction.setSecondNavItem(e.target.innerText))} to={`/catalog/${id}/${transliterateToURL(item)}`}>{item}</NavLink></li> 
                                     })
                                 }
                             </ul>
