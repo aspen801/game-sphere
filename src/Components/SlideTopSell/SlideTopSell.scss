@@ -10,6 +10,7 @@
 .container_slide {
     max-width: 1408px;
     margin: 0 auto;
+   
 }
 .sell_text {
     margin: 0px;
@@ -65,6 +66,9 @@ button.rec-dot_active  {
     #slide_topSell {
         min-height: 1000px;
     }
+    .sell_text {
+        margin-left: 40px;
+    }
     button.rec-dot{
         margin: 0;
         background-color: #F2F4F7;
@@ -89,6 +93,9 @@ button.rec-dot_active  {
 @media (max-width: 530px) {
     button.rec-dot {
         width: 25%;
+    }
+    .sell_text {
+        margin-left: 10px;
     }
 }
 @media (max-width: 375px) {

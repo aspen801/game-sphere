@@ -13,12 +13,12 @@ const Card = () => {
   return (
     <div className="сard">
       <img
-        src={window.innerWidth <= 400 ? heartMobile : heart}
+        src={window.innerWidth <= 450 ? heartMobile : heart}
         alt="heart"
         className="card_likes"
       />
       <img
-        src={window.innerWidth <= 400 ? balanceMobile : balance}
+        src={window.innerWidth <= 450 ? balanceMobile : balance}
         alt="balance"
         className="card_balance"
       />
