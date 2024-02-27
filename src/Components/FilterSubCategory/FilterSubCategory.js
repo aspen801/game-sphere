@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import "./FilterSubCategory.scss"
 import { NavLink } from 'react-router-dom';
 import { actions as secondAction } from '../../Features/slices/SecondNavigationId.slice'
-
+import transliterateToURL from '../../layouts/TransliteToUrl';
 
 
 export const FilterSubCategory = ({modalInfo}) => {
@@ -19,12 +19,11 @@ export const FilterSubCategory = ({modalInfo}) => {
                     return null
                 }
                 
-                
                 return(<li className='catalog-page__filters__list__item'>
                 <NavLink 
                 className='catalog-page__filters__list__item__link' 
                 onClick={(e) => dispatch(secondAction.setSecondNavItem(e.target.innerText))}
-                to={`/catalog/${id}/${item}`}>
+                to={`/catalog/${id}/${transliterateToURL(item)}`}>
                     {item}
                 </NavLink>
             </li>)})}
