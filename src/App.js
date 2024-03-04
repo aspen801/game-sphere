@@ -17,7 +17,7 @@ import promotion from "./resources/svg/promotionBurger.svg";
 import sellers from "./resources/svg/sellersBurger.svg";
 import Header from "./Components/Header/Header";
 import { Footer } from "./Components/Footer/Footer";
-import Catalog from "./Components/Catalog/Catalog";
+import NavigationMenu from "./Components/NavigationMenu/NavigationMenu";
 const modalInfo = [
   {
     firstList: [
@@ -147,7 +147,7 @@ const App = () => {
   return (
     <>
       <Header modalInfo={modalInfo} />
-      <Catalog modalInfo={modalInfo} />
+      <NavigationMenu modalInfo={modalInfo} />
       <Routes>
         <Route path="/" element={<MainPage/>} />
         <Route path="/product/:id" />
