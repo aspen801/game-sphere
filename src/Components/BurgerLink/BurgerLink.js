@@ -6,7 +6,7 @@ import { actions as secondAction } from '../../Features/slices/SecondNavigationI
 
 
 
-export const BurgerLink = ({setOpenBurger, setOpenBurgerLink,openBurgerLink,informationBurgerLink}) => {
+const BurgerLink = ({setOpenBurger, setOpenBurgerLink,openBurgerLink,informationBurgerLink}) => {
   const dispatch = useDispatch()
   function setTargetUrl(e) {
     dispatch(secondAction.setSecondNavItem(e.target.innerText))
@@ -26,3 +26,5 @@ export const BurgerLink = ({setOpenBurger, setOpenBurgerLink,openBurgerLink,info
     </div>
   )
 }
+
+export default BurgerLink;

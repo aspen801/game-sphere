@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { actions } from '../../Features/slices/NavigationId.slice'
 
 
-export const BurgerCatalog = ({item, setOpenBurger, index, ArrowRight,setOpenBurgerLink,setInformationBurgerLink}) => {
+const BurgerCatalog = ({item, setOpenBurger, index, ArrowRight,setOpenBurgerLink,setInformationBurgerLink}) => {
   const {catalog,firstList,secondList,id} = item
   const dispatch = useDispatch()
 
@@ -23,3 +23,5 @@ export const BurgerCatalog = ({item, setOpenBurger, index, ArrowRight,setOpenBur
     </li>
   )
 }
+
+export default BurgerCatalog;

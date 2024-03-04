@@ -2,7 +2,7 @@ import React from 'react'
 import filterIcon from "../../resources/svg/filter-icon.svg"
 import SortIcon from "../../resources/svg/sort-icon.svg"
 import "./FilterMobile.scss"
-export const FilterMobile = () => {
+const FilterMobile = () => {
   return (
     <div className='filter-mobile'>
         <button className='filter-mobile__button-filter'>
@@ -16,3 +16,5 @@ export const FilterMobile = () => {
     </div>
   )
 }
+
+export default FilterMobile;

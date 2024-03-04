@@ -3,13 +3,13 @@ import "./Actions.scss"
 import Carousel, {consts} from "@itseasy21/react-elastic-carousel";
 import arrowleft from "../../resources/svg/ArrowLeft.svg"
 import arrowright from "../../resources/svg/ArrowRight.svg"
-import { ActionItem } from '../ActionsItem/ActionItem';
+import ActionItem from '../ActionsItem/ActionItem';
 import actionSotsLeft from "../../resources/svg/actionSotsLeft.svg"
 import actionSotsRight from "../../resources/svg/actionSotsRight.svg"
 import actionSotsLeftTab from "../../resources/svg/sotSmallActionTab.svg"
 import actionSotsRightTab from "../../resources/svg/sotsRightActionTab.svg"
 import actionSotsRightMobile from "../../resources/svg/sotsRightActionMobile.svg"
-export const Actions = () => {
+const Actions = () => {
     const breakPoints = [
         {width: 625, renderArrow: false},
         {width: 1220, itemsToShow: 1, pagination: true},
@@ -40,3 +40,5 @@ export const Actions = () => {
     </div>
   )
 }
+
+export default Actions;

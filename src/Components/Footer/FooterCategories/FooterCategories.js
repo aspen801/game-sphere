@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./FooterCategories.scss"
 import dropArrowFooter from "../../../resources/svg/dropArrowFooter.svg"
-export const FooterCategories = () => {
+const FooterCategories = () => {
     const [openCategories, setCategories] = useState(false)
   return (
     <div>
@@ -22,3 +22,5 @@ export const FooterCategories = () => {
     </div>
   )
 }
+
+export default FooterCategories;

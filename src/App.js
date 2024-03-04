@@ -16,7 +16,7 @@ import disk from "./resources/svg/diskBurger.svg";
 import promotion from "./resources/svg/promotionBurger.svg";
 import sellers from "./resources/svg/sellersBurger.svg";
 import Header from "./Components/Header/Header";
-import { Footer } from "./Components/Footer/Footer";
+import Footer from "./Components/Footer/Footer";
 import NavigationMenu from "./Components/NavigationMenu/NavigationMenu";
 const modalInfo = [
   {

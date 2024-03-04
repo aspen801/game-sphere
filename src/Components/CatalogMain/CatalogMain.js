@@ -1,11 +1,11 @@
 import React from "react";
 import "./CatalogMain.scss";
 import CatalogGrid from "../../Components/CatalogGrid/CatalogGrid";
-import { CatalogSubcategoryMenu } from "../CatalogSubcategoryMenu/CatalogSubcategoryMenu";
+import CatalogSubcategoryMenu from "../CatalogSubcategoryMenu/CatalogSubcategoryMenu";
 import CatalogFilter from "../CatalogFilter/CatalogFilter";
-import { Sorts } from "../../Components/Sorts/Sorts";
+import Sorts from "../../Components/Sorts/Sorts";
 import CatalogPagination from "../../Components/CatalogPagination/CatalogPagination";
-import { FilterMobile } from "../../Components/FilterMobile/FilterMobile";
+import FilterMobile from "../../Components/FilterMobile/FilterMobile";
 import { useParams } from "react-router-dom";
 
 const CatalogMain = ({ modalInfo }) => {
