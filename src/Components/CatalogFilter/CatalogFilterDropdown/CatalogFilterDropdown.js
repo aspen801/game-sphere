@@ -2,10 +2,15 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./CatalogFilterDropdown.scss";
 import { ReactComponent as PaginationArrow } from "../../../resources/svg/paginationArrow.svg";
-
-const CatalogFilterDropdown = () => {
+import CatalogFilterDropdownItem from "./CatalogFilterDropdownItem/CatalogFilterDropdownItem";
+const CatalogFilterDropdown = ({ activeFilter, setActiveFilter }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const changeFilter = (currId) => {
+    const copy = [...activeFilter];
+    const current = copy.find((fl) => fl.id === currId);
+    current.isActive = !current.isActive;
+    setActiveFilter(copy);
+  };
   const variants = {
     open: { opacity: 1, height: "auto" },
     closed: { opacity: 0, height: 0 },
@@ -29,22 +34,14 @@ const CatalogFilterDropdown = () => {
           variants={variants}
           transition={{ duration: 0.5 }}
         >
-          <div className="catalog-filter__dropdown-item">
-            <input type="checkbox" />
-            <p>Qbox</p>
-          </div>
-          <div className="catalog-filter__dropdown-item">
-            <input type="checkbox" />
-            <p>Impression</p>
-          </div>
-          <div className="catalog-filter__dropdown-item">
-            <input type="checkbox" />
-            <p>HP</p>
-          </div>
-          <div className="catalog-filter__dropdown-item">
-            <input type="checkbox" />
-            <p>2E</p>
-          </div>
+          {activeFilter.map((item) => (
+            <CatalogFilterDropdownItem
+              title={item.title}
+              active={item.isActive}
+              changeFilter={changeFilter}
+              id={item.id}
+            />
+          ))}
         </motion.div>
       )}
     </div>

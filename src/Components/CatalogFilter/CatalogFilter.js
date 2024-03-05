@@ -2,13 +2,35 @@ import { useState } from "react";
 import "./CatalogFilter.scss";
 import Slider from "react-slider";
 import CatalogFilterDropdown from "./CatalogFilterDropdown/CatalogFilterDropdown";
-// import CatalogFilterRange from "./CatalogFilterRange/CatalogFilterRange";
+import ActiveFilters from "../ActiveFilters/Components/ActiveFilters/ActiveFilters";
 
 const MIN = 10000;
 const MAX = 100000;
 
 const CatalogFilter = () => {
   const [values, setValues] = useState([MIN, MAX]);
+  const [activeFilter, setActiveFilter] = useState([
+    {
+      title: "Дискретна (ігрова)",
+      id: 0,
+      isActive: false,
+    },
+    {
+      title: "Готові рішення",
+      id: 1,
+      isActive: false,
+    },
+    {
+      title: "ASUS",
+      id: 2,
+      isActive: false,
+    },
+    {
+      title: "24 ГБ",
+      id: 3,
+      isActive: false,
+    },
+  ]);
 
   const handleMinChange = (event) => {
     const newMin = Number(event.target.value);
@@ -23,6 +45,10 @@ const CatalogFilter = () => {
   return (
     <div className="catalog-filter">
       <div className="catalog-filter__price-range">
+        <ActiveFilters
+          activeFilter={activeFilter}
+          setActiveFilter={setActiveFilter}
+        />
         <p className>Ціна</p>
         <div className="catalog-filter__price-range-input-container">
           <div className="catalog-filter__price-range-input">
@@ -58,9 +84,10 @@ const CatalogFilter = () => {
         </div>
       </div>
       <div className="catalog-filter__dropdowns">
-        <CatalogFilterDropdown />
-        <CatalogFilterDropdown />
-        <CatalogFilterDropdown />
+        <CatalogFilterDropdown
+          activeFilter={activeFilter}
+          setActiveFilter={setActiveFilter}
+        />
       </div>
     </div>
   );
