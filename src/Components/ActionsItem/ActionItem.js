@@ -1,7 +1,7 @@
 import React from 'react'
 import "./ActionItem.scss"
 import actionItemImg from "../../resources/png/actionImgItem1.png"
-export const ActionItem = () => {
+const ActionItem = () => {
   return (
     <div className='action_item'>
         <div className='container_action_item'>
@@ -16,3 +16,5 @@ export const ActionItem = () => {
     </div>
   )
 }
+
+export default ActionItem;

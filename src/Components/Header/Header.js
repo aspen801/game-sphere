@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react'
 import  "./Header.scss"
 import giveSvg from '../../layouts/SvgFunction'
-import { useClickOutside } from '../../hooks/useClickOutSide'
-import { BurgerMenu } from '../BurgerMenu/BurgerMenu'
-import { BurgerLink } from '../BurgerLink/BurgerLink'
+import useClickOutside from '../../hooks/useClickOutSide'
+import BurgerMenu from '../BurgerMenu/BurgerMenu'
+import BurgerLink from '../BurgerLink/BurgerLink'
 import arrow from "../../resources/svg/arrow.svg"
 
 const Header = ({modalInfo}) => {

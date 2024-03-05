@@ -7,9 +7,9 @@ import giveSvg from '../../layouts/SvgFunction'
 import ArrowRight from "../../resources/svg/arrowRightBurger.svg"
 import Profile from "../../resources/svg/Profile.svg"
 import Balance from "../../resources/svg/balance.svg"
-import { BurgerCatalog } from '../BurgerCatalog/BurgerCatalog'
+import BurgerCatalog from '../BurgerCatalog/BurgerCatalog'
 
-export const BurgerMenu = ({setInformationBurgerLink, setOpenBurger,openBurger,modalInfo,setOpenBurgerLink,openBurgerLink}) => {
+const BurgerMenu = ({setInformationBurgerLink, setOpenBurger,openBurger,modalInfo,setOpenBurgerLink,openBurgerLink}) => {
   const [open, setOpen] = useState(false)
   const [activeLng, setActiveLng] = useState("Укр")
   const [passiveLng, setPassiveLng] = useState("Eng")
@@ -48,3 +48,5 @@ export const BurgerMenu = ({setInformationBurgerLink, setOpenBurger,openBurger,m
     </div>
   )
 }
+
+export default BurgerMenu;

@@ -8,7 +8,7 @@ import guaranteeMobile from "../../resources/svg/guaranteeMobile.svg"
 import deliveryMobile from "../../resources/svg/deliveryMobile.svg"
 import discountAdvMobile from "../../resources/svg/discountAdvMobile.svg"
 import supportMobile from "../../resources/svg/supportMobile.svg"
-export const Advantages = () => {
+const Advantages = () => {
   return (
     <div className='advantages'>
         <div className='advantages_container'>
@@ -32,3 +32,5 @@ export const Advantages = () => {
     </div>
   )
 }
+
+export default Advantages;

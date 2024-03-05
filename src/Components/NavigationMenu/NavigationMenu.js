@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavigationMenu.scss";
 import searchInputSvg from "../../resources/svg/Search.svg";
-import { DropDown } from "../DropDownMenu/DropDownComponent";
+import DropDown from "../DropDownMenu/DropDownComponent";
 
 const NavigationMenu = ({ modalInfo }) => {
   return (

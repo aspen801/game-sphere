@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { actions as secondAction } from "../../Features/slices/SecondNavigationId.slice";
 import transliterateToURL from "../../layouts/TransliteToUrl";
 
-export const CatalogSubcategoryMenu = ({ modalInfo }) => {
+const CatalogSubcategoryMenu = ({ modalInfo }) => {
   const index = useSelector((state) => state.SetIndexNavItem);
   const dispatch = useDispatch();
   const { firstList, id } = modalInfo[index];
@@ -36,3 +36,5 @@ export const CatalogSubcategoryMenu = ({ modalInfo }) => {
     </div>
   );
 };
+
+export default CatalogSubcategoryMenu;

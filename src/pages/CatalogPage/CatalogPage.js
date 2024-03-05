@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./CatalogPage.scss";
-import { NavigationCatalog } from "../../Components/NavigationCatalog/NavigationCatalog";
+import NavigationCatalog from "../../Components/NavigationCatalog/NavigationCatalog";
 import CatalogMain from "../../Components/CatalogMain/CatalogMain";
 import { useSelector } from "react-redux";
 

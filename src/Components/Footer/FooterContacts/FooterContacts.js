@@ -1,7 +1,7 @@
 import React from 'react'
 import "./FooterContacts.scss"
 import giveSvg from '../../../layouts/SvgFunction'
-export const FooterContacts = () => {
+const FooterContacts = () => {
   return (
     <div className='footer_contacts'>
         <p className='footer_contacts_text'>Контакти</p>
@@ -17,3 +17,5 @@ export const FooterContacts = () => {
     </div>
   )
 }
+
+export default FooterContacts;
