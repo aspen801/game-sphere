@@ -7,30 +7,8 @@ import ActiveFilters from "../ActiveFilters/Components/ActiveFilters/ActiveFilte
 const MIN = 10000;
 const MAX = 100000;
 
-const CatalogFilter = () => {
+const CatalogFilter = ({ activeFilter, setActiveFilter }) => {
   const [values, setValues] = useState([MIN, MAX]);
-  const [activeFilter, setActiveFilter] = useState([
-    {
-      title: "Дискретна (ігрова)",
-      id: 0,
-      isActive: false,
-    },
-    {
-      title: "Готові рішення",
-      id: 1,
-      isActive: false,
-    },
-    {
-      title: "ASUS",
-      id: 2,
-      isActive: false,
-    },
-    {
-      title: "24 ГБ",
-      id: 3,
-      isActive: false,
-    },
-  ]);
 
   const handleMinChange = (event) => {
     const newMin = Number(event.target.value);
