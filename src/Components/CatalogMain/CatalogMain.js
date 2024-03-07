@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CatalogMain.scss";
 import CatalogGrid from "../../Components/CatalogGrid/CatalogGrid";
 import CatalogSubcategoryMenu from "../CatalogSubcategoryMenu/CatalogSubcategoryMenu";
@@ -10,7 +10,28 @@ import { useParams } from "react-router-dom";
 
 const CatalogMain = ({ modalInfo }) => {
   const { category, subcategory } = useParams();
-  // Check if we are on subcategory level
+  const [activeFilter, setActiveFilter] = useState([
+    {
+      title: "Дискретна (ігрова)",
+      id: 0,
+      isActive: false,
+    },
+    {
+      title: "Готові рішення",
+      id: 1,
+      isActive: false,
+    },
+    {
+      title: "ASUS",
+      id: 2,
+      isActive: false,
+    },
+    {
+      title: "24 ГБ",
+      id: 3,
+      isActive: false,
+    },
+  ]);
   const atSubcategoryLevel = subcategory !== undefined;
 
   return (
@@ -18,11 +39,18 @@ const CatalogMain = ({ modalInfo }) => {
       {!atSubcategoryLevel ? (
         <CatalogSubcategoryMenu modalInfo={modalInfo} />
       ) : (
-        <CatalogFilter modalInfo={modalInfo} />
+        <CatalogFilter
+          modalInfo={modalInfo}
+          activeFilter={activeFilter}
+          setActiveFilter={setActiveFilter}
+        />
       )}
       <div className="catalog-main__column">
         <Sorts />
-        <FilterMobile />
+        <FilterMobile
+          activeFilter={activeFilter}
+          setActiveFilter={setActiveFilter}
+        />
         <CatalogGrid />
         <CatalogPagination />
       </div>
