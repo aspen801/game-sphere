@@ -6,7 +6,7 @@ import corsairLogo from "../../resources/svg/corsairLogo.svg"
 import lenovoLogo from "../../resources/svg/lenovoLogo.svg"
 import samsungLogo from "../../resources/svg/samsungLogo.svg"
 import sonyLogo from "../../resources/svg/sonyLogo.svg"
-export const Brands = () => {
+const Brands = () => {
   return (
     <div className='brands'>
         <div className='brands_container'>
@@ -23,3 +23,5 @@ export const Brands = () => {
     </div>
   )
 }
+
+export default Brands;

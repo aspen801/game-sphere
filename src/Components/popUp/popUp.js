@@ -3,8 +3,8 @@ import "./popUp.scss"
 import CloseButton from "../../resources/svg/closeButton.svg"
 import sotsRight from "../../resources/png/sotsPopUpRight.png"
 import sotsLeft from "../../resources/png/sotsPopUpLeft.png"
-import { useClickOutside } from '../../hooks/useClickOutSide'
-export const PopUp = () => {
+import useClickOutside from '../../hooks/useClickOutSide'
+const PopUp = () => {
 
     // useEffect(() => {
     //     const popUpTimer = setTimeout(() => setOpen(true),15000)
@@ -43,3 +43,5 @@ export const PopUp = () => {
     </div>
   )
 }
+
+export default PopUp;

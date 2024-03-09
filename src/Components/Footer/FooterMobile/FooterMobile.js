@@ -1,11 +1,11 @@
 import React from 'react'
 import "./FooterMobile.scss"
 import Logo from '../../../resources/svg/Logo.svg'
-import { FooterSubmit } from '../FooterSubmit/FooterSubmit'
-import { FooterContacts } from '../FooterContacts/FooterContacts'
-import { FooterBuyer } from '../FooterBuyer/FooterBuyer'
-import { FooterCategories } from '../FooterCategories/FooterCategories'
-export const FooterMobile = () => {
+import FooterSubmit from '../FooterSubmit/FooterSubmit'
+import FooterContacts from '../FooterContacts/FooterContacts'
+import FooterBuyer from '../FooterBuyer/FooterBuyer'
+import FooterCategories from '../FooterCategories/FooterCategories'
+const FooterMobile = () => {
   return (
     <>
         <div className='footer_container_mobile'>
@@ -25,3 +25,5 @@ export const FooterMobile = () => {
     </>
   )
 }
+
+export default FooterMobile;

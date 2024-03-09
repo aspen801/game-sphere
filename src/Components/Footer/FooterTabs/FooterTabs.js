@@ -2,11 +2,11 @@ import React from 'react'
 import "./FooterTabs.scss"
 
 import Logo from '../../../resources/svg/Logo.svg'
-import { FooterSubmit } from '../FooterSubmit/FooterSubmit'
-import { FooterContacts } from '../FooterContacts/FooterContacts'
-import { FooterBuyer } from '../FooterBuyer/FooterBuyer'
-import { FooterCategories } from '../FooterCategories/FooterCategories'
-export const FooterTabs = () => { 
+import FooterSubmit from '../FooterSubmit/FooterSubmit'
+import FooterContacts from '../FooterContacts/FooterContacts'
+import FooterBuyer from '../FooterBuyer/FooterBuyer'
+import FooterCategories from '../FooterCategories/FooterCategories'
+const FooterTabs = () => { 
   return (
     <>
         <div className='footer_container_tabs'>
@@ -25,3 +25,5 @@ export const FooterTabs = () => {
     </>
   )
 }
+
+export default FooterTabs;

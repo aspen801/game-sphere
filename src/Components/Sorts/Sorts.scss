@@ -40,3 +40,8 @@
     transition: all 0.5s;
     color: #835AE0;
 }
+@media (max-width: 880px) {
+    .sorts__content {
+        display: none;
+    }
+}

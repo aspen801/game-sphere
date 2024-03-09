@@ -1,6 +1,6 @@
 import React from 'react'
 import "./FooterSubmit.scss"
-export const FooterSubmit = () => {
+const FooterSubmit = () => {
   return (
     <div>
         {/* <p className='footer_input_text'>Підпишись та першим дізнавайся акції та новини!</p> */}
@@ -11,3 +11,5 @@ export const FooterSubmit = () => {
     </div>
   )
 }
+
+export default FooterSubmit;

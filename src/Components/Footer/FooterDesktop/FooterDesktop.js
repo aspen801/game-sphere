@@ -1,13 +1,13 @@
 import React from 'react'
 
 import "./FooterDesktop.scss"
-import { FooterSubmit } from '../FooterSubmit/FooterSubmit'
-import { FooterCategories } from '../FooterCategories/FooterCategories'
-import { FooterBuyer } from '../FooterBuyer/FooterBuyer'
-import { FooterContacts } from '../FooterContacts/FooterContacts'
+import FooterSubmit from '../FooterSubmit/FooterSubmit'
+import FooterCategories from '../FooterCategories/FooterCategories'
+import FooterBuyer from '../FooterBuyer/FooterBuyer'
+import FooterContacts from '../FooterContacts/FooterContacts'
 import giveSvg from '../../../layouts/SvgFunction'
 
-export const FooterDesktop = () => {
+const FooterDesktop = () => {
   return (
     <>
         <div className='footer_container'>
@@ -28,3 +28,5 @@ export const FooterDesktop = () => {
     </>
   )
 }
+
+export default FooterDesktop;

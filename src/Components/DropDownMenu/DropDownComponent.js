@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import "./DropDownComponent.scss"
-import { useClickOutside } from '../../hooks/useClickOutSide'
+import useClickOutside from '../../hooks/useClickOutSide'
 import { NavLink } from "react-router-dom";
 import { actions } from '../../Features/slices/NavigationId.slice'
 import { actions as secondAction } from '../../Features/slices/SecondNavigationId.slice'
@@ -8,7 +8,7 @@ import { actions as SetIndexAction } from '../../Features/slices/SetIndexNavItem
 import { useDispatch } from 'react-redux'
 import transliterateToURL from '../../layouts/TransliteToUrl';
 
-export const DropDown = ({info, index}) => {
+const DropDown = ({info, index}) => {
     const dispatch = useDispatch()
     const [open, setOpen] = useState(false)
     const {firstList, catalog,img, arrowCatalog,id} = info
@@ -63,3 +63,5 @@ export const DropDown = ({info, index}) => {
         </>
     )
 }
+
+export default DropDown;

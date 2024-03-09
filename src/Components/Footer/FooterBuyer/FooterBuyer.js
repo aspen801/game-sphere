@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./FooterBuyer.scss"
 import dropArrowFooter from "../../../resources/svg/dropArrowFooter.svg"
-export const FooterBuyer = () => {
+const FooterBuyer = () => {
     const [openBuyer, setOpenBuyer] = useState(false)
   return (
     <div className='footer_buyer'>
@@ -22,3 +22,5 @@ export const FooterBuyer = () => {
     </div>
   ) 
 }
+
+export default FooterBuyer;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./Sorts.scss"
-export const Sorts = () => {
+const Sorts = () => {
     const [activePopular, setActivePopular] = useState(true)
     const [activeExpensive, setActiveExpensive] = useState(false)
     const [activeCheap, setActiveCheap] = useState(false)
@@ -25,3 +25,5 @@ export const Sorts = () => {
     </div>
   )
 }
+
+export default Sorts;

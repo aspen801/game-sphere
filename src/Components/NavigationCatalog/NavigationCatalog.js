@@ -5,7 +5,7 @@ import arrow from "../../resources/svg/arrow.svg";
 import { NavLink } from "react-router-dom";
 import { actions as secondAction } from "../../Features/slices/SecondNavigationId.slice";
 
-export const NavigationCatalog = () => {
+const NavigationCatalog = () => {
   const navCatalog = useSelector((state) => state.NavigationIdSlice);
   const SecondNav = useSelector((state) => state.SecondNavigation);
   const stat = useSelector((state) => state);
@@ -40,3 +40,5 @@ export const NavigationCatalog = () => {
     </div>
   );
 };
+
+export default NavigationCatalog;
