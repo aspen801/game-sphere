@@ -6,11 +6,10 @@ import { NavLink } from "react-router-dom";
 import { actions as secondAction } from "../../Features/slices/SecondNavigationId.slice";
 
 const NavigationCatalog = () => {
-  const navCatalog = useSelector((state) => state.NavigationIdSlice);
-  const SecondNav = useSelector((state) => state.SecondNavigation);
-  const stat = useSelector((state) => state);
+  const SecondNavItem = useSelector((state) => state.SecondNavigation);
+  const NavigationIdSlice = useSelector((state) => state.NavigationIdSlice);
   const dispatch = useDispatch();
-  console.log(stat)
+
   return (
     <div className="nav_catalog">
       <div className="nav_catalog_container">
@@ -20,20 +19,20 @@ const NavigationCatalog = () => {
           </NavLink>
         </p>
         <img src={arrow} alt="arrow" />
-        <p className={SecondNav !== "" ? "links_active" : "links"}>
+        <p className={SecondNavItem !== "" ? "links_active" : "links"}>
           <NavLink
-            className={SecondNav !== "" ? "links_active" : "links"}
-            to={SecondNav !== "" ? ".." : ""}
+            className={SecondNavItem !== "" ? "links_active" : "links"}
+            to={SecondNavItem !== "" ? ".." : ""}
             relative="path"
             onClick={() => dispatch(secondAction.setSecondNavItem(""))}
           >
-            {navCatalog}
+            {NavigationIdSlice}
           </NavLink>
         </p>
-        {SecondNav !== "" ? (
+        {SecondNavItem !== "" ? (
           <>
             <img src={arrow} alt="arrow" />
-            <p className="links">{SecondNav}</p>
+            <p className="links">{SecondNavItem}</p>
           </>
         ) : null}
       </div>

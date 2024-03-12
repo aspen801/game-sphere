@@ -5,8 +5,7 @@ import CatalogMain from "../../Components/CatalogMain/CatalogMain";
 import { useSelector } from "react-redux";
 
 const CatalogPage = ({ modalInfo }) => {
-  const navCatalog = useSelector((state) => state.NavigationIdSlice);
-
+  const NavItemText = useSelector((state) => state.NavigationIdSlice);
   // Условный фетч категорий происходит здесь
   useEffect(() => {
     fetch("https://dummyjson.com/products/1")
@@ -20,7 +19,7 @@ const CatalogPage = ({ modalInfo }) => {
     <div className="catalog-page">
       <div className="catalog-page__content">
         <NavigationCatalog />
-        <p className="catalog-page__title-text">{navCatalog}</p>
+        <p className="catalog-page__title-text">{NavItemText}</p>
         <CatalogMain modalInfo={modalInfo} />
       </div>
     </div>

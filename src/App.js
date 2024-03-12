@@ -40,7 +40,7 @@ const modalInfo = [
     tabsImg: desktop,
     arrowCatalog,
     catalog: "ПК та комплектуючі",
-    id: "computers"
+    id: "computers",
   },
   {
     firstList: [
@@ -56,7 +56,7 @@ const modalInfo = [
     tabsImg: gamepad,
     arrowCatalog,
     catalog: "Консолі та аксесуари",
-    id: "consoles"
+    id: "consoles",
   },
   {
     firstList: [
@@ -71,7 +71,7 @@ const modalInfo = [
     tabsImg: laptop,
     arrowCatalog,
     catalog: "Ноутбуки",
-    id: "laptop"
+    id: "laptop",
   },
   {
     firstList: [
@@ -92,7 +92,7 @@ const modalInfo = [
     tabsImg: mouse,
     arrowCatalog,
     catalog: "Переферія",
-    id: "periphery"
+    id: "periphery",
   },
   {
     firstList: [
@@ -109,7 +109,7 @@ const modalInfo = [
     tabsImg: disk,
     arrowCatalog,
     catalog: "Аксесуари",
-    id: 'accessories'
+    id: "accessories",
   },
   {
     firstList: [
@@ -124,10 +124,10 @@ const modalInfo = [
     tabsImg: promotion,
     arrowCatalog,
     catalog: "Акції",
-      firstList: [],
-      secondList: [],
-      tabsImg: promotion,
-      catalog: "Акції",
+    firstList: [],
+    secondList: [],
+    tabsImg: promotion,
+    catalog: "Акції",
   },
   {
     firstList: [
@@ -144,16 +144,29 @@ const modalInfo = [
   },
 ];
 const App = () => {
+  fetch("https://game-store-dev.onrender.com/api/api-categories")
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    });
   return (
     <>
       <Header modalInfo={modalInfo} />
       <NavigationMenu modalInfo={modalInfo} />
       <Routes>
-        <Route path="/" element={<MainPage/>} />
+        <Route path="/" element={<MainPage />} />
         <Route path="/product/:id" />
-        <Route path="/catalog" element={<MainPage/>} />
-        <Route path="/catalog/:category" element={<CatalogPage modalInfo={modalInfo}/>} />
-        <Route path="/catalog/:category/:subcategory" element={<CatalogPage modalInfo={modalInfo}/>}/>
+        <Route path="/catalog" element={<MainPage />} />
+        <Route
+          path="/catalog/:category"
+          element={<CatalogPage modalInfo={modalInfo} />}
+        />
+        <Route
+          path="/catalog/:category/:subcategory"
+          element={<CatalogPage modalInfo={modalInfo} />}
+        />
         <Route path="/shop" />
         <Route path="/user-agreement" />
         <Route path="/cart" />

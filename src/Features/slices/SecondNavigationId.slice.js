@@ -1,16 +1,14 @@
-import {createSlice} from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit";
 
 export const SecondNavigationIdSlice = createSlice({
-    name:"SecondNavigation",
-    initialState: "",
-    reducers: {
-        setSecondNavItem: (state, {payload}) => {
-            return payload
-       
-        }
-    }
-})
+  name: "SecondNavigation",
+  initialState: localStorage.getItem("SecondNavItem"),
+  reducers: {
+    setSecondNavItem: (state, { payload }) => {
+      localStorage.setItem("SecondNavItem", payload);
+      return payload;
+    },
+  },
+});
 
-
-
-export const {actions, reducer} = SecondNavigationIdSlice
+export const { actions, reducer } = SecondNavigationIdSlice;
