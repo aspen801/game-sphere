@@ -93,4 +93,7 @@
   .catalog-filter {
     display: none;
   }
+  .catalog-filter.visible {
+    display: flex;
+  }
 }

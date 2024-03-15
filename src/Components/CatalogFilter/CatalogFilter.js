@@ -7,7 +7,7 @@ import ActiveFilters from "../ActiveFilters/Components/ActiveFilters/ActiveFilte
 const MIN = 10000;
 const MAX = 100000;
 
-const CatalogFilter = ({ activeFilter, setActiveFilter }) => {
+const CatalogFilter = ({ isMobile, activeFilter, setActiveFilter }) => {
   const [values, setValues] = useState([MIN, MAX]);
 
   const handleMinChange = (event) => {
@@ -21,7 +21,7 @@ const CatalogFilter = ({ activeFilter, setActiveFilter }) => {
   };
 
   return (
-    <div className="catalog-filter">
+    <div className={`catalog-filter ${isMobile ? "visible" : ""}`}>
       <div className="catalog-filter__price-range">
         <ActiveFilters
           activeFilter={activeFilter}
