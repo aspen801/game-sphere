@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import "./Sorts.scss"
-const Sorts = () => {
+const Sorts = ({isMobile}) => {
     const [activePopular, setActivePopular] = useState(true)
     const [activeExpensive, setActiveExpensive] = useState(false)
     const [activeCheap, setActiveCheap] = useState(false)
+
   return (
-    <div className='sorts__content'>
-        <p>Сортування</p>
+    <div className={`sorts__content ${isMobile ? 'open' : ''}`}>
+        <p className='sorts__content-title'>Сортування</p>
         <p onClick={() => {
             setActivePopular(true)
             setActiveExpensive(false)
