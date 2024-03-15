@@ -43,5 +43,31 @@
 @media (max-width: 880px) {
     .sorts__content {
         display: none;
+        color: #98A2B3;
+        gap: 30px;
     }
+    .sorts__content.open{
+        display: flex;
+    }
+    .sorts__content {
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 202px;
+    }
+    .sorts__content-title{
+        display: none;
+    }
+    .sorts__content p {
+
+        text-decoration: none;
+    }
+    .sorts__content p:hover {
+        
+        color: #ffffff;
+       
+    }
+    .sorts__content p.active {
+        color: #ffffff;
+    }
+
 }
