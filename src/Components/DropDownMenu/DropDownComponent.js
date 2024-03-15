@@ -61,7 +61,7 @@ const DropDown = ({ info, index }) => {
                             setOpen(false);
                             dispatch(secondAction.setSecondNavItem(""));
                           }}
-                          to={`/catalog/${id}`}
+                          to={`/catalog/${transliterateToURL(catalog)}`}
                         >
                           {item}
                         </NavLink>
@@ -77,7 +77,9 @@ const DropDown = ({ info, index }) => {
                             secondAction.setSecondNavItem(e.target.innerText)
                           )
                         }
-                        to={`/catalog/${id}/${transliterateToURL(item)}`}
+                        to={`/catalog/${transliterateToURL(
+                          catalog
+                        )}/${transliterateToURL(item)}`}
                       >
                         {item}
                       </NavLink>

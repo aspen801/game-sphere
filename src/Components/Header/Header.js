@@ -5,7 +5,7 @@ import useClickOutside from "../../hooks/useClickOutSide";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import BurgerLink from "../BurgerLink/BurgerLink";
 import arrow from "../../resources/svg/arrow.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = ({ modalInfo }) => {
   const [openLng, setOpenLng] = useState(false);
@@ -104,15 +104,19 @@ const Header = ({ modalInfo }) => {
           </div>
           {giveSvg("balance")}
           <div className="shoppingCount">
-            {giveSvg("shoppingCart")}
-            <p
-              className="shopping_count"
-              style={
-                shoppingCount >= 1 ? { display: "block" } : { display: "none" }
-              }
-            >
-              {shoppingCount}
-            </p>
+            <NavLink className="shoppingCount" to="/cart" state="Кошик">
+              {giveSvg("shoppingCart")}
+              <p
+                className="shopping_count"
+                style={
+                  shoppingCount >= 1
+                    ? { display: "block" }
+                    : { display: "none" }
+                }
+              >
+                {shoppingCount}
+              </p>
+            </NavLink>
           </div>
         </div>
       </div>
