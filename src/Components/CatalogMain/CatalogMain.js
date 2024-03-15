@@ -5,7 +5,7 @@ import CatalogSubcategoryMenu from "../CatalogSubcategoryMenu/CatalogSubcategory
 import CatalogFilter from "../CatalogFilter/CatalogFilter";
 import Sorts from "../../Components/Sorts/Sorts";
 import CatalogPagination from "../../Components/CatalogPagination/CatalogPagination";
-import FilterMobile from "../../Components/FilterMobile/FilterMobile";
+import MobileFilter from "../MobileFilter/MobileFilter";
 import { useParams } from "react-router-dom";
 
 const CatalogMain = ({ modalInfo }) => {
@@ -45,9 +45,11 @@ const CatalogMain = ({ modalInfo }) => {
           setActiveFilter={setActiveFilter}
         />
       )}
+
       <div className="catalog-main__column">
         <Sorts />
-        <FilterMobile
+        <MobileFilter
+          modalInfo={modalInfo}
           activeFilter={activeFilter}
           setActiveFilter={setActiveFilter}
         />
