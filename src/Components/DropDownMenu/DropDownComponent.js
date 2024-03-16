@@ -11,6 +11,7 @@ import transliterateToURL from "../../layouts/TransliteToUrl";
 const DropDown = ({ info, index }) => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
+  let tmp;
   const { firstList, catalog, img, arrowCatalog, id } = info;
   const menuRef = useRef();
   useClickOutside(menuRef, () => {
@@ -38,8 +39,8 @@ const DropDown = ({ info, index }) => {
             href="#"
             style={index === 5 ? { color: "#F79009" } : null}
             onClick={(e) => {
-              dispatch(actions.setNavItem(e.target.innerText));
               dispatch(SetIndexAction.SetIndexNavItem(index));
+              dispatch(actions.setNavItem(e.target.innerText));
             }}
           >
             {catalog}
@@ -61,7 +62,7 @@ const DropDown = ({ info, index }) => {
                             setOpen(false);
                             dispatch(secondAction.setSecondNavItem(""));
                           }}
-                          to={`/catalog/${id}`}
+                          to={`/catalog/${transliterateToURL(catalog)}`}
                         >
                           {item}
                         </NavLink>
@@ -72,12 +73,14 @@ const DropDown = ({ info, index }) => {
                     <li onClick={() => setOpen(false)}>
                       <NavLink
                         className="links_drop_menu"
-                        onClick={(e) =>
+                        onClick={(e) => {
                           dispatch(
                             secondAction.setSecondNavItem(e.target.innerText)
-                          )
-                        }
-                        to={`/catalog/${id}/${transliterateToURL(item)}`}
+                          );
+                        }}
+                        to={`/catalog/${transliterateToURL(
+                          catalog
+                        )}/${transliterateToURL(item)}`}
                       >
                         {item}
                       </NavLink>

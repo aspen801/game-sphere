@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.cart-page {
+  background: #1f2023;
+  &__container {
+    max-width: 1228px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+  }
+  &__window {
+    max-width: 812px;
+    background: #2a2a2f;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 70px;
+  }
+  &__main-text {
+    margin: 0px;
+    margin-top: 30px;
+    font-family: $kharkiv;
+    color: #fff;
+    font-size: 24px;
+  }
+  &__info-text {
+    display: grid;
+    grid-template-columns: 8fr 4fr 1fr;
+  }
+  &__info-text p {
+    color: #fff;
+    font-family: $mainFont500;
+    font-size: 14px;
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+}
