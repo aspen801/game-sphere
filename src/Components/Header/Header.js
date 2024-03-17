@@ -6,6 +6,8 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import BurgerLink from "../BurgerLink/BurgerLink";
 import arrow from "../../resources/svg/arrow.svg";
 import { Link, NavLink } from "react-router-dom";
+import AppDrawer from "../ui/AppDrawer/AppDrawer";
+import MobileCart from "../MobileCart/MobileCart";
 
 const Header = ({ modalInfo }) => {
   const [openLng, setOpenLng] = useState(false);
@@ -14,6 +16,7 @@ const Header = ({ modalInfo }) => {
   const [openBurger, setOpenBurger] = useState(false);
   const [openBurgerLink, setOpenBurgerLink] = useState(false);
   const [openContactPanel, setOpenContactPanel] = useState(false);
+  const [isOpenCart, setIsOpenCart] = useState(false);
   const [likesHeart, setLikesHeart] = useState(0); // переробити на Redux
   const [shoppingCount, setShoppingCount] = useState(0); // переробити на Redux
   const [informationBurgerLink, setInformationBurgerLink] = useState(
@@ -104,7 +107,16 @@ const Header = ({ modalInfo }) => {
           </div>
           {giveSvg("balance")}
           <div className="shoppingCount">
-            <NavLink className="shoppingCount" to="/cart" state="Кошик">
+            <NavLink
+              className="shoppingCount"
+              to={window.innerWidth >= 768 ? "/cart" : ""}
+              onClick={() => {
+                window.innerWidth >= 768
+                  ? setIsOpenCart(false)
+                  : setIsOpenCart(true);
+              }}
+              state="Кошик"
+            >
               {giveSvg("shoppingCart")}
               <p
                 className="shopping_count"
@@ -144,6 +156,15 @@ const Header = ({ modalInfo }) => {
         className={openBurger ? "background active" : "background"}
         onClick={() => setOpenBurgerLink(false)}
       ></div>
+      <AppDrawer
+        titleContent={<p></p>}
+        isOpen={isOpenCart}
+        onClose={() => setIsOpenCart(false)}
+        anchor={"left"}
+        renderLine={false}
+      >
+        <MobileCart />
+      </AppDrawer>
     </header>
   );
 };

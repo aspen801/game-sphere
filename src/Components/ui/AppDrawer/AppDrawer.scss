@@ -47,4 +47,11 @@
 .app-drawer__content.bottom {
   padding: 0 50px 0px 50px;
 }
-
+@media (max-width: 500px) {
+  .app-drawer__content {
+    padding: 18px 16px 0px 16px;
+  }
+  .app-drawer__head-content {
+    padding: 20px 24px 0px 24px;
+  }
+}

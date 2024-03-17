@@ -2,13 +2,14 @@ import React, { useEffect } from "react";
 import "./CatalogPage.scss";
 import NavigationCatalog from "../../Components/NavigationCatalog/NavigationCatalog";
 import CatalogMain from "../../Components/CatalogMain/CatalogMain";
+
 import { useSelector } from "react-redux";
 
 const CatalogPage = ({ modalInfo }) => {
   const NavItemText = useSelector((state) => state.NavigationIdSlice);
   // Условный фетч категорий происходит здесь
   useEffect(() => {
-    fetch("https://dummyjson.com/products/1")
+    fetch("https://game-store-stage.onrender.com/api/api-categories")
       .then((res) => res.json())
       .then((json) => {
         console.log(json);
