@@ -10,7 +10,7 @@ const AppDrawer = ({
   onClose,
   anchor = "left",
   children,
-  renderLine,
+  renderLine = "true",
 }) => {
   const windowSize = useWindowSize();
   const isBottom = anchor === "bottom";
