@@ -6,7 +6,7 @@ import { actions as secondAction } from "../../Features/slices/SecondNavigationI
 import transliterateToURL from "../../layouts/TransliteToUrl";
 
 const CatalogSubcategoryMenu = ({ modalInfo }) => {
-  const index = useSelector((state) => state.SetIndexNavItem);
+  const index = localStorage.getItem("NavItem");
   const dispatch = useDispatch();
   const { firstList, id } = modalInfo[index];
 

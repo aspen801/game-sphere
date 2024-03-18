@@ -2,10 +2,18 @@ import React from "react";
 import "./NavigationMenu.scss";
 import searchInputSvg from "../../resources/svg/Search.svg";
 import DropDown from "../DropDownMenu/DropDownComponent";
+import { useLocation } from "react-router-dom";
 
 const NavigationMenu = ({ modalInfo }) => {
   return (
-    <nav id="catalog">
+    <nav
+      id="catalog"
+      style={
+        useLocation().pathname === "/cart"
+          ? { display: "none" }
+          : { display: "block" }
+      }
+    >
       <div className="container_nav">
         <ul className="navigation">
           {modalInfo.map((item, i) => (
