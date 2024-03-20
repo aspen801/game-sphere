@@ -1,0 +1,126 @@
+@import "../../styles/variables.scss";
+
+.catalog-pagination {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-bottom: 26px;
+}
+
+.catalog-pagination__show-more {
+  padding: 0;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 30px;
+  align-self: center;
+  p {
+    font-family: $mainFont400;
+    font-size: 14px;
+    margin: 0;
+    color: #f9fafb;
+    margin-right: 8px;
+    transition: color 0.3s ease;
+  }
+}
+
+.catalog-pagination__arrows-container {
+  position: relative;
+  display: flex;
+  padding-bottom: 2px;
+}
+
+.catalog-pagination__show-more-arrow {
+  height: 100%;
+  width: 14px;
+  height: 14px;
+  align-self: center;
+  transform: rotate(180deg);
+  &.additional-arrow {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+    left: 7px;
+    &:last-child {
+      left: 14px;
+    }
+  }
+}
+
+.catalog-pagination__show-more:hover {
+  p {
+    color: $mainPurple;
+  }
+  .catalog-pagination__show-more-arrow {
+    path {
+      fill: $mainPurple;
+      transition: fill 0.3s ease;
+    }
+    &.additional-arrow {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0s;
+    }
+  }
+}
+
+.catalog-pagination__buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.catalog-pagination__arrow {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 16px;
+  height: 16px;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  &.right {
+    img {
+      transform: rotate(180deg);
+    }
+  }
+  &:hover {
+    border: 1px solid $mainPurple;
+  }
+}
+
+.catalog-pagination__button {
+  box-sizing: border-box;
+  cursor: pointer;
+  background: none;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 2px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  border: none;
+  color: #f9fafb;
+  font-family: $mainFont400;
+  font-size: 14px;
+  font-weight: 400;
+  &:hover {
+    border: 1px solid $mainPurple;
+  }
+  & > p {
+    height: 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &.active {
+    background: $mainPurple;
+  }
+}

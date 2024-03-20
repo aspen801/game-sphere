@@ -1,0 +1,38 @@
+@import "../../../styles/variables.scss";
+
+
+.footer_container {
+    max-width: 1227px;
+    margin: 0 auto;
+    padding: 60px 40px 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.footer_container ul {
+    list-style-type: none;
+    color: #F9FAFB;
+    line-height: 140%;
+    padding: 0px;
+    margin: 0px;
+}
+.footer_container li {
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: $mainFont400;
+}
+.footer_container li:hover {
+    color: $colorSellFont;
+}
+.footer_container li svg {
+    margin-right: 20px;
+    cursor: pointer;
+}
+.footer_container li svg:hover {
+    stroke: $colorSellFont;
+}
+.footer_container li svg:hover:first-child {
+    fill: $colorSellFont;
+    stroke: none;
+}
