@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import "./CatalogPage.scss";
-import NavigationCatalog from "../../Components/NavigationCatalog/NavigationCatalog";
-import CatalogMain from "../../Components/CatalogMain/CatalogMain";
+import NavigationCatalog from "../../components/NavigationCatalog/NavigationCatalog";
+import CatalogMain from "../../components/CatalogMain/CatalogMain";
 
 import { useSelector } from "react-redux";
 
 const CatalogPage = ({ modalInfo }) => {
-  const NavItemText = useSelector((state) => state.NavigationIdSlice);
+  const NavItemText = useSelector((state) => state.navigationIdSlice);
   // Условный фетч категорий происходит здесь
   useEffect(() => {
     fetch("https://game-store-stage.onrender.com/api/api-categories")

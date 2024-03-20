@@ -1,2 +1,2 @@
-import ActiveFilters from "./Components/ActiveFilters/ActiveFilters";
+import ActiveFilters from "./components/ActiveFilters/ActiveFilters";
 export { ActiveFilters };

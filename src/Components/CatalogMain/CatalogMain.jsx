@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./CatalogMain.scss";
-import CatalogGrid from "../../Components/CatalogGrid/CatalogGrid";
+import CatalogGrid from "../../components/CatalogGrid/CatalogGrid";
 import CatalogSubcategoryMenu from "../CatalogSubcategoryMenu/CatalogSubcategoryMenu";
 import CatalogFilter from "../CatalogFilter/CatalogFilter";
-import Sorts from "../../Components/Sorts/Sorts";
-import CatalogPagination from "../../Components/CatalogPagination/CatalogPagination";
+import Sorts from "../../components/Sorts/Sorts";
+import CatalogPagination from "../../components/CatalogPagination/CatalogPagination";
 import MobileFilter from "../MobileFilter/MobileFilter";
 import { useParams } from "react-router-dom";
 
