@@ -1,6 +1,7 @@
 @import "../../styles/variables.scss";
 
 .mobile-cart {
+  height: 100vh;
   &__title {
     display: flex;
     justify-content: space-between;

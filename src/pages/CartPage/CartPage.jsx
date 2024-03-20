@@ -5,6 +5,7 @@ import Advantages from "../../components/Advantages/Advantages";
 import CartPageItem from "../../components/CartPageItem/CartPageItem";
 import arrow from "../../resources/svg/arrow.svg";
 import { NavLink } from "react-router-dom";
+import CartTotalPrice from "../../Components/CartTotalPrice/CartTotalPrice";
 const CartPage = () => {
   return (
     <div className="cart-page">
@@ -23,17 +24,20 @@ const CartPage = () => {
           </p>
         </div>
         <p className="cart-page__main-text">Кошик</p>
-        <div className="cart-page__window">
-          <div className="cart-page__info-text">
-            <p>Продукт</p>
-            <p>Кількість</p>
-            <p>Сума</p>
+        <div className="cart-page__content">
+          <div className="cart-page__window">
+            <div className="cart-page__info-text">
+              <p>Продукт</p>
+              <p>Кількість</p>
+              <p>Сума</p>
+            </div>
+            <div className="cart-page__list">
+              <CartPageItem />
+              <CartPageItem />
+              <CartPageItem />
+            </div>
           </div>
-          <div className="cart-page__list">
-            <CartPageItem />
-            <CartPageItem />
-            <CartPageItem />
-          </div>
+          <CartTotalPrice />
         </div>
       </div>
       <Advantages />

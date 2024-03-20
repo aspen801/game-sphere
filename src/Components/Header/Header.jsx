@@ -8,6 +8,7 @@ import arrow from "../../resources/svg/arrow.svg";
 import { Link, NavLink } from "react-router-dom";
 import AppDrawer from "../ui/AppDrawer/AppDrawer";
 import MobileCart from "../MobileCart/MobileCart";
+import CartTotalPriceMobile from "../CartTotalPriceMobile/CartTotalPriceMobile";
 
 const Header = ({ modalInfo }) => {
   const [openLng, setOpenLng] = useState(false);
@@ -164,6 +165,7 @@ const Header = ({ modalInfo }) => {
         renderLine={false}
       >
         <MobileCart />
+        <CartTotalPriceMobile onClose={() => setIsOpenCart(false)} />
       </AppDrawer>
     </header>
   );

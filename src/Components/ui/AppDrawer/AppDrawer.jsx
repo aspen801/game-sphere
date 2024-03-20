@@ -38,12 +38,10 @@ const AppDrawer = ({
             alt="close_burger"
           />
         </div>
-        {!isBottom && (
-          <div
-            className="app-drawer__divider"
-            style={renderLine ? { display: "block" } : { display: "none" }}
-          />
-        )}
+        <div
+          className="app-drawer__divider"
+          style={renderLine ? { display: "block" } : { display: "none" }}
+        />
       </div>
 
       <div className={`app-drawer__content ${isBottom ? "bottom" : ""}`}>

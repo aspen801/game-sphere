@@ -53,6 +53,7 @@ const FilterButton = ({ modalInfo, activeFilter, setActiveFilter }) => {
         isOpen={isSortsOpen}
         onClose={() => setIsSortsOpen(false)}
         anchor={"bottom"}
+        renderLine={false}
       >
         <Sorts isMobile={isSortsOpen} />
       </AppDrawer>
