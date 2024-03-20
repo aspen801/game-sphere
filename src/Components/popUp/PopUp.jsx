@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./PopUp.scss";
+import "./popUp.scss";
 import CloseButton from "../../resources/svg/closeButton.svg";
 import sotsRight from "../../resources/png/sotsPopUpRight.png";
 import sotsLeft from "../../resources/png/sotsPopUpLeft.png";
