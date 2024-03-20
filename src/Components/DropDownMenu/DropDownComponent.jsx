@@ -2,11 +2,11 @@ import React, { useState, useRef } from "react";
 import "./DropDownComponent.scss";
 import useClickOutside from "../../hooks/useClickOutSide";
 import { NavLink } from "react-router-dom";
-import { actions } from "../../Features/slices/NavigationId.slice";
-import { actions as secondAction } from "../../Features/slices/SecondNavigationId.slice";
-import { actions as SetIndexAction } from "../../Features/slices/SetIndexNavItem.slice";
+import { actions } from "../../store/slices/navigationId.slice";
+import { actions as secondAction } from "../../store/slices/secondNavigationId.slice";
+import { actions as SetIndexAction } from "../../store/slices/setIndexNavItem.slice";
 import { useDispatch } from "react-redux";
-import transliterateToURL from "../../layouts/TransliteToUrl";
+import transliterateToURL from "../../utils/transliteToUrl";
 
 const DropDown = ({ info, index }) => {
   const dispatch = useDispatch();

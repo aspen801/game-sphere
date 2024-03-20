@@ -1,8 +1,8 @@
 import React from "react";
 import "./CartPage.scss";
-import NavigationCatalog from "../../Components/NavigationCatalog/NavigationCatalog";
-import Advantages from "../../Components/Advantages/Advantages";
-import CartPageItem from "../../Components/CartPageItem/CartPageItem";
+import NavigationCatalog from "../../components/NavigationCatalog/NavigationCatalog";
+import Advantages from "../../components/Advantages/Advantages";
+import CartPageItem from "../../components/CartPageItem/CartPageItem";
 import arrow from "../../resources/svg/arrow.svg";
 import { NavLink } from "react-router-dom";
 const CartPage = () => {

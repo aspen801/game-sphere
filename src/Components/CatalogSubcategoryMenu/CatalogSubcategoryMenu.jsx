@@ -2,8 +2,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./CatalogSubcategoryMenu.scss";
 import { NavLink } from "react-router-dom";
-import { actions as secondAction } from "../../Features/slices/SecondNavigationId.slice";
-import transliterateToURL from "../../layouts/TransliteToUrl";
+import { actions as secondAction } from "../../store/slices/secondNavigationId.slice";
+import transliterateToURL from "../../utils/transliteToUrl";
 
 const CatalogSubcategoryMenu = ({ modalInfo }) => {
   const index = localStorage.getItem("NavItem");

@@ -5,7 +5,7 @@ import FooterSubmit from "../FooterSubmit/FooterSubmit";
 import FooterCategories from "../FooterCategories/FooterCategories";
 import FooterBuyer from "../FooterBuyer/FooterBuyer";
 import FooterContacts from "../FooterContacts/FooterContacts";
-import giveSvg from "../../../layouts/SvgFunction";
+import giveSvg from "../../../utils/svgFunction";
 
 const FooterDesktop = ({ modalInfo }) => {
   return (

@@ -3,7 +3,7 @@ import "./Card.scss";
 import laptop from "../../resources/png/laptop.png";
 import shoppingCartDesktop from "../../resources/svg/shoppingCart.svg";
 import shoppingCartMobile from "../../resources/svg/shoppingCartMobile.svg";
-import { CustomRatingIcon } from "../../layouts/RatedFunction";
+import { CustomRatingIcon } from "../../utils/ratedFunction";
 import heart from "../../resources/svg/heartCard.svg";
 import heartMobile from "../../resources/svg/heartCardMobile.svg";
 import balance from "../../resources/svg/balanceCard.svg";

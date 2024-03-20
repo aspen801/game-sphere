@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import filterIcon from "../../resources/svg/filter-icon.svg";
 import SortIcon from "../../resources/svg/sort-icon.svg";
 import "./MobileFilter.scss";
-import ActiveFilters from "../ActiveFilters/Components/ActiveFilters/ActiveFilters";
-import Sorts from "../../Components/Sorts/Sorts";
+import ActiveFilters from "../ActiveFilters/components/ActiveFilters/ActiveFilters";
+import Sorts from "../../components/Sorts/Sorts";
 import AppDrawer from "../ui/AppDrawer/AppDrawer";
 import CatalogFilter from "../CatalogFilter/CatalogFilter";
 

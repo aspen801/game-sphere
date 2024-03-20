@@ -3,11 +3,11 @@ import "./NavigationCatalog.scss";
 import { useDispatch, useSelector } from "react-redux";
 import arrow from "../../resources/svg/arrow.svg";
 import { NavLink } from "react-router-dom";
-import { actions as secondAction } from "../../Features/slices/SecondNavigationId.slice";
+import { actions as secondAction } from "../../store/slices/secondNavigationId.slice";
 
 const NavigationCatalog = () => {
-  const SecondNavItem = useSelector((state) => state.SecondNavigation);
-  const NavigationIdSlice = useSelector((state) => state.NavigationIdSlice);
+  const SecondNavItem = useSelector((state) => state.secondNavigation);
+  const NavigationIdSlice = useSelector((state) => state.navigationIdSlice);
   const dispatch = useDispatch();
 
   return (

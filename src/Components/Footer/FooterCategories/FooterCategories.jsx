@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./FooterCategories.scss";
 import dropArrowFooter from "../../../resources/svg/dropArrowFooter.svg";
 import { NavLink } from "react-router-dom";
-import { actions } from "../../../Features/slices/NavigationId.slice";
-import transliterateToURL from "../../../layouts/TransliteToUrl";
-import { actions as SetIndexAction } from "../../../Features/slices/SetIndexNavItem.slice";
-import { actions as secondAction } from "../../../Features/slices/SecondNavigationId.slice";
+import { actions } from "../../../store/slices/navigationId.slice";
+import transliterateToURL from "../../../utils/transliteToUrl";
+import { actions as SetIndexAction } from "../../../store/slices/setIndexNavItem.slice";
+import { actions as secondAction } from "../../../store/slices/secondNavigationId.slice";
 import { useDispatch } from "react-redux";
 const FooterCategories = ({ modalInfo }) => {
   const [openCategories, setCategories] = useState(false);
