@@ -2,31 +2,28 @@ $mainFont500: fixelTextMedium500;
 $mainFont400: fixelTextRegular400;
 $logoFont: galaxy;
 $kharkiv: Kharkiv;
-$mainGbColor: #1F2023;
-$secondColor: #2A2A2F;
-$gradient-purple: linear-gradient(63deg, #53389E 16.72%, #7F56D9 83.39%);
-$colorSellFont: #6941C6;
-$colorDiscount: #F79009;
+$mainGbColor: #1f2023;
+$secondColor: #2a2a2f;
+$gradient-purple: linear-gradient(63deg, #53389e 16.72%, #7f56d9 83.39%);
+$colorSellFont: #6941c6;
+$colorDiscount: #f79009;
+$mainPurple: #835ae0;
 
 @font-face {
-    font-family: 'fixelTextMedium500';
-    src: url('./fonts/FixelText-Medium.woff2');
-    font-weight: Medium;
+  font-family: "fixelTextMedium500";
+  src: url("../resources/fonts/FixelText-Medium.otf");
+  font-weight: Medium;
 }
 @font-face {
-    font-family: 'fixelTextRegular400';
-    src: url('./fonts/FixelText-Regular.woff2');
-    font-weight: Normal;
+  font-family: "fixelTextRegular400";
+  src: url("../resources/fonts/FixelText-Regular.otf");
+  font-weight: Normal;
 }
 @font-face {
-    font-family: 'galaxy';
-    src: url('./fonts/LogoFont.otf');
+  font-family: "galaxy";
+  src: url("../resources/fonts/LogoFont.otf");
 }
 @font-face {
-    font-family: 'Kharkiv';
-    src: url('./fonts/KharkivTone.ttf');
+  font-family: "Kharkiv";
+  src: url("../resources/fonts/KharkivTone.ttf");
 }
-
-
-
-

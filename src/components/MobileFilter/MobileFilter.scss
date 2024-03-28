@@ -1,0 +1,70 @@
+@import "../../styles/variables.scss";
+
+.mobile-filter {
+  display: none;
+  align-items: center;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+.mobile-filter__active-filters {
+  display: none;
+}
+.mobile-filter__button-filter {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  background: none;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  border: 1px solid;
+  padding: 16px 32px;
+  border-radius: 4px;
+  height: 52px;
+  font-size: 16px;
+  line-height: 140%;
+  text-decoration: none;
+  font-family: $mainFont500;
+  border-color: $colorSellFont;
+  box-shadow: 0 0 40px 40px $colorSellFont inset, 0 0 0 0 $colorSellFont;
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+.mobile-filter__button-filter:hover {
+  box-shadow: 0 0 10px 0 $colorSellFont inset, 0 0 10px 4px $colorSellFont;
+}
+
+.mobile-filter__button-sort {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  background: none;
+  width: 100%;
+  gap: 10px;
+  margin: 0;
+  text-align: center;
+  color: $colorSellFont;
+  border: 2px solid;
+  padding: 16px 32px;
+  border-radius: 4px;
+  height: 52px;
+  font-size: 14px;
+  line-height: 140%;
+  text-decoration: none;
+  font-family: $mainFont500;
+  border-color: $colorSellFont;
+  cursor: pointer;
+}
+@media (max-width: 880px) {
+  .mobile-filter {
+    display: grid;
+  }
+  .mobile-filter__active-filters {
+    display: block;
+  }
+}

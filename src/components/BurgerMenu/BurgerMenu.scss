@@ -1,0 +1,86 @@
+@import "../../styles/variables.scss";
+.burger_head {
+    width: 100%;
+    max-width: 490px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.burger {
+    position: relative;
+    z-index: 150;
+    height: 100%;
+    overflow: auto;
+}
+.line {
+    max-width: 100%;
+    background:#835AE0;
+    height: 1px;
+    margin-top: 20px;
+}
+.burger_container {
+    max-width: 490px;
+    margin: 0 auto;
+}
+.burger_container ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.burger_container li {
+    color: #F2F4F7;
+    font-size: 18px;
+    margin-top: 30px;
+    font-family: $mainFont500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.burger_container li:last-child {
+    margin-bottom: 100px;
+}
+.burger_language {
+    margin-top: 40px;
+    align-items: end;
+    position: relative;
+}
+.burger_language p:last-child {
+    margin-top: 7px;
+}
+.burger_language p {
+    margin: 0px;
+    padding: 0px;
+    color: #F2F4F7;
+    font-family: $mainFont400;
+    font-size: 16px;
+}
+.burger_icon {
+    margin-right: 16px;
+}
+
+@media (max-width: 465px) {
+    .burger_head {
+        max-width: 264px;
+        margin: 0px;
+        margin-left: 16px;
+        margin-right: 40px;
+        margin-top: 46px;
+    }
+    .line {
+        margin-top: 16px;
+    }
+    .burger_item img:first-child {
+        height: 20px;
+        width: 20px;
+    }
+    .burger_container {
+        max-width: 288px;
+        margin: 0 auto;
+    }
+    .burger_container li {
+        font-size: 16px;
+    }
+}

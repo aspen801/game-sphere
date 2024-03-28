@@ -1,0 +1,59 @@
+@import "../../../styles/variables.scss";
+
+.catalog-filter-dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.catalog-filter-dropdown__arrow {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.5s ease;
+  transform: rotate(270deg);
+}
+
+.catalog-filter-dropdown__arrow.active {
+  transform: rotate(90deg);
+}
+
+.catalog-filter-dropdown__label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-filter__dropdown-items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  gap: 10px;
+}
+
+.catalog-filter__dropdown-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  input {
+    margin: 0;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #f2f4f7;
+    border-radius: 1px;
+    &:checked {
+      border: none;
+      background-color: $mainPurple;
+    }
+    &::before {
+      background-color: #f2f4f7;
+    }
+  }
+  p {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    padding-top: 4px;
+    text-align: center;
+  }
+}

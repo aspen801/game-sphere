@@ -1,0 +1,110 @@
+@import "../../styles/variables.scss";
+
+
+
+
+#slide_topSell {
+    background: $mainGbColor;
+    min-height: 1057px;
+}
+.container_slide {
+    max-width: 1408px;
+    margin: 0 auto;
+   
+}
+.sell_text {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 160px;
+    padding-bottom: 70px;
+    color: #fff;
+    font-size: 48px;
+    font-family: $kharkiv;
+    line-height: 100%;
+    margin-left: 90px;
+}
+.rec-arrow {
+    display: none;
+}
+.slide_buttons {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.flex {
+    display: flex;
+}
+button.rec-dot_active:hover, button.rec-dot:active, button.rec-dot:focus {
+    transition: none;
+    background-color: none;
+    box-shadow: none;
+}
+.rec-pagination {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+button.rec-dot{
+    margin: 0;
+    background-color: #F2F4F7;
+    border-radius: 0px;
+    border: none;
+    width: 33.3%;
+    box-shadow: none;
+    transition: all 1s ease-in-out;
+    height: 4px;
+}
+
+button.rec-dot_active  {
+    transition: all 1s ease-in-out;
+    background-color: #835AE0;
+}
+
+
+@media (max-width: 839px) {
+    #slide_topSell {
+        min-height: 1000px;
+    }
+    .sell_text {
+        margin-left: 40px;
+    }
+    button.rec-dot{
+        margin: 0;
+        background-color: #F2F4F7;
+        border-radius: 0px;
+        border: none;
+        width: 33.3%;
+        box-shadow: none;
+        transition: all 1s ease-in-out;
+        height: 4px;
+    }
+    button.rec-dot_active  {
+        transition: all 1s ease-in-out;
+        background-color: #835AE0;
+    }
+}
+
+@media (max-width: 1360px) {
+    .slide_buttons {
+        display: none;
+    }
+}
+@media (max-width: 530px) {
+    button.rec-dot {
+        width: 25%;
+    }
+    .sell_text {
+        margin-left: 10px;
+    }
+}
+@media (max-width: 375px) {
+    .sell_text {
+        margin-left: 16px;
+        font-size: 24px;
+        line-height: 110%;
+    }
+    #slide_topSell {
+        min-height: 816px;
+    }
+}

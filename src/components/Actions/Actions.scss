@@ -1,0 +1,137 @@
+@import "../../styles/variables.scss";
+
+.slide_buttons {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 160;
+}
+.action_sots_left_tab {
+    display: none;
+}
+.action_sots_right_tab {
+    display: none;
+}
+.actions_carousel .rec-pagination {
+    width: 150px;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+}
+.actions_carousel button.rec-dot{
+    background-color: #F2F4F7;
+    border-radius: 0px;
+    border: none;
+    width: 30px;
+    box-shadow: none;
+    transition: all 1s ease-in-out;
+    height: 4px;
+
+}
+.actions_carousel button.rec-dot_active  {
+    transition: all 1s ease-in-out;
+    background-color: #835AE0;
+
+}
+
+.actions {
+    width: 100%;
+    min-height: 550px;
+    background: $secondColor;
+    position: relative;
+}
+.actions_container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.action_sots_right_Mobile {
+    display: none;
+}
+.action_sots_left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.action_sots_right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+@media (max-width: 1360px) {
+    .slide_buttons {
+        display: none;
+    }
+}
+@media (max-width:768px) {
+    .actions {
+        min-height: 520px;
+        position: relative;
+    }
+    .actions_carousel .rec-pagination {
+        width: 150px;
+        gap: 10px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 44px;
+    }
+    .action_sots_left {
+        display: none;
+    }
+    .action_sots_right {
+        display: none;
+    }
+    .action_sots_left_tab {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .action_sots_right_tab {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+}
+@media (max-width:540px) {
+    .actions {
+        height: 100%;
+        min-height: 230px;
+        position: relative;
+        padding-bottom: 20px;
+    }
+    .actions_carousel .rec-pagination {
+        width: 150px;
+        gap: 10px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 43px;
+    }
+    .action_sots_left {
+        display: none;
+    }
+    .action_sots_right {
+        display: none;
+    }
+    .action_sots_left_tab {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .action_sots_right_tab {
+        display: none;
+
+    }
+    .action_sots_right_Mobile {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+}

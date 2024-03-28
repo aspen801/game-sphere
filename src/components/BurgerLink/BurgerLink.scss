@@ -1,0 +1,60 @@
+@import "../../styles/variables.scss";
+.burger_link_head {
+    display: flex;
+    align-items: center;
+    margin-top: 38px;
+    margin-left: 40px;
+}
+.burger_link_head p {
+    margin: 0px;
+    font-size: 18px;
+    font-family: $mainFont500;
+    color: #F2F4F7;
+    margin-left: 16px;
+}
+.burger_link {
+    text-decoration: none;
+    color: #F2F4F7;
+}
+.burger_link:active {
+    text-decoration: none;
+    color: #F2F4F7;
+}
+.burger_link_head img {
+    transform: rotate(180deg);
+}
+.line_link {
+    margin-top: 38px;
+}
+.burger_link_list {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 40px;
+    margin-left: 80px;
+    list-style-type: none;
+    color: #F2F4F7;
+    font-size: 18px;
+    font-family: $mainFont500;
+    overflow: auto;
+}
+.burger_link_list li {
+    margin-bottom: 30px;
+    cursor: pointer;
+
+}
+@media (max-width: 465px) {
+    .burger_link_head {
+        margin-top: 60px;
+        margin-left: 16px;
+    }
+    .line_link {
+        margin-top: 16px;
+    }
+    .burger_link_list {
+        margin-top: 20px;
+        margin-left: 56px;
+        font-size: 16px;
+        overflow: auto;
+    }
+
+}
