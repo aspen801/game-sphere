@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./CatalogFilterDropdown.scss";
-import { ReactComponent as PaginationArrow } from "../../../resources/svg/paginationArrow.svg";
+// import { ReactComponent as PaginationArrow } from "../../../resources/svg/paginationArrow.svg";
 import CatalogFilterDropdownItem from "./CatalogFilterDropdownItem/CatalogFilterDropdownItem";
 const CatalogFilterDropdown = ({ activeFilter, setActiveFilter }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +22,9 @@ const CatalogFilterDropdown = ({ activeFilter, setActiveFilter }) => {
     <div className="catalog-filter-dropdown">
       <div className="catalog-filter-dropdown__label" onClick={toggleDropdown}>
         <p>Торгова марка</p>
-        <PaginationArrow
+        {/* <PaginationArrow
           className={`catalog-filter-dropdown__arrow ${isOpen ? "active" : ""}`}
-        />
+        /> */}
       </div>
       {isOpen && (
         <motion.div
