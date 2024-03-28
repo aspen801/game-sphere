@@ -1,6 +1,6 @@
 import React from "react";
 import "./CatalogPagination.scss";
-import { ReactComponent as PaginationArrow } from "../../resources/svg/paginationArrow.svg";
+// import { ReactComponent as PaginationArrow } from "../../resources/svg/paginationArrow.svg";
 import paginationArrow from "../../resources/svg/paginationArrow.svg";
 
 const CatalogPagination = () => {
@@ -9,9 +9,9 @@ const CatalogPagination = () => {
       <button className="catalog-pagination__show-more">
         <p>Показати ще 12 товарів</p>
         <div className="catalog-pagination__arrows-container">
-          <PaginationArrow className="catalog-pagination__show-more-arrow" />
+          {/* <PaginationArrow className="catalog-pagination__show-more-arrow" />
           <PaginationArrow className="catalog-pagination__show-more-arrow additional-arrow " />
-          <PaginationArrow className="catalog-pagination__show-more-arrow additional-arrow" />
+          <PaginationArrow className="catalog-pagination__show-more-arrow additional-arrow" /> */}
         </div>
       </button>
       <div className="catalog-pagination__buttons">
