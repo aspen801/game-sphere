@@ -18,7 +18,7 @@ const Intro = () => {
     <div id="intro">
       {images.map((item) => givePng(item))}
       <div className="container_intro">
-        <h1>Новий рік</h1>
+        <h1>Привіт!</h1>
         <h2>Нові перемоги</h2>
         <p>
           Зустрічайте Новий рік з ексклюзивними цінами на комп’ютери та ноутбуки
