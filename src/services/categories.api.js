@@ -1,4 +1,4 @@
-import { api } from "./config/config";
+import api from "./config";
 
 const resource = "api-categories";
 

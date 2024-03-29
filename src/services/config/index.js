@@ -18,4 +18,4 @@ const api = {
     }),
 };
 
-export { api };
+export default api;
