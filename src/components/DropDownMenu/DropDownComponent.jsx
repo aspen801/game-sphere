@@ -1,104 +1,102 @@
-import React, { useState, useRef } from "react";
-import "./DropDownComponent.scss";
-import useClickOutside from "../../hooks/useClickOutSide";
+import React, { useRef, useState } from "react";
+
+import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
+
+import useClickOutside from "../../hooks/useClickOutSide";
+import arrowCatalog from "../../resources/svg/arrowCatalog.svg";
 import { actions } from "../../store/slices/navigationId.slice";
 import { actions as secondAction } from "../../store/slices/secondNavigationId.slice";
 import { actions as SetIndexAction } from "../../store/slices/setIndexNavItem.slice";
-import { useDispatch } from "react-redux";
 import transliterateToURL from "../../utils/transliteToUrl";
+import "./DropDownComponent.scss";
 
 const DropDown = ({ info, index }) => {
+  const { id, name, slug, status, subcategories } = info;
+  const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
-  const [open, setOpen] = useState(false);
-  let tmp;
-  const { firstList, catalog, img, arrowCatalog, id } = info;
   const menuRef = useRef();
+
   useClickOutside(menuRef, () => {
-    setOpen(false);
+    setIsOpen(false);
   });
-  if (index === 5) {
+
+  if (slug === "#") {
     return (
-      <>
-        <div>
-          <li className="nav_item">
-            <a href="#" style={{ color: "#F79009" }}>
-              {catalog}
-            </a>
-          </li>
-        </div>
-        <div></div>
-      </>
+      <div>
+        <li className="dropdown-component__button special">
+          <a href="#">{name}</a>
+        </li>
+      </div>
     );
   }
+
   return (
     <>
       <div>
-        <li className="nav_item" onClick={() => setOpen(!open)}>
+        <li
+          className="dropdown-component__button"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           <a
-            href="#"
-            style={index === 5 ? { color: "#F79009" } : null}
             onClick={(e) => {
               dispatch(SetIndexAction.SetIndexNavItem(index));
               dispatch(actions.setNavItem(e.target.innerText));
             }}
           >
-            {catalog}
+            {name}
           </a>
         </li>
       </div>
-      <div className={open ? "modal active" : "modal"}>
-        <div className={open ? "catalog_pc active" : "catalog_pc"}>
-          <div className="container_modal" ref={menuRef}>
-            <div className="modal_list">
-              <ul className="item_list">
-                {firstList.map((item, index) => {
-                  if (firstList.length - 1 === index)
-                    return (
-                      <li key={id}>
-                        <NavLink
-                          className="links_drop_menu_last"
-                          onClick={() => {
-                            setOpen(false);
-                            dispatch(secondAction.setSecondNavItem(""));
-                          }}
-                          to={`/catalog/${transliterateToURL(catalog)}`}
-                        >
-                          {item}
-                        </NavLink>
-                        <img src={arrowCatalog} alt="arrowCatalog" />
-                      </li>
-                    );
+
+      <div className={`dropdown-component ${isOpen && "active"}`}>
+        <div className="dropdown-component__modal" ref={menuRef}>
+          <div className="dropdown-component__modal-list">
+            <ul className="dropdown-component__modal-list-items">
+              {subcategories.map((item, index) => {
+                if (subcategories.length - 1 === index)
                   return (
-                    <li onClick={() => setOpen(false)}>
+                    <li key={id}>
                       <NavLink
-                        className="links_drop_menu"
-                        onClick={(e) => {
-                          dispatch(
-                            secondAction.setSecondNavItem(e.target.innerText)
-                          );
+                        className="dropdown-component__modal-list-item last"
+                        onClick={() => {
+                          setIsOpen(false);
+                          dispatch(secondAction.setSecondNavItem(""));
                         }}
-                        to={`/catalog/${transliterateToURL(
-                          catalog
-                        )}/${transliterateToURL(item)}`}
+                        to={`/catalog/${slug}`}
                       >
-                        {item}
+                        {info.name}
                       </NavLink>
+                      <img src={arrowCatalog} alt="arrowCatalog" />
                     </li>
                   );
-                })}
-              </ul>
-            </div>
-            <img src={img} alt="" />
+                return (
+                  <li onClick={() => setIsOpen(false)}>
+                    <NavLink
+                      className="dropdown-component__modal-list-item"
+                      onClick={(e) => {
+                        dispatch(
+                          secondAction.setSecondNavItem(e.target.innerText),
+                        );
+                      }}
+                      to={`/catalog/${slug}/${transliterateToURL(item.slug)}`}
+                    >
+                      {item.name}
+                    </NavLink>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
+          {/* <img src={img} alt="" /> */}
         </div>
-        <div
-          className={open ? "background_click active" : "background_click"}
-          onClick={() => {
-            setOpen(false);
-          }}
-        ></div>
       </div>
+      <div
+        className={`background_click ${isOpen && "active"}`}
+        onClick={() => {
+          setIsOpen(false);
+        }}
+      ></div>
     </>
   );
 };

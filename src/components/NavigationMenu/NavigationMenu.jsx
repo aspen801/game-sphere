@@ -1,31 +1,40 @@
 import React from "react";
-import "./NavigationMenu.scss";
-import searchInputSvg from "../../resources/svg/Search.svg";
-import DropDown from "../DropDownMenu/DropDownComponent";
+
 import { useLocation } from "react-router-dom";
 
-const NavigationMenu = ({ modalInfo }) => {
+import searchInputSvg from "../../resources/svg/Search.svg";
+import DropDown from "../DropDownMenu/DropDownComponent";
+import "./NavigationMenu.scss";
+import { useGetCategories } from "./hooks/useCategories";
+
+const NavigationMenu = () => {
+  const { items } = useGetCategories();
+
   return (
     <nav
-      id="catalog"
+      className="navigation-menu"
       style={
         useLocation().pathname === "/cart"
           ? { display: "none" }
           : { display: "block" }
       }
     >
-      <div className="container_nav">
-        <ul className="navigation">
-          {modalInfo.map((item, i) => (
+      <div className="navigation-menu__container">
+        <ul className="navigation-menu__item">
+          {items?.map((item, i) => (
             <DropDown key={i} info={item} index={i} />
           ))}
         </ul>
-        <div className="search_panel_nav">
-          <input type="text" placeholder="Шукати" className="input_nav" />
+        <div className="navigation-menu__search-panel">
+          <input
+            type="text"
+            placeholder="Шукати"
+            className="navigation-menu__search-panel-input"
+          />
           <img
             src={searchInputSvg}
             alt="search"
-            className="search_button_nav"
+            className="navigation-menu__search-panel-button"
           />
         </div>
       </div>
