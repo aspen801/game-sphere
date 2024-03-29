@@ -1,11 +1,11 @@
 import React from "react";
 
+import { useGetCategories } from "@/hooks/useCategories";
 import { useLocation } from "react-router-dom";
 
 import searchInputSvg from "../../resources/svg/Search.svg";
 import DropDown from "../DropDownMenu/DropDownComponent";
 import "./NavigationMenu.scss";
-import { useGetCategories } from "./hooks/useCategories";
 
 const NavigationMenu = () => {
   const { items } = useGetCategories();
