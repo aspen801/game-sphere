@@ -1,2 +1,3 @@
 import ActiveFilters from "./components/ActiveFilters/ActiveFilters";
-export { ActiveFilters };
+
+export default ActiveFilters;
