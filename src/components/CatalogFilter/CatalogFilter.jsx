@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./CatalogFilter.scss";
 import Slider from "react-slider";
 import CatalogFilterDropdown from "./CatalogFilterDropdown/CatalogFilterDropdown";
-import ActiveFilters from "../ActiveFilters/components/ActiveFilters/ActiveFilters";
+import ActiveFilters from "@/components/ActiveFilters";
 
 const MIN = 10000;
 const MAX = 100000;
