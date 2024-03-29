@@ -1,24 +1,27 @@
 import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
-import MainPage from "./pages/MainPage/MainPage";
-import CatalogPage from "./pages/CatalogPage/CatalogPage";
-import navigationPc from "./resources/png/NavigationPC.png";
-import navigationConsole from "./resources/png/NavigationConsole.png";
-import navigationLaptop from "./resources/png/NavigationLaptop.png";
-import navigationHeadPhone from "./resources/png/NavigationHeadPhone.png";
-import navigationGadgets from "./resources/png/NavigationGadgets.png";
-import arrowCatalog from "./resources/svg/arrowCatalog.svg";
-import desktop from "./resources/svg/desktopBurger.svg";
-import gamepad from "./resources/svg/gamepadBurger.svg";
-import laptop from "./resources/svg/laptopBurger.svg";
-import mouse from "./resources/svg/mouseBurger.svg";
-import disk from "./resources/svg/diskBurger.svg";
-import promotion from "./resources/svg/promotionBurger.svg";
-import sellers from "./resources/svg/sellersBurger.svg";
+
+import { Route, Routes, useLocation } from "react-router-dom";
+
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import NavigationMenu from "./components/NavigationMenu/NavigationMenu";
 import CartPage from "./pages/CartPage/CartPage";
+import CatalogPage from "./pages/CatalogPage/CatalogPage";
+import MainPage from "./pages/MainPage/MainPage";
+import navigationConsole from "./resources/png/NavigationConsole.png";
+import navigationGadgets from "./resources/png/NavigationGadgets.png";
+import navigationHeadPhone from "./resources/png/NavigationHeadPhone.png";
+import navigationLaptop from "./resources/png/NavigationLaptop.png";
+import navigationPc from "./resources/png/NavigationPC.png";
+import arrowCatalog from "./resources/svg/arrowCatalog.svg";
+import desktop from "./resources/svg/desktopBurger.svg";
+import disk from "./resources/svg/diskBurger.svg";
+import gamepad from "./resources/svg/gamepadBurger.svg";
+import laptop from "./resources/svg/laptopBurger.svg";
+import mouse from "./resources/svg/mouseBurger.svg";
+import promotion from "./resources/svg/promotionBurger.svg";
+import sellers from "./resources/svg/sellersBurger.svg";
+
 const modalInfo = [
   {
     firstList: [
@@ -145,14 +148,6 @@ const modalInfo = [
   },
 ];
 const App = () => {
-  console.log(useLocation());
-  fetch("https://game-store-dev.onrender.com/api/api-categories")
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      console.log(data);
-    });
   return (
     <>
       <Header modalInfo={modalInfo} />
