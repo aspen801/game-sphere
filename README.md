@@ -1,14 +1,16 @@
-# Старт
+#Start
 
-Для запуску проєкта в режимі розробки нам потрібно:
-1) Встановити nodeJS на пк (https://nodejs.org/en/download)
-2) Після цього потрібно запустити термінал, і перейти в корінний розділ проєкту (my-app)
-3) Встановити всі бібліотеки, які використовувалися для розробки сайту (npm i)
-4) Запустити проєкт (npm start)
+To launch the project in development mode, we need to:
 
-Для завершення проєкту, і створення оптимізованого сайту, для вигрузки на сервер:
-1) Встановити nodeJS на пк (https://nodejs.org/en/download)
-2) Після цього потрібно запустити термінал, і перейти в корінний розділ проєкту (my-app)
-3) Встановити всі бібліотеки, які використовувалися для розробки сайту (npm i)
-4) Білдим сайт (npm run build), після цього в нас створиться папка build
-5) Загружаєм папку build на сервер
+1. Install nodeJS on your PC (https://nodejs.org/en/download)
+2. After that, launch the terminal and go to the root section of the project (my-app)
+3. Install all libraries that were used to develop the site (npm i)
+4. Start the project (npm start)
+
+To complete the project and create an optimized website for uploading to the server:
+
+1. Install nodeJS on your PC (https://nodejs.org/en/download)
+2. After that, launch the terminal and go to the root section of the project (my-app)
+3. Install all the libraries that were used to develop the site (npm i)
+4. Build the site (npm run build), after that we will create a build folder
+5. Upload the build folder to the server
