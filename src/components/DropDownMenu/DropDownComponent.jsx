@@ -8,11 +8,11 @@ import arrowCatalog from "../../resources/svg/arrowCatalog.svg";
 import { actions } from "../../store/slices/navigationId.slice";
 import { actions as secondAction } from "../../store/slices/secondNavigationId.slice";
 import { actions as SetIndexAction } from "../../store/slices/setIndexNavItem.slice";
-import transliterateToURL from "../../utils/transliteToUrl";
+import transformGoogleLink from "../../utils/transformGoogleLink";
 import "./DropDownComponent.scss";
 
 const DropDown = ({ info, index }) => {
-  const { id, name, slug, status, subcategories } = info;
+  const { id, name, slug, status, subcategories, image } = info;
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const menuRef = useRef();
@@ -21,7 +21,7 @@ const DropDown = ({ info, index }) => {
     setIsOpen(false);
   });
 
-  if (slug === "#") {
+  if (slug === "akciji-i-propoziciji") {
     return (
       <div>
         <li className="dropdown-component__button special">
@@ -79,7 +79,7 @@ const DropDown = ({ info, index }) => {
                           secondAction.setSecondNavItem(e.target.innerText),
                         );
                       }}
-                      to={`/catalog/${slug}/${transliterateToURL(item.slug)}`}
+                      to={`/catalog/${slug}/${item.slug}`}
                     >
                       {item.name}
                     </NavLink>
@@ -88,7 +88,7 @@ const DropDown = ({ info, index }) => {
               })}
             </ul>
           </div>
-          {/* <img src={img} alt="" /> */}
+          <img src={transformGoogleLink(image)} alt="" />
         </div>
       </div>
       <div
