@@ -25,9 +25,63 @@ const DropDown = ({ info, index }) => {
     return (
       <div>
         <li className="dropdown-component__button special">
-          <a href="#">{name}</a>
+          <a>{name}</a>
         </li>
       </div>
+    );
+  }
+
+  if (slug === "pokupcevi") {
+    return (
+      <>
+        <div>
+          <li
+            className="dropdown-component__button"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <a
+              onClick={(e) => {
+                dispatch(SetIndexAction.SetIndexNavItem(index));
+                dispatch(actions.setNavItem(e.target.innerText));
+              }}
+            >
+              {name}
+            </a>
+          </li>
+        </div>
+
+        <div className={`dropdown-component ${isOpen && "active"}`}>
+          <div className="dropdown-component__modal" ref={menuRef}>
+            <div className="dropdown-component__modal-list">
+              <ul className="dropdown-component__modal-list-items">
+                {subcategories.map((item, index) => {
+                  return (
+                    <li onClick={() => setIsOpen(false)}>
+                      <NavLink
+                        className="dropdown-component__modal-list-item"
+                        onClick={(e) => {
+                          dispatch(
+                            secondAction.setSecondNavItem(e.target.innerText),
+                          );
+                        }}
+                        to={`/${slug}/#${item.slug}`}
+                      >
+                        {item.name}
+                      </NavLink>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className={`background_click ${isOpen && "active"}`}
+          onClick={() => {
+            setIsOpen(false);
+          }}
+        ></div>
+      </>
     );
   }
 
