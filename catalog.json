@@ -1014,20 +1014,20 @@
         "producer": "Seagate",
         "model": "BarraCuda",
         "guarantee": 36,
-        "characteristics": {
-            "producer": "Seagate",
-            "interface": "SATA 6Gb/s",
-            "capacity": "2 ТБ",
-            "rotational_speed": "7200 об/хв",
-            "cache": "256 МБ",
-            "form_factor": "3.5-дюймовий",
-            "noise_level": "25 дБ",
-            "MTBF": "1 млн годин",
-            "dimensions": "101.6 x 26.1 x 146.99 мм",
-            "weight": "610 г",
-            "operating_temperature": "0°C до 60°C",
-            "country_of_production": "Китай"
-        }
+        "country_of_production": "Китай",
+        "weight": "610 г",
+        "characteristics": [
+            {"name": "Виробник", "val": "Seagate"},
+            {"name": "Інтерфейси", "val": "SATA 6Gb/s"},
+            {"name": "Об'єм накопичувача", "val": "2 ТБ"},
+            {"name": "Швидкість обертання шпинделя, об/хв", "val": "7200 об/хв"},
+            {"name": "Кеш", "val": "256 МБ"},
+            {"name": "Форм-фактор", "val": "3.5-дюймовий"},
+            {"name": "Гучність", "val": "25 дБ"},
+            {"name": "MTBF час", "val": "1 млн годин"},
+            {"name": "Габарити (ВхШхГ), мм", "val": "101.6 x 26.1 x 146.99 мм"},
+            {"name": "Температура", "val": "0°C до 60°C"}
+        ]
     },
     {
         "id": "HDD123456",
