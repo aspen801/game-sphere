@@ -17,7 +17,7 @@
 }
 #header {
   background: $mainGbColor;
-  min-height: 115px;
+  min-height: 85px;
   padding-top: 20px;
   padding: 20px 40px 0 40px;
 }
@@ -254,11 +254,15 @@
   text-decoration: none;
   font-family: $mainFont500;
   border-color: $colorSellFont;
-  box-shadow: 0 0 40px 40px $colorSellFont inset, 0 0 0 0 $colorSellFont;
+  box-shadow:
+    0 0 40px 40px $colorSellFont inset,
+    0 0 0 0 $colorSellFont;
   transition: all 150ms ease-in-out;
 }
 .btn_call:hover {
-  box-shadow: 0 0 10px 0 $colorSellFont inset, 0 0 10px 4px $colorSellFont;
+  box-shadow:
+    0 0 10px 0 $colorSellFont inset,
+    0 0 10px 4px $colorSellFont;
 }
 .contact_panel {
   position: absolute;
