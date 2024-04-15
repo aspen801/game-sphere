@@ -22,9 +22,14 @@
   opacity: 100%;
 }
 
+.dropdown-component__button {
+  padding: 3px 0 3px 0;
+}
+
 .dropdown-component__button a {
+  // padding: 1px 0 1px 0;
   cursor: pointer;
-  color: #fff;
+  color: #ffffff;
   position: relative;
   text-decoration: none;
   font-family: $mainFont500;
