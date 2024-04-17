@@ -1,315 +1,358 @@
 @import "../../styles/variables.scss";
 
-#intro {
-    position: relative;
-    min-height: 600px;
-    background-color: $mainGbColor;
+.hero {
+  min-width: 1550px;
+  position: relative;
+  min-height: 600px;
+  background-color: $mainGbColor;
+}
+
+.hero__background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; //Использовать нужно точно cover
+  position: absolute;
+  z-index: 1;
+}
+
+.hero__container {
+  display: flex;
+  justify-content: center;
+}
+
+.hero__content {
+  padding-left: 120px;
+  min-width: 1408px;
+}
+
+.hero__content h1 {
+  padding-top: 180px;
+  max-width: 660px;
+  display: block;
+  position: relative;
+  font-family: $kharkiv;
+  font-size: 4.5rem;
+  line-height: 80%;
+  z-index: 11;
+  margin: 0;
+  color: #fff;
+  // white-space: nowrap;
+}
+
+.hero__content h2 {
+  max-width: 660px;
+  display: block;
+  position: relative;
+  font-family: $kharkiv;
+  font-size: 72px;
+  line-height: 80%;
+  z-index: 11;
+  margin: 0;
+  color: #fff;
+  padding-top: 25px;
+  // white-space: nowrap;
+}
+
+.hero__content a {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  max-width: 224px;
+  text-align: center;
+  z-index: 11;
+  color: #fff;
+  border: 1px solid;
+  padding: 16px 32px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 140%;
+  text-decoration: none;
+  font-family: $mainFont500;
+  border-color: $colorSellFont;
+  box-shadow:
+    0 0 40px 40px $colorSellFont inset,
+    0 0 0 0 $colorSellFont;
+  transition: all 150ms ease-in-out;
+}
+.hero__content a:hover {
+  box-shadow:
+    0 0 10px 0 $colorSellFont inset,
+    0 0 10px 4px $colorSellFont;
+}
+.hero__content p {
+  padding-top: 30px;
+  font-family: $mainFont400;
+  margin-top: 30px;
+  position: relative;
+  font-size: 20px;
+  max-width: 552px;
+  z-index: 11;
+  margin: 0;
+  color: #fff;
+  line-height: 140%;
+  margin-bottom: 72px;
+  word-wrap: break-word;
 }
 .SotsLeft {
-    position: absolute;
-    left: 0px;
-    z-index: 1;
-
+  position: absolute;
+  left: 0px;
+  z-index: 1;
 }
 .SotsRight {
-    position: absolute;
-    right: 0px;
-    z-index: 3;
+  position: absolute;
+  top: -270px;
+  right: -247px;
+  z-index: 3;
 }
 .SotMouse {
-    transition: transform 0.5s;
-    position: absolute;
-    right: 577px;
-    top: 4px;
-    z-index: 4;
-    filter: drop-shadow(0rem 0rem 0.75rem #854EFF);
+  transition: transform 0.5s;
+  position: absolute;
+  right: 577px;
+  top: 4px;
+  z-index: 4;
+  filter: drop-shadow(0rem 0rem 0.75rem #854eff);
 }
 .SotHeadphones {
-    transition: transform 0.5s;
-    position: absolute;
-    right: 319px;
-    top: 4px;
-    z-index: 4;
-    filter: drop-shadow(0rem 0rem 0.75rem #854EFF);
+  transition: transform 0.5s;
+  position: absolute;
+  right: 319px;
+  top: 4px;
+  z-index: 4;
+  filter: drop-shadow(0rem 0rem 0.75rem #854eff);
 }
 .SotLaptop {
-    transition: transform 0.5s;
-    position: absolute;
-    right: 450px;
-    top: 229px;
-    z-index: 4;
-    filter: drop-shadow(0rem 0rem 0.75rem #854EFF);
+  transition: transform 0.5s;
+  position: absolute;
+  right: 450px;
+  top: 229px;
+  z-index: 4;
+  filter: drop-shadow(0rem 0rem 0.75rem #854eff);
 }
 .SotDisplay {
-    transition: transform 0.5s;
-    position: absolute;
-    right: 63px;
-    top: 4px;
-    z-index: 4;
-    filter: drop-shadow(0rem 0rem 0.75rem #854EFF);
+  transition: transform 0.5s;
+  position: absolute;
+  right: 63px;
+  top: 4px;
+  z-index: 4;
+  filter: drop-shadow(0rem 0rem 0.75rem #854eff);
 }
 .SotKeyBoard {
-    transition: transform 0.5s;
-    position: absolute;
-    right: 0px;
-    top: 229px;
-    z-index: 4;
-    filter: drop-shadow(0rem 0rem 0.75rem #854EFF);
+  transition: transform 0.5s;
+  position: absolute;
+  right: 0px;
+  top: 229px;
+  z-index: 4;
+  filter: drop-shadow(0rem 0rem 0.75rem #854eff);
 }
 .SotArmchair {
-    transition: transform 0.5s;
-    position: absolute;
-    right: 192px;
-    top: 229px;
-    z-index: 4;
-    filter: drop-shadow(0rem 0rem 0.75rem #854EFF);
+  transition: transform 0.5s;
+  position: absolute;
+  right: 192px;
+  top: 229px;
+  z-index: 4;
+  filter: drop-shadow(0rem 0rem 0.75rem #854eff);
 }
 .SotMouse:hover {
-    transition: transform 0.5s;
-    transform: scale(1.1);
-    z-index: 5;
+  transition: transform 0.5s;
+  transform: scale(1.1);
+  z-index: 5;
 }
 .SotLaptop:hover {
-    transition: transform 0.5s;
-    transform: scale(1.1);
-    z-index: 5;
+  transition: transform 0.5s;
+  transform: scale(1.1);
+  z-index: 5;
 }
 .SotArmchair:hover {
-    transition: transform 0.5s;
-    transform: scale(1.1);
-    z-index: 5;
+  transition: transform 0.5s;
+  transform: scale(1.1);
+  z-index: 5;
 }
 .SotKeyBoard:hover {
-    transition: transform 0.5s;
-    transform: scale(1.1);
-    z-index: 5;
+  transition: transform 0.5s;
+  transform: scale(1.1);
+  z-index: 5;
 }
 .SotHeadphones:hover {
-    transition: transform 0.5s;
-    transform: scale(1.1);
-    z-index: 5;
+  transition: transform 0.5s;
+  transform: scale(1.1);
+  z-index: 5;
 }
 .SotDisplay:hover {
-    transition: transform 0.5s;
-    transform: scale(1.1);
-    z-index: 5;
+  transition: transform 0.5s;
+  transform: scale(1.1);
+  z-index: 5;
 }
-.container_intro {
-    max-width: 1228px;
-    margin: 0 auto;
-}
-.container_intro h1 {
-    padding-top: 180px;
-    max-width: 660px;
-    display: block;
-    position: relative;
-    font-family: $kharkiv;
-    font-size: 4.5rem;
-    line-height: 80%;
-    z-index: 11;
-    margin: 0;
-    color: #fff;
-    // white-space: nowrap;
-}
+
 .SotsPhone {
-    display: none;
+  display: none;
 }
-.container_intro h2 {
-    max-width: 660px;
-    display: block;
-    position: relative;
-    font-family: $kharkiv;
-    font-size: 72px;
-    line-height: 80%;
-    z-index: 11;
-    margin: 0;
-    color: #fff;
-    padding-top: 25px;
-    // white-space: nowrap;
-}
+
 .SotsTablet {
+  display: none;
+}
+
+@media (max-width: 1870px) {
+  .hero__content {
+    margin: 0;
+  }
+
+  .SotsLeft {
     display: none;
-}
-.container_intro a {
-    display: block;
-    position: relative;
-    margin: 0;
-    max-width: 224px;
-    text-align: center;
-    z-index: 11;
-    color: #fff;
-    border: 1px solid;
-    padding: 16px 32px;
-    border-radius: 4px;
-    font-size: 16px;
-    line-height: 140%;
-    text-decoration: none;
-    font-family: $mainFont500;
-    border-color: $colorSellFont;
-    box-shadow: 0 0 40px 40px $colorSellFont inset, 0 0 0 0 $colorSellFont;
-    transition: all 150ms ease-in-out;
-}
-.container_intro a:hover {
-    box-shadow: 0 0 10px 0 $colorSellFont inset, 0 0 10px 4px $colorSellFont;
-}
-.container_intro p {
-    padding-top: 30px;
-    font-family: $mainFont400;
-    margin-top: 30px;
-    position: relative;
-    font-size: 20px;
-    max-width: 552px;
-    z-index: 11;
-    margin: 0;
-    color: #fff;
-    line-height: 140%;
-    margin-bottom: 72px;
+  }
+
+  // .hero__content h1 {
+  //     max-width: 360px;
+  //     font-size: 3rem;
+  // }
+  // .hero__content h2 {
+  //     max-width: 460px;
+  //     font-size: 3rem;
+  // }
+  // .hero__content p {
+  //     font-size: 1.125rem;
+  //     line-height: 140%;
+  // }
 }
 
-@media (max-width: 1570px) {
-    .container_intro {
-        padding-left: 40px;
-    }
-    .container_intro h1 {
-        max-width: 360px;
-        font-size: 3rem;
-    }
-    .container_intro h2 {
-        max-width: 460px;
-        font-size: 3rem;
-    }
-    .container_intro p {
-        font-size: 1.125rem;
-        line-height: 140%;
-    }
-}
+// @media (max-width: 1400px) {
+//     .SotsLeft {
+//         display: none;
+//     }
+//     .SotsRight {
+//         position: absolute;
+//         right: 0px;
+//         z-index: 3;
+//     }
+// }
 
-@media (max-width: 1400px) {
-    .SotsLeft {
-        display: none;
-    }
-    .SotsRight {
-        position: absolute;
-        right: 0px;
-        z-index: 3;
-    }
-}
-
-@media (max-width: 1300px) {
-    #intro {
-        position: relative;
-        min-height: 883px;
-    }
-    .container_intro  {
-        padding-top: 526px;
-    }
-    .container_intro h1{
-            padding-top: 0;
-    }
-}
+// @media (max-width: 1300px) {
+//     .hero {
+//         position: relative;
+//         min-height: 883px;
+//     }
+//     .hero__content  {
+//         padding-top: 526px;
+//     }
+//     .hero__content h1{
+//             padding-top: 0;
+//     }
+// }
 
 //Tablet
-@media (max-width: 768px) { 
-    .SotsRight {
-        display: none;
-    }
-    #intro {
-        position: relative;
-        min-height: 883px;
-    }
-    
-    .SotsTablet {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%; 
-        transform: translate(-50%, -50%);
-        z-index: 1;
-    }
-    .SotMouse {
-        display: none;
-    }
-    .SotHeadphones {
-        display: none;
-    }
-    .SotLaptop {
-        display: none;
-    }
-    .SotDisplay {
-        display: none;
-    }
-    .SotKeyBoard {
-        display: none;
-    }
-    .SotArmchair {
-        display: none;
-    }
-    .container_intro h1{
-        font-size: 3rem;
-        line-height: 100%;
-    }
-    .container_intro h2 {
-        font-size: 3rem;
-        line-height: 100%;
-    }
-    .container_intro p {
-        font-size: 1.125rem;
-        line-height: 140%;
-    }
-    .container_intro a {
-        font-size: 1rem;
-        line-height: 140%;
-    }
-    .container_intro {
-        padding-left: 40px;
-    }
+@media (max-width: 768px) {
+  .hero {
+    min-width: 0;
+  }
+  .hero__content {
+    min-width: 0;
+  }
+
+  .hero__background {
+    display: none;
+  }
+
+  .SotsRight {
+    display: none;
+  }
+  .hero {
+    position: relative;
+    min-height: 883px;
+  }
+
+  .hero__container {
+    display: flex;
+    justify-content: start;
+  }
+
+  .hero__content {
+    padding-top: 400px;
+    padding-left: 40px;
+  }
+
+  .hero__content h1 {
+    max-width: 360px;
+    font-size: 36px;
+  }
+  .hero__content h2 {
+    max-width: 460px;
+    font-size: 36px;
+  }
+
+  .hero__content p {
+    font-size: 1.125rem;
+    line-height: 140%;
+  }
+  .hero__content a {
+    font-size: 1rem;
+    line-height: 140%;
+  }
+
+  .SotsTablet {
+    display: block;
+    position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .SotMouse {
+    display: none;
+  }
+  .SotHeadphones {
+    display: none;
+  }
+  .SotLaptop {
+    display: none;
+  }
+  .SotDisplay {
+    display: none;
+  }
+  .SotKeyBoard {
+    display: none;
+  }
+  .SotArmchair {
+    display: none;
+  }
 }
 
-@media (max-width: 480px) { 
-    .container_intro {  
-        padding-left: 16px;
-    }
+@media (max-width: 480px) {
+  .hero__content {
+    padding-left: 16px;
+  }
 }
 
 //Mobile
-@media (max-width: 400px) {
-    .container_intro {
-    padding: 0px 16px; 
-    }
-    .SotsTablet {
-        display: none;
-    }
-    .SotsPhone {
-        display: block;
-        position: absolute;
-        top: 140px;
-        left: 50%; 
-        transform: translate(-50%, -50%);
-    }
-    #intro {
-        position: relative;
-        min-height: 594px;
-    }
-    .container_intro h1 {
-        padding-top: 296px;
-        font-size: 2.25rem;
-        line-height: 110%;
-    }
-    .container_intro h2 {
-        font-size: 2.25rem;
-        line-height: 110%;
-    }
-    .container_intro p {
-        font-size: 1.125rem;
-        line-height: 140%;
-        margin-bottom: 40px;
-    }
-    .container_intro a {
-        box-sizing: border-box;
-        font-size: 1rem;
-        line-height: 140%;
-        padding: 16px 32px;
-        max-width: 343px;
-        margin: 0 auto;
-    }
+@media (max-width: 375px) {
+  .hero__content {
+    padding: 0px 16px;
+  }
+  .SotsTablet {
+    display: none;
+  }
+  .SotsPhone {
+    display: block;
+    position: absolute;
+  }
+  .hero {
+    position: relative;
+    min-height: 594px;
+  }
+  .hero__content h1 {
+    padding-top: 296px;
+    font-size: 24px;
+    line-height: 110%;
+  }
+  .hero__content h2 {
+    font-size: 24px;
+    line-height: 110%;
+  }
+  .hero__content p {
+    font-size: 1.125rem;
+    line-height: 140%;
+    margin-bottom: 40px;
+  }
+  .hero__content a {
+    width: 100%;
+  }
 }
