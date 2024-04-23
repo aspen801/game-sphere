@@ -86,7 +86,7 @@
 .catalog {
   display: flex;
   align-items: end;
-  gap: 8px;
+  gap: 20px;
   margin-left: 100px;
 }
 .profile {
@@ -298,6 +298,10 @@
 }
 .contact_information {
   padding-left: 10px;
+}
+
+.contact_information p {
+  color: #98a2b3;
 }
 @media (max-width: 1180px) {
   .contact {

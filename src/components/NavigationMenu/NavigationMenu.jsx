@@ -3,12 +3,12 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 
 import searchInputSvg from "../../resources/svg/Search.svg";
+import { useGetAllCategoriesQuery } from "../../services/categories.api";
 import DropDown from "../DropDownMenu/DropDownComponent";
 import "./NavigationMenu.scss";
-import { useGetCategories } from "./hooks/useCategories";
 
 const NavigationMenu = () => {
-  const { items } = useGetCategories();
+  const { data, isLoading, isError } = useGetAllCategoriesQuery();
 
   return (
     <nav
@@ -21,7 +21,7 @@ const NavigationMenu = () => {
     >
       <div className="navigation-menu__container">
         <ul className="navigation-menu__item">
-          {items?.map((item, i) => (
+          {data?.data.map((item, i) => (
             <DropDown key={i} info={item} index={i} />
           ))}
         </ul>
