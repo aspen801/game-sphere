@@ -1,50 +1,49 @@
-import React, { useState, useRef } from "react";
-import "./Header.scss";
-import giveSvg from "../../utils/svgFunction";
-import useClickOutside from "../../hooks/useClickOutSide";
-import BurgerMenu from "../BurgerMenu/BurgerMenu";
-import BurgerLink from "../BurgerLink/BurgerLink";
-import arrow from "../../resources/svg/arrow.svg";
+import React, { useRef, useState } from "react";
+
 import { Link, NavLink } from "react-router-dom";
-import AppDrawer from "../ui/AppDrawer/AppDrawer";
-import MobileCart from "../MobileCart/MobileCart";
+
+import useClickOutside from "../../hooks/useClickOutSide";
+import BurgerLogoMob from "../../resources/svg/BurgerLogoMob.svg";
+import BurgerLogoTab from "../../resources/svg/Logo.svg";
+import arrow from "../../resources/svg/arrow.svg";
+import giveSvg from "../../utils/svgFunction";
+import BurgerLink from "../BurgerLink/BurgerLink";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import CartTotalPriceMobile from "../CartTotalPriceMobile/CartTotalPriceMobile";
+import MobileCart from "../MobileCart/MobileCart";
+import AppDrawer from "../ui/AppDrawer/AppDrawer";
+import "./Header.scss";
 
 const Header = ({ modalInfo }) => {
   const [openLng, setOpenLng] = useState(false);
   const [activeLng, setActiveLng] = useState("Укр");
   const [passiveLng, setPassiveLng] = useState("Eng");
   const [openBurger, setOpenBurger] = useState(false);
-  const [openBurgerLink, setOpenBurgerLink] = useState(false);
   const [openContactPanel, setOpenContactPanel] = useState(false);
   const [isOpenCart, setIsOpenCart] = useState(false);
   const [likesHeart, setLikesHeart] = useState(0); // переробити на Redux
   const [shoppingCount, setShoppingCount] = useState(0); // переробити на Redux
-  const [informationBurgerLink, setInformationBurgerLink] = useState(
-    modalInfo[0]
-  );
-  const burgerRef = useRef();
+
   const contactRef = useRef();
-  useClickOutside(burgerRef, () => {
-    setOpenBurger(false);
-  });
   useClickOutside(contactRef, () => {
     setOpenContactPanel(false);
   });
-  openBurger
-    ? document.body.classList.add("active")
-    : document.body.classList.remove("active");
   return (
     <header id="header">
+      <AppDrawer
+        titleContent={<img src={BurgerLogoTab} alt="Burger_logo" />}
+        isOpen={openBurger}
+        onClose={() => setOpenBurger(false)}
+      >
+        <BurgerMenu openBurger={openBurger} setOpenBurger={setOpenBurger} />
+      </AppDrawer>
       <div className="container">
         <div className="nav">
-          <a href="#" onClick={() => setOpenBurger(!openBurger)}>
-            {giveSvg("menu")}
-          </a>
-          <a href="#">
+          <a onClick={() => setOpenBurger(!openBurger)}>{giveSvg("menu")}</a>
+          <a>
             <Link to="./">{giveSvg("logoSvg")}</Link>
           </a>
-          <a href="#">
+          <a>
             <Link to="./">{giveSvg("LogoMobileSvg")}</Link>
           </a>
         </div>
@@ -133,30 +132,6 @@ const Header = ({ modalInfo }) => {
           </div>
         </div>
       </div>
-      <div
-        ref={burgerRef}
-        className={openBurger ? "burger_menu active" : "burger_menu"}
-        style={openBurger ? { display: "block" } : { display: "none" }}
-      >
-        <BurgerMenu
-          openBurgerLink={openBurgerLink}
-          setInformationBurgerLink={setInformationBurgerLink}
-          setOpenBurgerLink={setOpenBurgerLink}
-          modalInfo={modalInfo}
-          openBurger={openBurger}
-          setOpenBurger={setOpenBurger}
-        />
-        <BurgerLink
-          setOpenBurger={setOpenBurger}
-          setOpenBurgerLink={setOpenBurgerLink}
-          openBurgerLink={openBurgerLink}
-          informationBurgerLink={informationBurgerLink}
-        />
-      </div>
-      <div
-        className={openBurger ? "background active" : "background"}
-        onClick={() => setOpenBurgerLink(false)}
-      ></div>
       <AppDrawer
         titleContent={<p></p>}
         isOpen={isOpenCart}
