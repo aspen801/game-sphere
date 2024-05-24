@@ -1,0 +1,28 @@
+@import "../../styles/variables.scss";
+
+.burger_link {
+  position: absolute;
+  display: none;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  overflow: auto;
+}
+
+.burger_link.active {
+  display: block;
+  position: absolute;
+  z-index: 155;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  overflow: auto;
+}
+
+.burger_item {
+  font-size: 18px;
+}
+
+.burger_item.active {
+  color: #f79009;
+}

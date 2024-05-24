@@ -1,11 +1,13 @@
 import React from "react";
 
+import { Skeleton } from "@mui/material";
 import { useLocation } from "react-router-dom";
 
 import searchInputSvg from "../../resources/svg/Search.svg";
 import { useGetAllCategoriesQuery } from "../../services/categories.api";
 import DropDown from "../DropDownMenu/DropDownComponent";
 import "./NavigationMenu.scss";
+import NavigationSkeleton from "./NavigationSkeleton/NavigationSkeleton";
 
 const NavigationMenu = () => {
   const { data, isLoading, isError } = useGetAllCategoriesQuery();
@@ -20,11 +22,16 @@ const NavigationMenu = () => {
       }
     >
       <div className="navigation-menu__container">
-        <ul className="navigation-menu__item">
-          {data?.data.map((item, i) => (
-            <DropDown key={i} info={item} index={i} />
-          ))}
-        </ul>
+        {!isLoading && !isError && data?.data.length > 0 ? (
+          <ul className="navigation-menu__item">
+            {data?.data.map((item, i) => (
+              <DropDown key={i} info={item} index={i} />
+            ))}
+          </ul>
+        ) : (
+          <NavigationSkeleton />
+        )}
+
         <div className="navigation-menu__search-panel">
           <input
             type="text"

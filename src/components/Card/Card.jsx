@@ -1,15 +1,16 @@
 import React from "react";
-import "./Card.scss";
+
 import laptop from "../../resources/png/laptop.png";
+import balance from "../../resources/svg/balanceCard.svg";
+import balanceMobile from "../../resources/svg/balanceCardMobile.svg";
+import heart from "../../resources/svg/heartCard.svg";
+import heartMobile from "../../resources/svg/heartCardMobile.svg";
 import shoppingCartDesktop from "../../resources/svg/shoppingCart.svg";
 import shoppingCartMobile from "../../resources/svg/shoppingCartMobile.svg";
 import { CustomRatingIcon } from "../../utils/ratedFunction";
-import heart from "../../resources/svg/heartCard.svg";
-import heartMobile from "../../resources/svg/heartCardMobile.svg";
-import balance from "../../resources/svg/balanceCard.svg";
-import balanceMobile from "../../resources/svg/balanceCardMobile.svg";
+import "./Card.scss";
 
-const Card = () => {
+const Card = ({ data }) => {
   return (
     <div className="сard">
       <img
@@ -22,27 +23,28 @@ const Card = () => {
         alt="balance"
         className="card_balance"
       />
+
       <div className="card-info-container">
-        <img src={laptop} alt="laptop" className="main_img" />
-        <p className="code_text">Код: 1447</p>
-        <p className="main_text">Ноутбук ASUS 16" ROG STRIX G16 G614JV-AS73</p>
-        {/* <div className='rating'>
-            {CustomRatingIcon()}
-            <p>5 відгуків</p>
-        </div> */}
+        <div className="card__image-container">
+          <img
+            src={data?.thumbnail || laptop}
+            alt="product"
+            className="main_img"
+          />
+        </div>
+
+        <p className="code_text">
+          <span>{`Код: ${data?.additional_code || "1234567"}`}</span>
+        </p>
+        <p className="main_text">{data?.title || "Default title"}</p>
         <div className="description">
-          <p>
-            <d>Об’єм ОЗП:</d> 16 Гб
-          </p>
-          <p>
-            <d>Тип накопикувача:</d> SSD
-          </p>
-          <p>
-            <d>Об’єм SSD диска:</d> 512 Гб
-          </p>
-          <p>
-            <d>Відеокарта:</d> GeForce RTX4060
-          </p>
+          {data?.characteristics.slice(0, 4).map((item) => (
+            <p>
+              <span className="card_description_text special">{item.name}</span>
+              {": "}
+              {item.value}
+            </p>
+          ))}
         </div>
         <div className="buy">
           <div>
