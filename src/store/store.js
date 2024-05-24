@@ -1,4 +1,6 @@
 import { categoriesApi } from "@/services/categories.api.js";
+import { homePageApi } from "@/services/homePage.api.js";
+import { productsApi } from "@/services/products.api.js";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 import { reducer as navigation } from "./slices/navigationId.slice.js";
@@ -10,10 +12,16 @@ const reducers = combineReducers({
   secondNavigation,
   setIndexNavItem,
   [categoriesApi.reducerPath]: categoriesApi.reducer,
+  [homePageApi.reducerPath]: homePageApi.reducer,
+  [productsApi.reducerPath]: productsApi.reducer,
 });
 
 export const store = configureStore({
   reducer: reducers,
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(categoriesApi.middleware),
+    getDefaultMiddleware().concat(
+      categoriesApi.middleware,
+      homePageApi.middleware,
+      productsApi.middleware,
+    ),
 });

@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import "./CatalogPage.scss";
-import NavigationCatalog from "../../components/NavigationCatalog/NavigationCatalog";
-import CatalogMain from "../../components/CatalogMain/CatalogMain";
 
 import { useSelector } from "react-redux";
+
+import CatalogMain from "../../components/CatalogMain/CatalogMain";
+import NavigationCatalog from "../../components/NavigationCatalog/NavigationCatalog";
+import "./CatalogPage.scss";
 
 const CatalogPage = ({ modalInfo }) => {
   const NavItemText = useSelector((state) => state.navigationIdSlice);
@@ -12,7 +13,7 @@ const CatalogPage = ({ modalInfo }) => {
     fetch("https://game-store-stage.onrender.com/api/api-categories")
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
+        // console.log(json);
       });
   }, []);
 

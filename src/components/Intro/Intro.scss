@@ -105,80 +105,80 @@
   right: -247px;
   z-index: 3;
 }
-.SotMouse {
+.sot-0 {
   transition: transform 0.5s;
   position: absolute;
   right: 577px;
-  top: 4px;
+  top: 2px;
   z-index: 4;
   filter: drop-shadow(0rem 0rem 0.75rem #854eff);
 }
-.SotHeadphones {
+.sot-1 {
   transition: transform 0.5s;
   position: absolute;
-  right: 319px;
-  top: 4px;
+  right: 320px;
+  top: 2px;
   z-index: 4;
   filter: drop-shadow(0rem 0rem 0.75rem #854eff);
 }
-.SotLaptop {
+.sot-2 {
   transition: transform 0.5s;
   position: absolute;
-  right: 450px;
-  top: 229px;
+  right: 448px;
+  top: 225px;
   z-index: 4;
   filter: drop-shadow(0rem 0rem 0.75rem #854eff);
 }
-.SotDisplay {
+.sot-3 {
   transition: transform 0.5s;
   position: absolute;
-  right: 63px;
-  top: 4px;
+  right: 61px;
+  top: 2px;
   z-index: 4;
   filter: drop-shadow(0rem 0rem 0.75rem #854eff);
 }
-.SotKeyBoard {
+.sot-4 {
   transition: transform 0.5s;
   position: absolute;
-  right: 0px;
-  top: 229px;
+  right: -65px;
+  top: 225px;
   z-index: 4;
   filter: drop-shadow(0rem 0rem 0.75rem #854eff);
 }
-.SotArmchair {
+.sot-5 {
   transition: transform 0.5s;
   position: absolute;
-  right: 192px;
-  top: 229px;
+  right: 191px;
+  top: 225px;
   z-index: 4;
   filter: drop-shadow(0rem 0rem 0.75rem #854eff);
 }
-.SotMouse:hover {
+.sot-0:hover {
   transition: transform 0.5s;
   transform: scale(1.1);
   z-index: 5;
 }
-.SotLaptop:hover {
+.sot-2:hover {
   transition: transform 0.5s;
   transform: scale(1.1);
   z-index: 5;
 }
-.SotArmchair:hover {
+.sot-5:hover {
   transition: transform 0.5s;
   transform: scale(1.1);
   z-index: 5;
 }
-.SotKeyBoard:hover {
+.sot-4:hover {
   transition: transform 0.5s;
   transform: scale(1.1);
   z-index: 5;
 }
-.SotHeadphones:hover {
+.sot-1:hover {
   transition: transform 0.5s;
   transform: scale(1.1);
   z-index: 5;
 }
-.SotDisplay:hover {
+.sot-3:hover {
   transition: transform 0.5s;
   transform: scale(1.1);
   z-index: 5;
@@ -245,7 +245,7 @@
     min-width: 0;
   }
   .hero__content {
-    min-width: 0;
+    min-width: 300px;
   }
 
   .hero__background {
@@ -296,22 +296,22 @@
     // transform: translate(-50%, -50%);
     z-index: 1;
   }
-  .SotMouse {
+  .sot-0 {
     display: none;
   }
-  .SotHeadphones {
+  .sot-1 {
     display: none;
   }
-  .SotLaptop {
+  .sot-2 {
     display: none;
   }
-  .SotDisplay {
+  .sot-3 {
     display: none;
   }
-  .SotKeyBoard {
+  .sot-4 {
     display: none;
   }
-  .SotArmchair {
+  .sot-5 {
     display: none;
   }
 }

@@ -1,46 +1,20 @@
 import React, { useState } from "react";
-import "./BurgerMenu.scss";
-import BurgerLogoTab from "../../resources/svg/Logo.svg";
-import BurgerLogoMob from "../../resources/svg/BurgerLogoMob.svg";
-import CloseButton from "../../resources/svg/closeButton.svg";
-import giveSvg from "../../utils/svgFunction";
-import ArrowRight from "../../resources/svg/arrowRightBurger.svg";
+
 import Profile from "../../resources/svg/Profile.svg";
 import Balance from "../../resources/svg/balance.svg";
-import BurgerCatalog from "../BurgerCatalog/BurgerCatalog";
+import { useGetAllCategoriesQuery } from "../../services/categories.api";
+import giveSvg from "../../utils/svgFunction";
+import BurgerCatalogItem from "../BurgerCatalogItem/BurgerCatalogItem";
+import "./BurgerMenu.scss";
 
-const BurgerMenu = ({
-  setInformationBurgerLink,
-  setOpenBurger,
-  openBurger,
-  modalInfo,
-  setOpenBurgerLink,
-  openBurgerLink,
-}) => {
+const BurgerMenu = ({ setOpenBurger, openBurger }) => {
+  const { data, isLoading, isError } = useGetAllCategoriesQuery();
+
   const [open, setOpen] = useState(false);
   const [activeLng, setActiveLng] = useState("Укр");
   const [passiveLng, setPassiveLng] = useState("Eng");
   return (
-    <div
-      className="burger"
-      style={
-        openBurger && !openBurgerLink
-          ? { displey: "block" }
-          : { display: "none" }
-      }
-    >
-      <div className="burger_head">
-        <img
-          src={window.innerWidth <= 465 ? BurgerLogoMob : BurgerLogoTab}
-          alt="Burger_logo"
-        />
-        <img
-          src={CloseButton}
-          onClick={() => setOpenBurger(false)}
-          alt="close_burger"
-        />
-      </div>
-      <div className="line"></div>
+    <div className="burger">
       <div className="burger_container">
         <div className="burger_language" onClick={() => setOpen(!open)}>
           <div style={{ display: "flex", alignItems: "end" }}>
@@ -78,14 +52,11 @@ const BurgerMenu = ({
               Порівняння
             </div>
           </li>
-          {modalInfo.map((item, i) => (
-            <BurgerCatalog
+          {data?.data.map((item, i) => (
+            <BurgerCatalogItem
               setOpenBurger={setOpenBurger}
-              setInformationBurgerLink={setInformationBurgerLink}
-              setOpenBurgerLink={setOpenBurgerLink}
               item={item}
               index={i}
-              ArrowRight={ArrowRight}
             />
           ))}
         </ul>

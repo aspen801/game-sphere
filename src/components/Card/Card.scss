@@ -1,8 +1,13 @@
 @import "../../styles/variables.scss";
 
+//Костыль, переделать
+.rec-item-wrapper{
+    min-height: 100%;
+}
+
 .сard {
     box-sizing: border-box;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     max-height: 100%;
     max-width: auto;
@@ -52,7 +57,15 @@
     margin: 0;
     margin-top: 4px;
 }
+
+.card__image-container {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}
+
 .main_img {
+    object-fit: contain;
     align-self: center;
     max-width: 260px;
     max-height: 187px;
@@ -74,7 +87,7 @@
     color: #F2F4F7;
     line-height: 140%;
 }
-.description d {
+.card_description_text.special {
     color: #98A2B3;
     
 }
