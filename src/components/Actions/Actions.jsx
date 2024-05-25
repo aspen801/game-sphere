@@ -9,6 +9,7 @@ import actionSotsRight from "../../resources/svg/actionSotsRight.svg"
 import actionSotsLeftTab from "../../resources/svg/sotSmallActionTab.svg"
 import actionSotsRightTab from "../../resources/svg/sotsRightActionTab.svg"
 import actionSotsRightMobile from "../../resources/svg/sotsRightActionMobile.svg"
+
 const Actions = () => {
     const breakPoints = [
         {width: 625, renderArrow: false},
