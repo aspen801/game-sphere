@@ -1,0 +1,38 @@
+@import "@styles/variables.scss";
+
+.burger_subcat_item {
+  font-size: 18px;
+  margin-left: 30px;
+}
+
+.burger_subcat_item a {
+  text-decoration: none;
+}
+
+.burger_subcat_item__text {
+  color: #f2f4f7;
+
+  margin-top: 30px;
+  font-family: $mainFont500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger_subcat_item__text.heading {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.burger_subcat_item__text.heading_arrow {
+  position: absolute;
+  left: -35px;
+  bottom: 1px;
+  transform: rotate(180deg);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}

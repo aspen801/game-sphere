@@ -1,0 +1,23 @@
+@import "@styles/variables.scss";
+
+.button-purple {
+  width: 100%;
+  background-color: none;
+  background: none;
+  border: 0px;
+  cursor: pointer;
+  color: #f9fafb;
+  font-family: $mainFont500;
+  font-size: 16px;
+  border: 1px solid;
+  border-color: $colorSellFont;
+  box-shadow:
+    0 0 40px 40px $colorSellFont inset,
+    0 0 0 0 $colorSellFont;
+  transition: all 150ms ease-in-out;
+  &:hover {
+    box-shadow:
+      0 0 10px 0 $colorSellFont inset,
+      0 0 10px 4px $colorSellFont;
+  }
+}

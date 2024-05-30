@@ -1,7 +1,7 @@
-import { categoriesApi } from "@/services/categories.api.js";
-import { homePageApi } from "@/services/homePage.api.js";
-import { productsApi } from "@/services/products.api.js";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { categoriesApi } from "@services/categories.api.js";
+import { homePageApi } from "@services/homePage.api.js";
+import { productsApi } from "@services/products.api.js";
 
 import { reducer as navigation } from "./slices/navigationId.slice.js";
 import { reducer as secondNavigation } from "./slices/secondNavigationId.slice.js";

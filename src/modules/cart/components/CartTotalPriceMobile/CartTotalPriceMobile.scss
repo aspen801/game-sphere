@@ -1,0 +1,35 @@
+@import "@styles/variables.scss";
+
+.cart-total-price-mobile {
+  box-sizing: border-box;
+  position: sticky;
+  bottom: 0px;
+  background: #2a2a2f;
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    margin-bottom: 20px;
+    & p {
+      margin: 0px;
+      font-size: 20px;
+      font-family: $mainFont400;
+      color: #c8cdd6;
+    }
+    & p:last-child {
+      font-size: 32px;
+      font-family: $mainFont500;
+      color: #835ae0;
+    }
+  }
+  &__continue-buy {
+    padding-bottom: 30px;
+    margin-top: 30px;
+    font-family: $mainFont400;
+    font-size: 16px;
+    color: #f2f4f7;
+    text-decoration: underline dotted;
+    text-underline-offset: 8px;
+    text-align: center;
+  }
+}
